@@ -79,7 +79,7 @@ export const userRelations = relations(user, ({ many }) => ({
   accounts: many(account),
 }))
 
-// Domínio da escola (equivalente às entidades Base44 de base44/entities/*.jsonc).
+// Domínio da escola (turmas, exercícios, fichas e sumários).
 export const level = pgTable('level', {
   id: text('id').primaryKey(),
   code: text('code').notNull().unique(),

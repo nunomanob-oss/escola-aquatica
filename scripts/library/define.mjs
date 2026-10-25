@@ -2,7 +2,7 @@
 // Cada nível exporta { level, prefix, exercises }, onde cada exercício é ex(bloco, título, campos).
 export const ex = (block, title, o) => ({ block, title, ...o });
 
-// Converte para a forma da entidade Exercise (base44/entities/Exercise.jsonc).
+// Converte para a forma do exercício no seed (ver exercise-schema.json).
 export function toEntity(level, item, code, orderIndex, turmas, demo3d) {
   return {
     title: item.title,

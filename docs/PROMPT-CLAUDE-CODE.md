@@ -19,8 +19,8 @@ Não é uma app para alunos: é uma ferramenta interna do instrutor.
 
 ## Stack
 
-- React + Vite + JavaScript (JSX), Tailwind CSS, componentes shadcn/ui, lucide-react para ícones, react-router-dom.
-- Persistência: base inicialmente alojada na Base44 (entidades + SDK `@base44/sdk`). Se estiveres a migrar, mantém a mesma forma de dados e usa Supabase/Postgres ou local (SQLite/IndexedDB) com o mesmo modelo.
+- TanStack Start (React, Vite), TypeScript/JSX, Tailwind CSS, componentes shadcn/ui, lucide-react para ícones, TanStack Router.
+- Persistência: PostgreSQL com Drizzle ORM. Autenticação com Better Auth.
 - **Offline-first**: cache local em `localStorage` (chaves `swim_cache_levels`, `swim_cache_exercises`, `swim_selection_<TURMA>`, `swim_active_level`) com fallback para dados em cache quando a rede falha. A seleção de exercícios da aula tem de sobreviver a recarregamentos e a falta de rede.
 
 ## Identidade visual

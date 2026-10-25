@@ -1,9 +1,25 @@
-// Carrega as turmas e a biblioteca técnica (base44/seed/exercise-library.json) para o Postgres.
-// Uso: npm run db:seed   (idempotente: os códigos BIB-… já existentes são ignorados)
+// Carrega utilizadores demo, turmas e a biblioteca técnica para o Postgres.
+// Uso: npm run db:seed   (idempotente: emails e códigos BIB-… já existentes são ignorados)
 import { randomUUID } from 'node:crypto'
 import { readFileSync } from 'node:fs'
+import { hashPassword } from 'better-auth/crypto'
 import { eq } from 'drizzle-orm'
 import { db, schema } from '../src/db'
+
+const DEMO_USERS = [
+  {
+    name: 'Instrutor Demo',
+    email: 'instrutor@escola.local',
+    password: 'instrutor123',
+    role: 'user',
+  },
+  {
+    name: 'Admin Demo',
+    email: 'admin@escola.local',
+    password: 'admin1234',
+    role: 'admin',
+  },
+]
 
 const LEVELS = [
   { code: 'A1', name: 'Adaptação ao Meio Aquático', ageRange: '7–15 anos', orderIndex: 1 },
@@ -18,7 +34,7 @@ const LEVELS = [
 
 const toCamel = (key: string) => key.replace(/_([a-z])/g, (_, c: string) => c.toUpperCase())
 
-// Campos da biblioteca (snake_case, forma da Base44) -> colunas da tabela.
+// Campos da biblioteca (snake_case no JSON de seed) -> colunas camelCase da tabela.
 function toRow(item: Record<string, unknown>) {
   const columns = new Set(Object.keys(schema.exercise))
   const row: Record<string, unknown> = {}
@@ -31,7 +47,45 @@ function toRow(item: Record<string, unknown>) {
   return row
 }
 
+async function seedUsers() {
+  let inserted = 0
+  let skipped = 0
+  for (const demo of DEMO_USERS) {
+    const [existing] = await db
+      .select({ id: schema.user.id })
+      .from(schema.user)
+      .where(eq(schema.user.email, demo.email))
+      .limit(1)
+    if (existing) {
+      skipped += 1
+      continue
+    }
+    const userId = randomUUID()
+    await db.insert(schema.user).values({
+      id: userId,
+      name: demo.name,
+      email: demo.email,
+      emailVerified: true,
+      role: demo.role,
+    })
+    await db.insert(schema.account).values({
+      id: randomUUID(),
+      accountId: userId,
+      providerId: 'credential',
+      userId,
+      password: await hashPassword(demo.password),
+    })
+    inserted += 1
+  }
+  console.log(`Utilizadores: ${inserted} criados, ${skipped} já existiam`)
+  for (const demo of DEMO_USERS) {
+    console.log(`  · ${demo.email} / ${demo.password} (${demo.role})`)
+  }
+}
+
 async function main() {
+  await seedUsers()
+
   for (const level of LEVELS) {
     await db
       .insert(schema.level)
@@ -48,7 +102,9 @@ async function main() {
   }
   console.log(`Turmas: ${LEVELS.length} (existentes ignoradas)`)
 
-  const library = JSON.parse(readFileSync('base44/seed/exercise-library.json', 'utf8')) as Record<string, unknown>[]
+  const library = JSON.parse(
+    readFileSync('scripts/library/seed/exercise-library.json', 'utf8'),
+  ) as Record<string, unknown>[]
   let inserted = 0
   let skipped = 0
   for (const item of library) {
