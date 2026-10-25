@@ -34,7 +34,7 @@ export function removeCache(key) {
   }
 }
 
-// O SDK lança Base44Error sem `status` quando o pedido nem chegou ao servidor.
+// Erros de rede: sem `status`, ou status 0 (pedido não chegou ao servidor).
 export function isNetworkError(error) {
   if (typeof navigator !== "undefined" && navigator.onLine === false) return true;
   return !error || error.status === undefined || error.status === null || error.status === 0;

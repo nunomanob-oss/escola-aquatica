@@ -1,4 +1,4 @@
-// Valida a biblioteca e gera base44/seed/exercise-library.json.
+// Valida a biblioteca e gera scripts/library/seed/exercise-library.json.
 // Uso: node scripts/library/build.mjs
 import fs from "node:fs";
 import path from "node:path";
@@ -13,8 +13,9 @@ import aperfeicoamento from "./data/aperfeicoamento.mjs";
 import altoRendimento from "./data/alto-rendimento.mjs";
 import master from "./data/master.mjs";
 
-const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
-const schema = JSON.parse(fs.readFileSync(`${ROOT}/base44/entities/Exercise.jsonc`, "utf8")).properties;
+const LIB = path.dirname(fileURLToPath(import.meta.url));
+const SEED_OUT = `${LIB}/seed/exercise-library.json`;
+const schema = JSON.parse(fs.readFileSync(`${LIB}/exercise-schema.json`, "utf8")).properties;
 const LEVELS = [iniciacao, aprendizagem, aperfeicoamento, altoRendimento, master];
 const BLOCKS = schema.training_block.enum;
 
@@ -156,7 +157,8 @@ if (errors.length) {
   process.exit(1);
 }
 
-fs.writeFileSync(`${ROOT}/base44/seed/exercise-library.json`, `${JSON.stringify(entities, null, 2)}\n`);
+fs.mkdirSync(`${LIB}/seed`, { recursive: true });
+fs.writeFileSync(SEED_OUT, `${JSON.stringify(entities, null, 2)}\n`);
 
 const table = LEVELS.map(({ level, exercises }) => {
   const counts = BLOCKS.map((b) => exercises.filter((e) => e.block === b).length);
@@ -166,4 +168,4 @@ console.log(["Nível", ...BLOCKS, "Total"].join(" | "));
 table.forEach((row) => console.log(row.join(" | ")));
 const perTurma = Object.values(LEVEL_TURMAS).flat().map((t) => `${t} ${entities.filter((e) => e.turmas.includes(t)).length}`);
 console.log(`\nPor turma: ${perTurma.join(" · ")}`);
-console.log(`\n${entities.length} exercícios válidos → base44/seed/exercise-library.json`);
+console.log(`\n${entities.length} exercícios válidos → scripts/library/seed/exercise-library.json`);

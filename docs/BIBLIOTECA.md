@@ -33,10 +33,10 @@ Alto Rendimento e Master não correspondem a nenhuma turma. Aparecem em "Todas" 
 ## Onde está cada coisa
 
 - `scripts/library/data/*.mjs`: os exercícios, um ficheiro por nível. É aqui que se editam.
-- `scripts/library/build.mjs`: valida a biblioteca e gera `base44/seed/exercise-library.json`.
-- `scripts/library/import.mjs`: importa o JSON para a Base44. Não duplica, porque ignora os códigos `BIB-…` que já existem.
-- `scripts/library/remove-old-examples.mjs`: apaga da Base44 os 120 exemplos antigos (só apareciam na Biblioteca). Não toca no programa das turmas nem nos personalizados. Antes de apagar, guarda uma cópia em `backups/`.
-- `base44/entities/Exercise.jsonc`: tem campos novos: `training_block`, `instructions`, `variations`, `distance`, `distance_m`, `rest_interval`, `repetitions`, `duration`, `intensity` e `focus_area`. Tem também novos equipamentos e duas categorias novas.
+- `scripts/library/exercise-schema.json`: enums e campos usados na validação (estilo, categoria, equipamento, blocos, etc.).
+- `scripts/library/build.mjs`: valida a biblioteca e gera `scripts/library/seed/exercise-library.json`.
+- `scripts/library/seed/exercise-library.json`: JSON de seed consumido por `npm run db:seed`.
+- `scripts/seed.ts`: importa turmas e a biblioteca para o Postgres (idempotente: ignora códigos `BIB-…` já existentes).
 
 ## Regras que o build verifica
 
@@ -52,11 +52,10 @@ Alto Rendimento e Master não correspondem a nenhuma turma. Aparecem em "Todas" 
 - Pelo menos 15 exercícios lúdicos na Iniciação.
 - Nenhum termo fora do pt-PT (crawl, quadril, nadadeira, placa…).
 
-## Publicar
+## Publicar na base local
 
-1. Publicar o schema novo (git → painel Base44).
-2. `node scripts/library/build.mjs`
-3. `BASE44_APP_ID=… BASE44_TOKEN=… node scripts/library/import.mjs`: sem `--apply`, só mostra o que faria. Repetir com `--apply` para gravar.
-4. `BASE44_APP_ID=… BASE44_TOKEN=… node scripts/library/remove-old-examples.mjs`: ler a lista primeiro e só depois correr com `--apply`. O script recusa-se a apagar se a biblioteca ainda não estiver importada.
+1. Editar os exercícios em `scripts/library/data/`.
+2. `node scripts/library/build.mjs` — valida e regenera o JSON de seed.
+3. `npm run db:seed` — carrega turmas e biblioteca no Postgres (não duplica códigos `BIB-…` já existentes).
 
 Os exercícios devem ser revistos pela coordenação técnica antes de ficarem visíveis para todos os instrutores.
