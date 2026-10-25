@@ -1,0 +1,275 @@
+{
+  "name": "Exercise",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Nome do exerc\u00edcio (ex: Patinagem de Bru\u00e7os com Cotovelo Alto)"
+    },
+    "code": {
+      "type": "string",
+      "description": "C\u00f3digo \u00fanico do exerc\u00edcio (ex: DRILL-BR-004)"
+    },
+    "description": {
+      "type": "string",
+      "description": "Descri\u00e7\u00e3o detalhada da execu\u00e7\u00e3o t\u00e9cnica"
+    },
+    "style": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "Crol",
+          "Costas",
+          "Bru\u00e7os",
+          "Mariposa",
+          "Quatro Estilos (IM)",
+          "Gen\u00e9rico"
+        ]
+      },
+      "description": "Estilo(s) de nata\u00e7\u00e3o a que o exerc\u00edcio se aplica"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "T\u00e9cnica / Drills",
+        "Pernas (Kick)",
+        "Bra\u00e7os (Pull)",
+        "Partidas e Viragens",
+        "Posi\u00e7\u00e3o do Corpo / Flutua\u00e7\u00e3o",
+        "Respira\u00e7\u00e3o",
+        "Resist\u00eancia / Aer\u00f3bico",
+        "Velocidade / Pot\u00eancia",
+        "Adapta\u00e7\u00e3o / Confian\u00e7a na \u00c1gua",
+        "Jogos / L\u00fadico"
+      ],
+      "description": "Classifica\u00e7\u00e3o t\u00e9cnica do exerc\u00edcio"
+    },
+    "level": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "Inicia\u00e7\u00e3o / Adapta\u00e7\u00e3o",
+          "Aprendizagem / M\u00e9dia",
+          "Aperfei\u00e7oamento",
+          "Alto Rendimento",
+          "Master"
+        ]
+      },
+      "description": "N\u00edvel do atleta a que o exerc\u00edcio se destina"
+    },
+    "primary_objective": {
+      "type": "string",
+      "description": "Objetivo principal do exerc\u00edcio (ex: Melhorar o agarre na fase de propuls\u00e3o)"
+    },
+    "focus_points": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Dicas do treinador: pontos a observar durante a execu\u00e7\u00e3o"
+    },
+    "equipment_required": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "Nenhum",
+          "Prancha",
+          "PULL-BUOY",
+          "Barbatanas",
+          "P\u00e1s",
+          "Tubo Frontal (Snorkel)",
+          "El\u00e1stico",
+          "Cinto de Tra\u00e7\u00e3o",
+          "Esparguete",
+          "Arcos de mergulho",
+          "Bast\u00f5es de mergulho",
+          "Bola",
+          "Tapete flutuante",
+          "Metr\u00f3nomo (Tempo Trainer)"
+        ]
+      },
+      "description": "Equipamento necess\u00e1rio para executar o exerc\u00edcio"
+    },
+    "difficulty_rating": {
+      "type": "number",
+      "description": "Dificuldade do exerc\u00edcio numa escala de 1 a 5"
+    },
+    "common_mistakes": {
+      "type": "string",
+      "description": "Erros comuns e respetivas corre\u00e7\u00f5es (um por linha)"
+    },
+    "coaching_cues": {
+      "type": "string",
+      "description": "Frase-chave curta para corrigir durante a execu\u00e7\u00e3o"
+    },
+    "video_url": {
+      "type": "string",
+      "description": "Link de demonstra\u00e7\u00e3o t\u00e9cnica (YouTube/Vimeo/S3)"
+    },
+    "image_diagram": {
+      "type": "string",
+      "description": "Esquema gr\u00e1fico ou GIF da execu\u00e7\u00e3o"
+    },
+    "is_custom": {
+      "type": "boolean",
+      "default": false,
+      "description": "Criado por um treinador (true) ou nativo da biblioteca (false)"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Palavras-chave para pesquisa livre"
+    },
+    "training_block": {
+      "type": "string",
+      "enum": [
+        "Aquecimento",
+        "T\u00e9cnica",
+        "S\u00e9rie Principal",
+        "Pernas",
+        "Bra\u00e7os",
+        "Velocidade",
+        "Retorno \u00e0 Calma",
+        "Jogos"
+      ],
+      "description": "Bloco do treino em que o exerc\u00edcio se usa (os mesmos nomes das fichas de treino)"
+    },
+    "instructions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Execu\u00e7\u00e3o passo a passo"
+    },
+    "variations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Varia\u00e7\u00f5es e progress\u00f5es"
+    },
+    "distance": {
+      "type": "string",
+      "description": "Formato da s\u00e9rie (ex: 4 x 25 m)"
+    },
+    "distance_m": {
+      "type": "number",
+      "description": "Dist\u00e2ncia total em metros"
+    },
+    "rest_interval": {
+      "type": "string",
+      "description": "Descanso ou intervalo de sa\u00edda (ex: 20 s, sa\u00edda a 1:00)"
+    },
+    "repetitions": {
+      "type": "string",
+      "description": "Repeti\u00e7\u00f5es (ex: 4)"
+    },
+    "duration": {
+      "type": "string",
+      "description": "Dura\u00e7\u00e3o aproximada (ex: 6 min)"
+    },
+    "intensity": {
+      "type": "string",
+      "enum": [
+        "Baixa",
+        "Moderada",
+        "Alta",
+        "M\u00e1xima"
+      ],
+      "description": "Intensidade do esfor\u00e7o"
+    },
+    "focus_area": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "Posi\u00e7\u00e3o do corpo",
+          "T\u00e9cnica de bra\u00e7os",
+          "T\u00e9cnica de pernas",
+          "Respira\u00e7\u00e3o",
+          "Coordena\u00e7\u00e3o",
+          "Entrada da m\u00e3o",
+          "Agarre",
+          "Tra\u00e7\u00e3o",
+          "Empurre",
+          "Recupera\u00e7\u00e3o",
+          "Rota\u00e7\u00e3o",
+          "Hidrodin\u00e2mica",
+          "Viragem de rolamento",
+          "Viragem aberta",
+          "Partida do bloco",
+          "Partida dentro de \u00e1gua",
+          "Ritmo de prova",
+          "Base aer\u00f3bia",
+          "Limiar anaer\u00f3bio",
+          "Velocidade / Pot\u00eancia",
+          "Foco mental",
+          "Confian\u00e7a na \u00e1gua",
+          "Flutua\u00e7\u00e3o",
+          "Imers\u00e3o",
+          "Divers\u00e3o"
+        ]
+      },
+      "description": "\u00c1reas trabalhadas"
+    },
+    "turmas": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Turmas a que se destina (biblioteca t\u00e9cnica); vazio = s\u00f3 por n\u00edvel do atleta"
+    },
+    "demo_3d": {
+      "type": "string",
+      "description": "Demonstra\u00e7\u00e3o 3D animada (identificador da anima\u00e7\u00e3o)"
+    },
+    "level_id": {
+      "type": "string",
+      "description": "C\u00f3digo do n\u00edvel a que pertence (Levels.code). \"ALL\" para exemplos de exerc\u00edcios aplic\u00e1veis a todas as turmas"
+    },
+    "content": {
+      "type": "string",
+      "description": "Conte\u00fado do exerc\u00edcio por t\u00e9cnica/estilo (ex: Crol, Costas, Bru\u00e7os, Mariposa, Estilos, Partidas e Viragens)"
+    },
+    "subcategory": {
+      "type": "string",
+      "description": "Subcategoria dentro do conte\u00fado (ex: A\u00e7\u00e3o dos MI, Viragens, Posi\u00e7\u00f5es)"
+    },
+    "category_id": {
+      "type": "string",
+      "description": "Nome da categoria (opcional)"
+    },
+    "is_example": {
+      "type": "boolean",
+      "description": "Exemplo pr\u00e1tico de exerc\u00edcio para aprender o conte\u00fado (n\u00e3o pertence a uma turma espec\u00edfica)"
+    },
+    "period_type": {
+      "type": "string",
+      "enum": [
+        "SEPT_JAN",
+        "FEB_JUL",
+        "FULL_YEAR",
+        "FIRST_WEEK_ONLY"
+      ],
+      "description": "\u00c9poca do ano em que o exerc\u00edcio \u00e9 dado"
+    },
+    "period_label": {
+      "type": "string",
+      "description": "R\u00f3tulo vis\u00edvel da \u00e9poca"
+    },
+    "order_index": {
+      "type": "number",
+      "description": "Ordem cronol\u00f3gica no programa"
+    }
+  },
+  "required": [
+    "level_id",
+    "title",
+    "period_type"
+  ]
+}
