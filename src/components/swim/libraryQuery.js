@@ -29,13 +29,16 @@ export function matchesFilters(exercise, filters) {
 // Exercícios da biblioteca técnica: têm bloco de treino e pertencem a um nível do atleta.
 const isLevelled = (ex) => ex.level_id === "ALL" && Boolean(ex.training_block);
 
-// A Biblioteca mostra só a biblioteca técnica e os exercícios criados pelos instrutores.
+// Exemplos do programa do clube (CFP): ligados aos conteúdos das turmas.
+export const isProgramExample = (ex) => ex.source === "CFP";
+
+// A Biblioteca mostra a biblioteca técnica, os exemplos do programa e os exercícios criados pelos instrutores.
 // O programa original das turmas continua a existir e a aparecer no ecrã Conteúdos.
-export const isLibraryExercise = (ex) => isLevelled(ex) || Boolean(ex.is_custom);
+export const isLibraryExercise = (ex) => isLevelled(ex) || isProgramExample(ex) || Boolean(ex.is_custom);
 
 // Turmas de um exercício da biblioteca: as atribuídas a ele ou, se não tiver, todas as do seu nível.
 function turmasOf(ex) {
-  if (ex.turmas?.length) return ex.turmas;
+  if (ex.turmas?.length || isProgramExample(ex)) return ex.turmas || [];
   return Object.keys(TURMA_LEVEL).filter((t) => (ex.level || []).includes(TURMA_LEVEL[t]));
 }
 
@@ -49,12 +52,12 @@ function turmaContents(exercises, turma) {
 export function belongsToTurma(ex, turma, contents) {
   if (ex.level_id === turma) return true;
   if (ex.level_id !== "ALL") return false;
-  if (isLevelled(ex)) return turmasOf(ex).includes(turma);
+  if (isLevelled(ex) || isProgramExample(ex)) return turmasOf(ex).includes(turma);
   return !contents || contents.has(ex.content);
 }
 
 // Primeiro o que é próprio da turma, depois os exemplos gerais; dentro de cada grupo, pela ordem.
-export const rank = (ex) => (ex.level_id === "ALL" && !isLevelled(ex) ? 1 : 0);
+export const rank = (ex) => (ex.level_id === "ALL" && !isLevelled(ex) && !isProgramExample(ex) ? 1 : 0);
 
 // Exercícios visíveis para a turma ativa, com os filtros aplicados.
 export function filterLibrary(exercises, activeLevel, filters) {
@@ -73,7 +76,7 @@ export function countByLevel(exercises, filters) {
     if (!matchesFilters(ex, filters)) return;
     counts.all += 1;
     if (ex.level_id && ex.level_id !== "ALL") counts[ex.level_id] = (counts[ex.level_id] || 0) + 1;
-    if (isLevelled(ex)) turmasOf(ex).forEach((t) => (counts[t] = (counts[t] || 0) + 1));
+    if (isLevelled(ex) || isProgramExample(ex)) turmasOf(ex).forEach((t) => (counts[t] = (counts[t] || 0) + 1));
   });
   return counts;
 }

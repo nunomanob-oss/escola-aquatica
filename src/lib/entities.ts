@@ -5,7 +5,7 @@ import { entityList, entityWrite } from '@/server/entities'
 type Row = Record<string, any>
 type ListOptions = { limit?: number; sort?: string; cursor?: string; distinct?: string }
 
-function makeEntity(name: 'Level' | 'Exercise' | 'WorkoutSheet' | 'ClassSummary') {
+function makeEntity(name: 'Level' | 'Exercise' | 'LevelContent' | 'WorkoutSheet' | 'ClassSummary') {
   const fetchRows = async (query: Record<string, string | number | boolean> = {}, options: ListOptions = {}) => {
     const sort = options.sort ?? undefined
     const descending = sort?.startsWith('-') ?? false
@@ -40,6 +40,7 @@ function makeEntity(name: 'Level' | 'Exercise' | 'WorkoutSheet' | 'ClassSummary'
 export const entities = {
   Level: makeEntity('Level'),
   Exercise: makeEntity('Exercise'),
+  LevelContent: makeEntity('LevelContent'),
   WorkoutSheet: makeEntity('WorkoutSheet'),
   ClassSummary: makeEntity('ClassSummary'),
 }

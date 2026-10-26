@@ -59,3 +59,18 @@ Alto Rendimento e Master não correspondem a nenhuma turma. Aparecem em "Todas" 
 3. `npm run db:seed` — carrega turmas e biblioteca no Postgres (não duplica códigos `BIB-…` já existentes).
 
 Os exercícios devem ser revistos pela coordenação técnica antes de ficarem visíveis para todos os instrutores.
+
+## Programa do clube (CFP): conteúdos e exemplos
+
+O programa de cada turma vem da base de dados do clube (`scripts/cfp/data/CFP_extracao.sqlite`): 11 níveis (Bebés 1 … Avançado), 245 conteúdos e 151 exercícios exemplo (`EX-001` … `EX-151`).
+
+- Cada conteúdo fica na tabela `level_content` (turma, bloco, número, período e meses) com os códigos dos seus exercícios exemplo.
+- Os exemplos entram na tabela `exercise` com `source: "CFP"` e as turmas onde são usados; aparecem também na Biblioteca.
+- No ecrã **Conteúdos**, cada turma mostra a árvore Bloco → Conteúdo → Exercício exemplo → Regressão / Progressão. Marca-se o conteúdo para o sumário da aula e, dentro da árvore, junta-se o exemplo à aula ou abre-se a ficha.
+- As ilustrações dos exemplos ainda não estão na app.
+
+Para atualizar depois de mudar a base do clube:
+
+1. Substituir `scripts/cfp/data/CFP_extracao.sqlite`.
+2. `node scripts/cfp/build.mjs` — valida e regenera `scripts/cfp/seed/cfp-program.json` (corrige "quadril" → "anca").
+3. `npm run db:migrate && npm run db:seed` — atualiza níveis, conteúdos e exemplos `EX-…` com a versão nova.

@@ -51,7 +51,7 @@ Abre o `.env` e preenche pelo menos:
 ```bash
 npm run db:up       # Postgres em localhost:5432 (Docker)
 npm run db:migrate  # Cria as tabelas
-npm run db:seed     # Turmas + biblioteca (~175 exercícios)
+npm run db:seed     # Turmas, programa CFP (245 conteúdos, 151 exemplos) + biblioteca (175)
 ```
 
 5. **Arrancar a app**
@@ -114,6 +114,7 @@ Todos os scripts definidos em `package.json`:
 | Comando | Para quê |
 |---|---|
 | `node scripts/library/build.mjs` | Valida os exercícios em `scripts/library/data/` e gera `scripts/library/seed/exercise-library.json`. |
+| `node scripts/cfp/build.mjs` | Converte a base do clube (`scripts/cfp/data/CFP_extracao.sqlite`) em `scripts/cfp/seed/cfp-program.json` (níveis, conteúdos e exemplos). |
 
 Mais detalhe sobre a biblioteca: [`docs/BIBLIOTECA.md`](docs/BIBLIOTECA.md).
 

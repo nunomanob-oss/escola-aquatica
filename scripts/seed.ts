@@ -1,5 +1,6 @@
 // Carrega utilizadores demo, turmas e a biblioteca técnica para o Postgres.
-// Uso: npm run db:seed   (idempotente: emails e códigos BIB-… já existentes são ignorados)
+// Uso: npm run db:seed   (idempotente: emails e códigos BIB-… já existentes são ignorados;
+// níveis, conteúdos e exercícios EX-… do programa CFP são atualizados com a versão do JSON)
 import { randomUUID } from 'node:crypto'
 import { readFileSync } from 'node:fs'
 import { hashPassword } from 'better-auth/crypto'
@@ -21,22 +22,19 @@ const DEMO_USERS = [
   },
 ]
 
-const LEVELS = [
-  { code: 'A1', name: 'Adaptação ao Meio Aquático', ageRange: '7–15 anos', orderIndex: 1 },
-  { code: 'A1+', name: 'Introdução às técnicas de Crol e Costas', ageRange: '7–15 anos', orderIndex: 2 },
-  { code: 'A2', name: 'Adaptação', ageRange: '7–15 anos', orderIndex: 3 },
-  { code: 'A2+', name: 'Introdução Crol/Costas', ageRange: '7–15 anos', orderIndex: 4 },
-  { code: 'B1', name: 'Crol e costas, introdução ao bruços', ageRange: '8–15 anos', orderIndex: 5 },
-  { code: 'B2', name: 'Mariposa, bruços, estafetas', ageRange: '8–15 anos', orderIndex: 6 },
-  { code: 'C', name: 'Bruços, viragem de bruços, velocidade', ageRange: '9–16 anos', orderIndex: 7 },
-  { code: 'D', name: 'Mariposa, estilos, ritmo', ageRange: '9–16 anos', orderIndex: 8 },
-]
+// Programa do clube (níveis, conteúdos e exercícios exemplo), gerado por scripts/cfp/build.mjs.
+type CfpProgram = {
+  levels: { code: string; name: string; age_range: string; duration_min: number; max_students: number; order_index: number }[]
+  contents: Record<string, unknown>[]
+  exercises: Record<string, unknown>[]
+}
+const CFP = JSON.parse(readFileSync('scripts/cfp/seed/cfp-program.json', 'utf8')) as CfpProgram
 
 const toCamel = (key: string) => key.replace(/_([a-z])/g, (_, c: string) => c.toUpperCase())
 
-// Campos da biblioteca (snake_case no JSON de seed) -> colunas camelCase da tabela.
-function toRow(item: Record<string, unknown>) {
-  const columns = new Set(Object.keys(schema.exercise))
+// Campos do JSON de seed (snake_case) -> colunas camelCase da tabela.
+function toRow(item: Record<string, unknown>, table: object = schema.exercise) {
+  const columns = new Set(Object.keys(table))
   const row: Record<string, unknown> = {}
   for (const [key, value] of Object.entries(item)) {
     const camel = toCamel(key)
@@ -86,21 +84,52 @@ async function seedUsers() {
 async function main() {
   await seedUsers()
 
-  for (const level of LEVELS) {
+  for (const level of CFP.levels) {
+    const values = {
+      name: level.name,
+      durationMin: level.duration_min,
+      maxStudents: level.max_students,
+      ageRange: level.age_range,
+      orderIndex: level.order_index,
+    }
     await db
       .insert(schema.level)
-      .values({
-        id: randomUUID(),
-        code: level.code,
-        name: level.name,
-        durationMin: 45,
-        maxStudents: 8,
-        ageRange: level.ageRange,
-        orderIndex: level.orderIndex,
-      })
-      .onConflictDoNothing({ target: schema.level.code })
+      .values({ id: randomUUID(), code: level.code, ...values })
+      .onConflictDoUpdate({ target: schema.level.code, set: values })
   }
-  console.log(`Turmas: ${LEVELS.length} (existentes ignoradas)`)
+  console.log(`Turmas: ${CFP.levels.length} (atualizadas com o programa CFP)`)
+
+  for (const content of CFP.contents) {
+    const row = toRow(content, schema.levelContent) as typeof schema.levelContent.$inferInsert
+    await db
+      .insert(schema.levelContent)
+      .values({ ...row, id: content.id as string })
+      .onConflictDoUpdate({ target: schema.levelContent.id, set: row })
+  }
+  console.log(`Conteúdos: ${CFP.contents.length} (atualizados)`)
+
+  let cfpInserted = 0
+  let cfpUpdated = 0
+  for (const item of CFP.exercises) {
+    const code = item.code as string
+    const row = toRow(item)
+    const [existing] = await db
+      .select({ id: schema.exercise.id })
+      .from(schema.exercise)
+      .where(eq(schema.exercise.code, code))
+      .limit(1)
+    if (existing) {
+      await db
+        .update(schema.exercise)
+        .set({ ...row, updatedAt: new Date() } as never)
+        .where(eq(schema.exercise.id, existing.id))
+      cfpUpdated += 1
+    } else {
+      await db.insert(schema.exercise).values({ ...row, id: randomUUID(), code } as never)
+      cfpInserted += 1
+    }
+  }
+  console.log(`Exercícios do programa: ${cfpInserted} inseridos, ${cfpUpdated} atualizados`)
 
   const library = JSON.parse(
     readFileSync('scripts/library/seed/exercise-library.json', 'utf8'),

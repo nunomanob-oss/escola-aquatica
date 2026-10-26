@@ -13,6 +13,7 @@ const server = () => Promise.all([import('@/db'), import('@/lib/auth')]).then(([
 const TABLES = {
   Level: schema.level,
   Exercise: schema.exercise,
+  LevelContent: schema.levelContent,
   WorkoutSheet: schema.workoutSheet,
   ClassSummary: schema.classSummary,
 } as const
