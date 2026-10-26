@@ -85,7 +85,7 @@ async function seedUsers() {
 const IMAGES_DIR = 'public/exercicios'
 
 async function seedImages() {
-  const files = existsSync(IMAGES_DIR) ? readdirSync(IMAGES_DIR).filter((f) => /\.(png|webp|jpe?g)$/i.test(f)) : []
+  const files = existsSync(IMAGES_DIR) ? readdirSync(IMAGES_DIR).filter((f) => /\.(png|webp|jpe?g|svg)$/i.test(f)) : []
   let linked = 0
   for (const file of files) {
     const code = file.replace(/\.[^.]+$/, '')
