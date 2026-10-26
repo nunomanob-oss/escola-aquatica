@@ -87,8 +87,38 @@ export const level = pgTable('level', {
   durationMin: integer('duration_min'),
   maxStudents: integer('max_students'),
   ageRange: text('age_range'),
+  stage: text('stage'),
+  space: text('space'),
+  requirements: text('requirements'),
+  // Períodos de calendarização do nível (ex.: SET-DEZ, JAN-ABR, ABR-JUL).
+  periods: text('periods').array().notNull().default([]),
   orderIndex: integer('order_index').notNull().default(0),
 })
+
+// Conteúdos do programa de cada turma (por bloco e período), com os códigos dos exercícios exemplo.
+export const levelContent = pgTable(
+  'level_content',
+  {
+    id: text('id').primaryKey(),
+    levelCode: text('level_code').notNull(),
+    number: text('number'),
+    block: text('block'),
+    title: text('title').notNull(),
+    // Período de introdução (ex.: SET-JAN).
+    period: text('period'),
+    // Todos os períodos em que é lecionado e os que são só de continuidade/consolidação.
+    periods: text('periods').array().notNull().default([]),
+    continuity: text('continuity').array().notNull().default([]),
+    startMonth: text('start_month'),
+    // Meses em que o conteúdo é lecionado (Set … Jul).
+    months: text('months').array().notNull().default([]),
+    // "Relatório" ou "Proposta" (calendarização sugerida quando o relatório não a marca).
+    source: text('source'),
+    exerciseCodes: text('exercise_codes').array().notNull().default([]),
+    orderIndex: integer('order_index').notNull().default(0),
+  },
+  (table) => [index('level_content_level_idx').on(table.levelCode)],
+)
 
 export const exercise = pgTable(
   'exercise',
@@ -144,23 +174,6 @@ export const exercise = pgTable(
     index('exercise_level_id_idx').on(table.levelId),
     index('exercise_order_idx').on(table.orderIndex),
   ],
-)
-
-// Conteúdos do programa de cada turma (por bloco e período), com os códigos dos exercícios exemplo.
-export const levelContent = pgTable(
-  'level_content',
-  {
-    id: text('id').primaryKey(),
-    levelCode: text('level_code').notNull(),
-    number: text('number'),
-    block: text('block'),
-    title: text('title').notNull(),
-    period: text('period'),
-    months: text('months').array().notNull().default([]),
-    exerciseCodes: text('exercise_codes').array().notNull().default([]),
-    orderIndex: integer('order_index').notNull().default(0),
-  },
-  (table) => [index('level_content_level_idx').on(table.levelCode)],
 )
 
 export const workoutSheet = pgTable(

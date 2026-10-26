@@ -4,7 +4,7 @@
 import { randomUUID } from 'node:crypto'
 import { existsSync, readdirSync, readFileSync } from 'node:fs'
 import { hashPassword } from 'better-auth/crypto'
-import { eq } from 'drizzle-orm'
+import { and, eq } from 'drizzle-orm'
 import { db, schema } from '../src/db'
 
 const DEMO_USERS = [
@@ -29,6 +29,20 @@ type CfpProgram = {
   exercises: Record<string, unknown>[]
 }
 const CFP = JSON.parse(readFileSync('scripts/cfp/seed/cfp-program.json', 'utf8')) as CfpProgram
+
+// Calendarização detalhada por nível (Excel base_dados_niveis_CFP.xlsx -> scripts/niveis/xlsx-to-json.py).
+type Niveis = {
+  levels: { code: string; stage: string | null; space: string | null; requirements: string | null; periods: string[] }[]
+  contents: {
+    level_code: string
+    number: string
+    periods: string[]
+    continuity: string[]
+    start_month: string | null
+    source: string | null
+  }[]
+}
+const NIVEIS = JSON.parse(readFileSync('scripts/niveis/niveis-cfp.json', 'utf8')) as Niveis
 
 const toCamel = (key: string) => key.replace(/_([a-z])/g, (_, c: string) => c.toUpperCase())
 
@@ -85,7 +99,7 @@ async function seedUsers() {
 const IMAGES_DIR = 'public/exercicios'
 
 async function seedImages() {
-  const files = existsSync(IMAGES_DIR) ? readdirSync(IMAGES_DIR).filter((f) => /\.(png|webp|jpe?g)$/i.test(f)) : []
+  const files = existsSync(IMAGES_DIR) ? readdirSync(IMAGES_DIR).filter((f) => /\.(png|webp|jpe?g|svg)$/i.test(f)) : []
   let linked = 0
   for (const file of files) {
     const code = file.replace(/\.[^.]+$/, '')
@@ -97,6 +111,31 @@ async function seedImages() {
     linked += rows.length
   }
   console.log(`Ilustrações: ${linked} exercícios com imagem (${files.length} ficheiros em ${IMAGES_DIR})`)
+}
+
+// Completa níveis e conteúdos do programa com a calendarização do Excel (por código do nível e nº do conteúdo).
+async function seedCalendar() {
+  for (const level of NIVEIS.levels) {
+    await db
+      .update(schema.level)
+      .set({ stage: level.stage, space: level.space, requirements: level.requirements, periods: level.periods })
+      .where(eq(schema.level.code, level.code))
+  }
+  let matched = 0
+  for (const content of NIVEIS.contents) {
+    const rows = await db
+      .update(schema.levelContent)
+      .set({
+        periods: content.periods,
+        continuity: content.continuity,
+        startMonth: content.start_month,
+        source: content.source,
+      })
+      .where(and(eq(schema.levelContent.levelCode, content.level_code), eq(schema.levelContent.number, content.number)))
+      .returning({ id: schema.levelContent.id })
+    matched += rows.length
+  }
+  console.log(`Calendarização: ${matched} de ${NIVEIS.contents.length} conteúdos atualizados`)
 }
 
 async function main() {
@@ -125,6 +164,7 @@ async function main() {
       .onConflictDoUpdate({ target: schema.levelContent.id, set: row })
   }
   console.log(`Conteúdos: ${CFP.contents.length} (atualizados)`)
+  await seedCalendar()
 
   let cfpInserted = 0
   let cfpUpdated = 0

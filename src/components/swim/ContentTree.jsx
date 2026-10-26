@@ -21,7 +21,7 @@ function Difficulty({ rating }) {
   );
 }
 
-function ExampleNode({ exercise, levelCode, inLesson, onToggle, onOpen }) {
+export function ExampleNode({ exercise, levelCode, inLesson, onToggle, onOpen }) {
   const elsewhere = (exercise.turmas || []).filter((t) => t !== levelCode);
 
   return (

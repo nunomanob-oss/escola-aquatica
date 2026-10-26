@@ -6,7 +6,7 @@ export default function TurmaBadge({ code }) {
   const color = ringColor(code);
   return (
     <span
-      className="w-9 h-9 shrink-0 rounded-[9px] flex items-center justify-center text-[13px] font-semibold"
+      className="min-w-9 h-9 px-1.5 shrink-0 rounded-[9px] flex items-center justify-center text-[13px] font-semibold whitespace-nowrap"
       style={{ backgroundColor: `${color}2E`, color }}
     >
       {code}
