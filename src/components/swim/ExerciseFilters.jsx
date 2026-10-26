@@ -15,7 +15,7 @@ import {
   EQUIPMENT_OPTIONS,
   STYLE_OPTIONS,
 } from "./exerciseMeta";
-import { hasActiveFilters } from "./libraryQuery";
+import { SOURCE_OPTIONS, hasActiveFilters } from "./libraryQuery";
 
 const ALL = "__all";
 const fieldStyles = "bg-[#062b16] border-[#186a35] text-white placeholder:text-[#9bd0a8]";
@@ -57,7 +57,13 @@ export default function ExerciseFilters({ filters, onChange, onClear }) {
           />
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+          <FilterSelect
+            value={filters.source}
+            onChange={set("source")}
+            placeholder="Origem"
+            options={SOURCE_OPTIONS}
+          />
           <FilterSelect
             value={filters.style}
             onChange={set("style")}
