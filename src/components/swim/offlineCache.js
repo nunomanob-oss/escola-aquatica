@@ -3,6 +3,7 @@
 export const CACHE_KEYS = {
   levels: "swim_cache_levels",
   exercises: "swim_cache_exercises",
+  contents: "swim_cache_contents",
   sheets: "swim_cache_sheets",
   summaries: "swim_cache_summaries",
   publicSettings: "swim_cache_public_settings",

@@ -96,6 +96,8 @@ export const exercise = pgTable(
     id: text('id').primaryKey(),
     title: text('title').notNull(),
     code: text('code'),
+    // Origem: 'CFP' para os exemplos do programa do clube; vazio para a biblioteca técnica e personalizados.
+    source: text('source'),
     description: text('description'),
     primaryObjective: text('primary_objective'),
     content: text('content'),
@@ -113,6 +115,11 @@ export const exercise = pgTable(
     variations: text('variations').array().notNull().default([]),
     difficultyRating: integer('difficulty_rating'),
     commonMistakes: text('common_mistakes'),
+    organization: text('organization'),
+    successCriteria: text('success_criteria'),
+    progression: text('progression'),
+    regression: text('regression'),
+    ageAdaptation: text('age_adaptation'),
     coachingCues: text('coaching_cues'),
     videoUrl: text('video_url'),
     imageDiagram: text('image_diagram'),
@@ -137,6 +144,23 @@ export const exercise = pgTable(
     index('exercise_level_id_idx').on(table.levelId),
     index('exercise_order_idx').on(table.orderIndex),
   ],
+)
+
+// Conteúdos do programa de cada turma (por bloco e período), com os códigos dos exercícios exemplo.
+export const levelContent = pgTable(
+  'level_content',
+  {
+    id: text('id').primaryKey(),
+    levelCode: text('level_code').notNull(),
+    number: text('number'),
+    block: text('block'),
+    title: text('title').notNull(),
+    period: text('period'),
+    months: text('months').array().notNull().default([]),
+    exerciseCodes: text('exercise_codes').array().notNull().default([]),
+    orderIndex: integer('order_index').notNull().default(0),
+  },
+  (table) => [index('level_content_level_idx').on(table.levelCode)],
 )
 
 export const workoutSheet = pgTable(
@@ -165,6 +189,7 @@ export const classSummary = pgTable(
     date: date('date', { mode: 'string' }).notNull(),
     levelId: text('level_id').notNull(),
     exerciseIds: text('exercise_ids').array().notNull().default([]),
+    contentIds: text('content_ids').array().notNull().default([]),
     notes: text('notes'),
     createdById: text('created_by_id').references(() => user.id, { onDelete: 'set null' }),
     createdAt: timestamp('created_at').notNull().defaultNow(),

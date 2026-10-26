@@ -4,16 +4,20 @@ import LevelTabs from "@/components/swim/LevelTabs";
 import ExerciseList from "@/components/swim/ExerciseList";
 import SummaryPanel from "@/components/swim/SummaryPanel";
 import AppNav from "@/components/swim/AppNav";
+import ContentTree from "@/components/swim/ContentTree";
+import FilterChipRow from "@/components/swim/FilterChipRow";
+import ExerciseDetailDialog from "@/components/swim/ExerciseDetailDialog";
+import { CACHE_KEYS, fetchAll, loadWithCache } from "@/components/swim/offlineCache";
 
-const CACHE_KEYS = {
-  levels: "swim_cache_levels",
-  categories: "swim_cache_categories",
-  exercises: "swim_cache_exercises",
-};
+const MONTHS = ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"];
+const CURRENT_MONTH = MONTHS[new Date().getMonth()];
 
 export default function Home() {
   const [levels, setLevels] = useState([]);
   const [exercises, setExercises] = useState([]);
+  const [contents, setContents] = useState([]);
+  const [onlyThisMonth, setOnlyThisMonth] = useState(false);
+  const [openExercise, setOpenExercise] = useState(null);
   const [activeCode, setActiveCode] = useState(
     () => localStorage.getItem("swim_active_level") || "A1"
   );
@@ -21,28 +25,19 @@ export default function Home() {
   const [selectedIds, setSelectedIds] = useState(new Set());
 
   useEffect(() => {
-    async function load() {
-      try {
-        const [lvlRes, exRes] = await Promise.all([
-          entities.Level.list({ limit: 100 }),
-          entities.Exercise.list({ limit: 500 }),
-        ]);
-        const lvl = lvlRes.items || [];
-        const ex = exRes.items || [];
+    // Rede primeiro; sem rede, usa a última cópia guardada no dispositivo.
+    const list = (key, loader) => loadWithCache(key, loader).catch(() => []);
+    Promise.all([
+      list(CACHE_KEYS.levels, async () => (await entities.Level.list({ limit: 100 })).items || []),
+      list(CACHE_KEYS.exercises, () => fetchAll(entities.Exercise, {}, "order_index")),
+      list(CACHE_KEYS.contents, () => fetchAll(entities.LevelContent, {}, "order_index")),
+    ])
+      .then(([lvl, ex, cnt]) => {
         setLevels(lvl);
         setExercises(ex);
-        localStorage.setItem(CACHE_KEYS.levels, JSON.stringify(lvl));
-        localStorage.setItem(CACHE_KEYS.exercises, JSON.stringify(ex));
-      } catch (e) {
-        const lvl = JSON.parse(localStorage.getItem(CACHE_KEYS.levels) || "[]");
-        const ex = JSON.parse(localStorage.getItem(CACHE_KEYS.exercises) || "[]");
-        setLevels(lvl);
-        setExercises(ex);
-      } finally {
-        setLoading(false);
-      }
-    }
-    load();
+        setContents(cnt);
+      })
+      .finally(() => setLoading(false));
   }, []);
 
   useEffect(() => {
@@ -68,7 +63,21 @@ export default function Home() {
     [exercises, activeCode]
   );
 
-  const toggleExercise = (id) => {
+  const exercisesByCode = useMemo(
+    () => Object.fromEntries(exercises.filter((e) => e.code).map((e) => [e.code, e])),
+    [exercises]
+  );
+
+  const levelContents = useMemo(
+    () =>
+      contents
+        .filter((c) => c.level_code === activeCode)
+        .filter((c) => !onlyThisMonth || (c.months || []).includes(CURRENT_MONTH))
+        .sort((a, b) => (a.order_index || 0) - (b.order_index || 0)),
+    [contents, activeCode, onlyThisMonth]
+  );
+
+  const toggleSelected = (id) => {
     setSelectedIds((prev) => {
       const next = new Set(prev);
       if (next.has(id)) next.delete(id);
@@ -83,7 +92,8 @@ export default function Home() {
     localStorage.setItem(`swim_selection_${activeCode}`, JSON.stringify([]));
   };
 
-  const selectedExercises = levelExercises.filter((e) => selectedIds.has(e.id));
+  const selectedContents = contents.filter((c) => c.level_code === activeCode && selectedIds.has(c.id));
+  const selectedExercises = exercises.filter((e) => selectedIds.has(e.id));
   const activeLevel = sortedLevels.find((l) => l.code === activeCode);
 
   if (loading) {
@@ -103,7 +113,7 @@ export default function Home() {
           Escola Aquática
         </h1>
         <p className="text-[#9bd0a8] text-sm mt-1">
-          Seleciona a turma e marca os exercícios dados na aula de hoje
+          Seleciona a turma, marca os conteúdos da aula de hoje e abre os exemplos de exercícios
         </p>
       </header>
 
@@ -118,14 +128,57 @@ export default function Home() {
           </div>
         )}
 
-        <ExerciseList
-          exercises={levelExercises}
-          selectedIds={selectedIds}
-          onToggle={toggleExercise}
+        <FilterChipRow
+          items={[
+            { value: false, label: "Todo o ano" },
+            { value: true, label: `Este mês (${CURRENT_MONTH})` },
+          ]}
+          activeValue={onlyThisMonth}
+          onSelect={setOnlyThisMonth}
         />
+
+        <div className="mt-4">
+          {levelContents.length > 0 ? (
+            <ContentTree
+              contents={levelContents}
+              exercisesByCode={exercisesByCode}
+              levelCode={activeCode}
+              selectedIds={selectedIds}
+              onToggle={toggleSelected}
+              onOpenExercise={setOpenExercise}
+            />
+          ) : (
+            levelExercises.length === 0 && (
+              <p className="text-[#9bd0a8] text-sm py-16 text-center">
+                {onlyThisMonth ? "Sem conteúdos para este mês." : "Sem conteúdos para esta turma."}
+              </p>
+            )
+          )}
+        </div>
+
+        {levelExercises.length > 0 && (
+          <div className="mt-8">
+            <h2 className="text-[#9bd0a8] text-xs font-semibold uppercase tracking-wider mb-2">
+              Outros exercícios da turma
+            </h2>
+            <ExerciseList exercises={levelExercises} selectedIds={selectedIds} onToggle={toggleSelected} />
+          </div>
+        )}
       </main>
 
-      <SummaryPanel level={activeLevel} selectedExercises={selectedExercises} onClear={clearSelection} />
+      <SummaryPanel
+        level={activeLevel}
+        selectedContents={selectedContents}
+        selectedExercises={selectedExercises}
+        onClear={clearSelection}
+      />
+
+      <ExerciseDetailDialog
+        exercise={openExercise}
+        onClose={() => setOpenExercise(null)}
+        levels={sortedLevels}
+        onDuplicated={() => {}}
+      />
     </div>
   );
 }

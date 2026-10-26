@@ -15,6 +15,7 @@ import DetailBlock from "./DetailBlock";
 import ExerciseFormatBlock from "./ExerciseFormatBlock";
 import ExerciseListBlock from "./ExerciseListBlock";
 import Demo3DBlock from "./demo3d/Demo3DBlock";
+import ProgressionSteps from "./ProgressionSteps";
 import { EQUIPMENT_ICONS } from "./exerciseMeta";
 
 function embedUrl(url) {
@@ -118,6 +119,15 @@ export default function ExerciseDetailDialog({ exercise, onClose, levels, onDupl
                 {style}
               </span>
             ))}
+            {exercise.source === "CFP" &&
+              (exercise.turmas || []).map((turma) => (
+                <span
+                  key={turma}
+                  className="text-[10px] px-2 py-0.5 rounded-full bg-white/10 text-[#d8f0da]"
+                >
+                  {turma}
+                </span>
+              ))}
             {athleteLevels.map((level) => (
               <span
                 key={level}
@@ -155,9 +165,33 @@ export default function ExerciseDetailDialog({ exercise, onClose, levels, onDupl
             </Block>
           )}
 
+          {exercise.organization && (
+            <Block title="Organização">
+              <p className="text-sm text-[#d8f0da] leading-relaxed">{exercise.organization}</p>
+            </Block>
+          )}
+
           <ExerciseFormatBlock exercise={exercise} />
 
           <ExerciseListBlock title="Passo a Passo" items={exercise.instructions} numbered />
+
+          {exercise.success_criteria && (
+            <Block title="Critério de Êxito">
+              <p className="text-sm text-[#d8f0da] leading-relaxed">{exercise.success_criteria}</p>
+            </Block>
+          )}
+
+          {(exercise.regression || exercise.progression) && (
+            <Block title="Regressão e Progressão">
+              <ProgressionSteps exercise={exercise} />
+            </Block>
+          )}
+
+          {exercise.age_adaptation && (
+            <Block title="Adaptação à Idade">
+              <p className="text-sm text-[#d8f0da] leading-relaxed">{exercise.age_adaptation}</p>
+            </Block>
+          )}
 
           {exercise.common_mistakes && (
             <Block title="Erros Comuns e Correções">
