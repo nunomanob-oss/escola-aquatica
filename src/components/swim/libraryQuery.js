@@ -1,10 +1,22 @@
 import { TURMA_LEVEL } from "./exerciseMeta";
 
-export const EMPTY_FILTERS = { q: "", style: "", category: "", equipment: "", level: "" };
+export const EMPTY_FILTERS = { q: "", style: "", category: "", equipment: "", level: "", source: "" };
+
+// Origem de cada exercício, para o filtro "Origem".
+export const SOURCE_OPTIONS = ["Programa do clube", "Biblioteca técnica", "Personalizados"];
+export function sourceOf(exercise) {
+  if (exercise.is_custom) return "Personalizados";
+  return exercise.source === "CFP" ? "Programa do clube" : "Biblioteca técnica";
+}
 
 export function hasActiveFilters(filters) {
   return Boolean(
-    filters.q.trim() || filters.style || filters.category || filters.equipment || filters.level
+    filters.q.trim() ||
+      filters.style ||
+      filters.category ||
+      filters.equipment ||
+      filters.level ||
+      filters.source
   );
 }
 
@@ -17,6 +29,7 @@ export function matchesFilters(exercise, filters) {
   if (filters.category && exercise.category !== filters.category) return false;
   if (filters.equipment && !includes(exercise.equipment_required, filters.equipment)) return false;
   if (filters.level && !includes(exercise.level, filters.level)) return false;
+  if (filters.source && sourceOf(exercise) !== filters.source) return false;
 
   const term = filters.q.trim().toLocaleLowerCase("pt-PT");
   if (term) {

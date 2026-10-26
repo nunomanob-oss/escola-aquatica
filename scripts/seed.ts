@@ -2,7 +2,7 @@
 // Uso: npm run db:seed   (idempotente: emails e códigos BIB-… já existentes são ignorados;
 // níveis, conteúdos e exercícios EX-… do programa CFP são atualizados com a versão do JSON)
 import { randomUUID } from 'node:crypto'
-import { readFileSync } from 'node:fs'
+import { existsSync, readdirSync, readFileSync } from 'node:fs'
 import { hashPassword } from 'better-auth/crypto'
 import { eq } from 'drizzle-orm'
 import { db, schema } from '../src/db'
@@ -81,6 +81,24 @@ async function seedUsers() {
   }
 }
 
+// Ilustrações: public/exercicios/<CÓDIGO>.png (ou .webp/.jpg) fica como imagem do exercício com esse código.
+const IMAGES_DIR = 'public/exercicios'
+
+async function seedImages() {
+  const files = existsSync(IMAGES_DIR) ? readdirSync(IMAGES_DIR).filter((f) => /\.(png|webp|jpe?g)$/i.test(f)) : []
+  let linked = 0
+  for (const file of files) {
+    const code = file.replace(/\.[^.]+$/, '')
+    const rows = await db
+      .update(schema.exercise)
+      .set({ imageDiagram: `/exercicios/${file}` })
+      .where(eq(schema.exercise.code, code))
+      .returning({ id: schema.exercise.id })
+    linked += rows.length
+  }
+  console.log(`Ilustrações: ${linked} exercícios com imagem (${files.length} ficheiros em ${IMAGES_DIR})`)
+}
+
 async function main() {
   await seedUsers()
 
@@ -151,6 +169,8 @@ async function main() {
     inserted += 1
   }
   console.log(`Biblioteca: ${inserted} inseridos, ${skipped} já existiam`)
+
+  await seedImages()
   process.exit(0)
 }
 

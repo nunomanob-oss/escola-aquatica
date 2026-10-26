@@ -1,6 +1,7 @@
 import React, { useMemo, useState } from "react";
 import { Check, ChevronDown, Eye, Lightbulb, Plus } from "lucide-react";
 import { Checkbox } from "@/components/ui/checkbox";
+import { Image } from "@/components/ui/image";
 import ProgressionSteps from "./ProgressionSteps";
 
 const PERIOD_BADGE = "bg-amber-400/15 text-amber-300 border-amber-400/30";
@@ -26,6 +27,11 @@ function ExampleNode({ exercise, levelCode, inLesson, onToggle, onOpen }) {
   return (
     <li className={branch}>
       <div className="rounded-lg bg-[#062b16] p-3">
+        {exercise.image_diagram && (
+          <button type="button" onClick={() => onOpen(exercise)} className="block w-full mb-3 rounded-md overflow-hidden">
+            <Image src={exercise.image_diagram} alt={exercise.title} className="w-full aspect-[3/2]" />
+          </button>
+        )}
         <button
           type="button"
           onClick={() => onOpen(exercise)}

@@ -74,3 +74,12 @@ Para atualizar depois de mudar a base do clube:
 1. Substituir `scripts/cfp/data/CFP_extracao.sqlite`.
 2. `node scripts/cfp/build.mjs` — valida e regenera `scripts/cfp/seed/cfp-program.json` (corrige "quadril" → "anca").
 3. `npm run db:migrate && npm run db:seed` — atualiza níveis, conteúdos e exemplos `EX-…` com a versão nova.
+
+## Ilustrações dos exercícios
+
+As imagens ficam em `public/exercicios/`, com o código do exercício como nome (`EX-001.png`, `BIB-INI-001.png`; também `.webp` ou `.jpg`).
+
+1. Copiar as imagens para `public/exercicios/` (por exemplo, as de `biblioteca/imagens/` do `CFP_entrega.zip`).
+2. `npm run db:seed` — liga cada imagem ao exercício com o mesmo código.
+
+A imagem aparece na ficha do exercício e, no ecrã Conteúdos, em cada exemplo da árvore. O formato esperado é horizontal 3:2.
