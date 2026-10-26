@@ -22,8 +22,10 @@ const fieldStyles = "bg-[#062b16] border-[#186a35] text-white placeholder:text-[
 const menuStyles = "bg-[#0d3f22] border-[#186a35] text-white";
 
 function FilterSelect({ value, onChange, placeholder, options }) {
+  // Sem `items`, o Select mostra o valor interno ("__all") em vez do rótulo.
+  const items = [{ value: ALL, label: placeholder }, ...options.map((option) => ({ value: option, label: option }))];
   return (
-    <Select value={value || ALL} onValueChange={(next) => onChange(next === ALL ? "" : next)}>
+    <Select items={items} value={value || ALL} onValueChange={(next) => onChange(next === ALL ? "" : next)}>
       <SelectTrigger className={fieldStyles}>
         <SelectValue placeholder={placeholder} />
       </SelectTrigger>

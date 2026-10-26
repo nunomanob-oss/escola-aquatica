@@ -25,15 +25,17 @@ export default function Painel() {
   // Tudo com cache: o Painel abre sem rede com os últimos dados guardados.
   const load = useCallback(async () => {
     const safe = (p) => p.catch(() => []);
-    const [levels, exercises, sheets, summaries] = await Promise.all([
+    const [levels, exercises, contents, sheets, summaries] = await Promise.all([
       safe(loadWithCache(CACHE_KEYS.levels, async () => listOf(await entities.Level.list({ limit: 100 })))),
       safe(loadWithCache(CACHE_KEYS.exercises, () => fetchAll(entities.Exercise, {}, "order_index"))),
+      safe(loadWithCache(CACHE_KEYS.contents, () => fetchAll(entities.LevelContent, {}, "order_index"))),
       safe(loadWithCache(CACHE_KEYS.sheets, () => fetchAll(entities.WorkoutSheet, {}, "-session_date"))),
       safe(loadWithCache(CACHE_KEYS.summaries, () => fetchAll(entities.ClassSummary, {}, "-date"))),
     ]);
     setData({
       levels: [...levels].sort((a, b) => (a.order_index || 0) - (b.order_index || 0)),
       exercises,
+      contents,
       sheets: applyPending("WorkoutSheet", sheets),
       summaries: applyPending("ClassSummary", summaries),
     });
@@ -57,7 +59,7 @@ export default function Painel() {
     () =>
       (data?.levels || []).map((level) => ({
         level,
-        coverage: programCoverage(data.exercises, data.summaries, level.code),
+        coverage: programCoverage(data.exercises, data.summaries, level.code, new Date(), data.contents),
       })),
     [data]
   );
