@@ -79,7 +79,9 @@ Para atualizar depois de mudar a base do clube:
 
 As imagens ficam em `public/exercicios/`, com o código do exercício como nome (`EX-001.png`, `BIB-INI-001.png`; também `.webp` ou `.jpg`).
 
-1. Copiar as imagens para `public/exercicios/` (por exemplo, as de `biblioteca/imagens/` do `CFP_entrega.zip`).
+1. Copiar as imagens para `public/exercicios/` (por exemplo, as de `biblioteca/imagens/` do `CFP_entrega.zip`). Uma imagem com o mesmo código noutro formato (por exemplo `.png` em vez de `.jpg`) deve substituir a anterior, e não ficar ao lado dela.
 2. `npm run db:seed` — liga cada imagem ao exercício com o mesmo código.
 
 A imagem aparece na ficha do exercício e, no ecrã Conteúdos, em cada exemplo da árvore. O formato esperado é horizontal 3:2.
+
+As 151 imagens atuais dos exemplos `EX-…` (`.jpg`, 320 px de largura) vêm da aba "Ilustrações" de `biblioteca_exercicios_CFP.xlsx`. Quando houver os PNG em tamanho real, substituem-nas: apagar o `.jpg` com o mesmo código antes de correr o seed.

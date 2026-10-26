@@ -18,7 +18,7 @@ export default function ExerciseInfographic({ exercise }) {
             src={url}
             alt={exercise.title}
             fittingType="fit"
-            className="w-full aspect-[3/2]"
+            className="w-full h-auto"
           />
         </div>
       ) : (

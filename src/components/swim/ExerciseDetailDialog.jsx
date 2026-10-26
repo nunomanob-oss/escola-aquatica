@@ -29,6 +29,8 @@ function MediaBlock({ exercise }) {
   const url = exercise.video_url;
 
   if (!url) {
+    // Com ilustração, a falta de vídeo não precisa de aviso.
+    if (exercise.image_diagram) return null;
     return <p className="text-[11px] text-[#9bd0a8]">Sem vídeo associado a este exercício.</p>;
   }
 
