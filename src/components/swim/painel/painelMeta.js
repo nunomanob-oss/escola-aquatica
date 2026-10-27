@@ -2,7 +2,8 @@
 
 // Cor do sistema (modo escuro do iOS) por etapa de aprendizagem.
 const STAGE_COLOR = { A: "#40C8E0", B: "#0A84FF", C: "#5E5CE6", D: "#5E5CE6" };
-export const ringColor = (code) => STAGE_COLOR[code?.[0]] || "#0A84FF";
+export const ringColor = (code) =>
+  code?.startsWith("Bebés") ? "#FF9F0A" : code === "Avançado" ? "#BF5AF2" : STAGE_COLOR[code?.[0]] || "#0A84FF";
 
 const iso = (d) => d.toISOString().slice(0, 10);
 

@@ -1,0 +1,5666 @@
+{
+  "levels": [
+    {
+      "code": "Bebés 1",
+      "stage": "Iniciação / 1.ª infância (com acompanhante)",
+      "age_range": "6–24 meses",
+      "duration_min": 30,
+      "space": "Tanque de Aprendizagem",
+      "max_students": 8,
+      "requirements": "Idade entre 6 e 24 meses; sessão com acompanhante",
+      "periods": [
+        "SET-DEZ",
+        "JAN-MAR",
+        "ABR-JUL"
+      ],
+      "order_index": 1
+    },
+    {
+      "code": "Bebés 2",
+      "stage": "Iniciação / 1.ª infância (com acompanhante)",
+      "age_range": "24–48 meses",
+      "duration_min": 30,
+      "space": "Tanque de Aprendizagem",
+      "max_students": 8,
+      "requirements": "Idade entre 24 e 48 meses a iniciar, ou transição de Bebés 1 aos 24 meses",
+      "periods": [
+        "SET-DEZ",
+        "JAN-MAR",
+        "ABR-JUL"
+      ],
+      "order_index": 2
+    },
+    {
+      "code": "A1",
+      "stage": "Etapa 1 – Adaptação ao meio aquático e introdução de crol e costas",
+      "age_range": "4–6 anos",
+      "duration_min": 45,
+      "space": "Tanque de Aprendizagem",
+      "max_students": 8,
+      "requirements": "4–6 anos a iniciar, ou transição de Bebés 2 (48 meses até ao final do ano civil)",
+      "periods": [
+        "SET-JAN",
+        "FEV-JUL"
+      ],
+      "order_index": 3
+    },
+    {
+      "code": "A1+",
+      "stage": "Etapa 1 – Adaptação ao meio aquático e introdução de crol e costas",
+      "age_range": "4–6 anos",
+      "duration_min": 45,
+      "space": "Tanque de Aprendizagem",
+      "max_students": 8,
+      "requirements": "4–6 anos com autonomia no meio aquático (imersão da face, equilíbrio, flutuação, deslize, ação alternada dos MI)",
+      "periods": [
+        "SET-JAN",
+        "FEV-JUL"
+      ],
+      "order_index": 4
+    },
+    {
+      "code": "A2",
+      "stage": "Etapa 1 – Adaptação ao meio aquático e introdução de crol e costas",
+      "age_range": "7–15 anos",
+      "duration_min": 45,
+      "space": "Tanque de Aprendizagem",
+      "max_students": 8,
+      "requirements": "7–15 anos a iniciar, ou transição de A1 aos 7 anos",
+      "periods": [
+        "SET-JAN",
+        "FEV-JUL"
+      ],
+      "order_index": 5
+    },
+    {
+      "code": "A2+",
+      "stage": "Etapa 1 – Adaptação ao meio aquático e introdução de crol e costas",
+      "age_range": "7–15 anos",
+      "duration_min": 45,
+      "space": "Tanque de Aprendizagem",
+      "max_students": 8,
+      "requirements": "7–15 anos com autonomia no meio aquático, ou transição de A1+/A1/A2",
+      "periods": [
+        "SET-JAN",
+        "FEV-JUL"
+      ],
+      "order_index": 6
+    },
+    {
+      "code": "B1",
+      "stage": "Etapa 2 – Habilidades aquáticas básicas",
+      "age_range": "4–6 anos",
+      "duration_min": 45,
+      "space": "Pista 25 m",
+      "max_students": 8,
+      "requirements": "4–6 anos com autonomia aquática e coordenação de MI, MS e respiração em crol e costas",
+      "periods": [
+        "SET-DEZ",
+        "JAN-ABR",
+        "ABR-JUL"
+      ],
+      "order_index": 7
+    },
+    {
+      "code": "B2",
+      "stage": "Etapa 2 – Habilidades aquáticas básicas",
+      "age_range": "7–15 anos",
+      "duration_min": 45,
+      "space": "Pista 25 m",
+      "max_students": 8,
+      "requirements": "7–15 anos com autonomia aquática, ou transição de B1 aos 7 anos",
+      "periods": [
+        "SET-DEZ",
+        "JAN-ABR",
+        "ABR-JUL"
+      ],
+      "order_index": 8
+    },
+    {
+      "code": "C",
+      "stage": "Etapa 2 – Habilidades aquáticas básicas",
+      "age_range": "6–15 anos",
+      "duration_min": 45,
+      "space": "Tanque de Aprendizagem",
+      "max_students": 8,
+      "requirements": "Transição de B1/B2: crol e costas corrigidos, viragem de rolamento, partida de cabeça, MI bruços c/ respiração",
+      "periods": [
+        "SET-DEZ",
+        "JAN-ABR",
+        "ABR-JUL"
+      ],
+      "order_index": 9
+    },
+    {
+      "code": "D",
+      "stage": "Etapa 3 – Habilidades aquáticas específicas da natação",
+      "age_range": "7–15 anos",
+      "duration_min": 45,
+      "space": "Tanque de Aprendizagem",
+      "max_students": 8,
+      "requirements": "Transição de C: crol, costas e bruços corrigidos, viragem de rolamento, partida de cabeça",
+      "periods": [
+        "SET-DEZ",
+        "JAN-ABR",
+        "ABR-JUL"
+      ],
+      "order_index": 10
+    },
+    {
+      "code": "Avançado",
+      "stage": "Etapa 3 – Habilidades aquáticas específicas da natação",
+      "age_range": "7–18 anos",
+      "duration_min": 45,
+      "space": "Tanque de Aprendizagem",
+      "max_students": 8,
+      "requirements": "Transição de D: domínio das 4 técnicas, viragens de rolamento e partida de cabeça",
+      "periods": [
+        "SET-DEZ",
+        "JAN-ABR",
+        "ABR-JUL"
+      ],
+      "order_index": 11
+    }
+  ],
+  "contents": [
+    {
+      "level_code": "Bebés 1",
+      "number": "1",
+      "block": "Familiarização com o meio aquático",
+      "title": "Familiarização com o meio aquático",
+      "intro_period": "SET-DEZ",
+      "periods": [
+        "SET-DEZ"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez"
+      ],
+      "continuity": [],
+      "source": "Proposta (quadro do relatório sem marcações)",
+      "order_index": 1
+    },
+    {
+      "level_code": "Bebés 1",
+      "number": "2",
+      "block": "Habilidades de motricidade grossa",
+      "title": "Equilíbrio vertical",
+      "intro_period": "SET-DEZ",
+      "periods": [
+        "SET-DEZ"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez"
+      ],
+      "continuity": [],
+      "source": "Proposta (quadro do relatório sem marcações)",
+      "order_index": 2
+    },
+    {
+      "level_code": "Bebés 1",
+      "number": "3",
+      "block": "Habilidades de motricidade grossa",
+      "title": "Equilíbrio ventral",
+      "intro_period": "SET-DEZ",
+      "periods": [
+        "SET-DEZ"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez"
+      ],
+      "continuity": [],
+      "source": "Proposta (quadro do relatório sem marcações)",
+      "order_index": 3
+    },
+    {
+      "level_code": "Bebés 1",
+      "number": "4",
+      "block": "Habilidades de motricidade grossa",
+      "title": "Equilíbrio dorsal",
+      "intro_period": "SET-DEZ",
+      "periods": [
+        "SET-DEZ"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez"
+      ],
+      "continuity": [],
+      "source": "Proposta (quadro do relatório sem marcações)",
+      "order_index": 4
+    },
+    {
+      "level_code": "Bebés 1",
+      "number": "5",
+      "block": "Habilidades de motricidade grossa",
+      "title": "Deslocamento vertical",
+      "intro_period": "JAN-MAR",
+      "periods": [
+        "JAN-MAR"
+      ],
+      "start_month": "Jan",
+      "months": [
+        "Jan",
+        "Fev",
+        "Mar"
+      ],
+      "continuity": [],
+      "source": "Proposta (quadro do relatório sem marcações)",
+      "order_index": 5
+    },
+    {
+      "level_code": "Bebés 1",
+      "number": "6",
+      "block": "Habilidades de motricidade grossa",
+      "title": "Deslocamento ventral",
+      "intro_period": "JAN-MAR",
+      "periods": [
+        "JAN-MAR"
+      ],
+      "start_month": "Jan",
+      "months": [
+        "Jan",
+        "Fev",
+        "Mar"
+      ],
+      "continuity": [],
+      "source": "Proposta (quadro do relatório sem marcações)",
+      "order_index": 6
+    },
+    {
+      "level_code": "Bebés 1",
+      "number": "7",
+      "block": "Habilidades de motricidade grossa",
+      "title": "Deslocamento dorsal",
+      "intro_period": "JAN-MAR",
+      "periods": [
+        "JAN-MAR"
+      ],
+      "start_month": "Jan",
+      "months": [
+        "Jan",
+        "Fev",
+        "Mar"
+      ],
+      "continuity": [],
+      "source": "Proposta (quadro do relatório sem marcações)",
+      "order_index": 7
+    },
+    {
+      "level_code": "Bebés 1",
+      "number": "8",
+      "block": "Habilidades de motricidade grossa",
+      "title": "Imersões (verticais e ventrais)",
+      "intro_period": "JAN-MAR",
+      "periods": [
+        "JAN-MAR"
+      ],
+      "start_month": "Jan",
+      "months": [
+        "Jan",
+        "Fev",
+        "Mar"
+      ],
+      "continuity": [],
+      "source": "Proposta (quadro do relatório sem marcações)",
+      "order_index": 8
+    },
+    {
+      "level_code": "Bebés 1",
+      "number": "9",
+      "block": "Habilidades de motricidade grossa",
+      "title": "Entrada na água partindo da posição sentado",
+      "intro_period": "ABR-JUL",
+      "periods": [
+        "ABR-JUL"
+      ],
+      "start_month": "Abr",
+      "months": [
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [],
+      "source": "Proposta (quadro do relatório sem marcações)",
+      "order_index": 9
+    },
+    {
+      "level_code": "Bebés 1",
+      "number": "10",
+      "block": "Habilidades de motricidade grossa",
+      "title": "Propulsão autónoma vertical",
+      "intro_period": "ABR-JUL",
+      "periods": [
+        "ABR-JUL"
+      ],
+      "start_month": "Abr",
+      "months": [
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [],
+      "source": "Proposta (quadro do relatório sem marcações)",
+      "order_index": 10
+    },
+    {
+      "level_code": "Bebés 1",
+      "number": "11",
+      "block": "Habilidades de motricidade grossa",
+      "title": "Propulsão autónoma ventral",
+      "intro_period": "ABR-JUL",
+      "periods": [
+        "ABR-JUL"
+      ],
+      "start_month": "Abr",
+      "months": [
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [],
+      "source": "Proposta (quadro do relatório sem marcações)",
+      "order_index": 11
+    },
+    {
+      "level_code": "Bebés 1",
+      "number": "12",
+      "block": "Habilidades de motricidade grossa",
+      "title": "Salto de pé",
+      "intro_period": "ABR-JUL",
+      "periods": [
+        "ABR-JUL"
+      ],
+      "start_month": "Abr",
+      "months": [
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [],
+      "source": "Proposta (quadro do relatório sem marcações)",
+      "order_index": 12
+    },
+    {
+      "level_code": "Bebés 1",
+      "number": "F1",
+      "block": "Habilidades de motricidade fina",
+      "title": "Manipulações",
+      "intro_period": "SET-DEZ",
+      "periods": [
+        "SET-DEZ",
+        "JAN-MAR",
+        "ABR-JUL"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez",
+        "Jan",
+        "Fev",
+        "Mar",
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [
+        "JAN-MAR",
+        "ABR-JUL"
+      ],
+      "source": "Proposta (conteúdo transversal, mantido todo o ano)",
+      "order_index": 13
+    },
+    {
+      "level_code": "Bebés 1",
+      "number": "F2",
+      "block": "Habilidades de motricidade fina",
+      "title": "Orientação espacial",
+      "intro_period": "SET-DEZ",
+      "periods": [
+        "SET-DEZ",
+        "JAN-MAR",
+        "ABR-JUL"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez",
+        "Jan",
+        "Fev",
+        "Mar",
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [
+        "JAN-MAR",
+        "ABR-JUL"
+      ],
+      "source": "Proposta (conteúdo transversal, mantido todo o ano)",
+      "order_index": 14
+    },
+    {
+      "level_code": "Bebés 1",
+      "number": "F3",
+      "block": "Habilidades de motricidade fina",
+      "title": "Ritmo",
+      "intro_period": "SET-DEZ",
+      "periods": [
+        "SET-DEZ",
+        "JAN-MAR",
+        "ABR-JUL"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez",
+        "Jan",
+        "Fev",
+        "Mar",
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [
+        "JAN-MAR",
+        "ABR-JUL"
+      ],
+      "source": "Proposta (conteúdo transversal, mantido todo o ano)",
+      "order_index": 15
+    },
+    {
+      "level_code": "Bebés 1",
+      "number": "F4",
+      "block": "Habilidades de motricidade fina",
+      "title": "Diferenciação cinestésica",
+      "intro_period": "SET-DEZ",
+      "periods": [
+        "SET-DEZ",
+        "JAN-MAR",
+        "ABR-JUL"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez",
+        "Jan",
+        "Fev",
+        "Mar",
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [
+        "JAN-MAR",
+        "ABR-JUL"
+      ],
+      "source": "Proposta (conteúdo transversal, mantido todo o ano)",
+      "order_index": 16
+    },
+    {
+      "level_code": "Bebés 1",
+      "number": "F5",
+      "block": "Habilidades de motricidade fina",
+      "title": "Reação",
+      "intro_period": "SET-DEZ",
+      "periods": [
+        "SET-DEZ",
+        "JAN-MAR",
+        "ABR-JUL"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez",
+        "Jan",
+        "Fev",
+        "Mar",
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [
+        "JAN-MAR",
+        "ABR-JUL"
+      ],
+      "source": "Proposta (conteúdo transversal, mantido todo o ano)",
+      "order_index": 17
+    },
+    {
+      "level_code": "Bebés 2",
+      "number": "1",
+      "block": "Familiarização com o meio aquático",
+      "title": "Familiarização com o meio aquático",
+      "intro_period": "SET-DEZ",
+      "periods": [
+        "SET-DEZ"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez"
+      ],
+      "continuity": [],
+      "source": "Proposta (quadro do relatório sem marcações)",
+      "order_index": 1
+    },
+    {
+      "level_code": "Bebés 2",
+      "number": "2",
+      "block": "Habilidades de motricidade grossa",
+      "title": "Equilíbrio vertical",
+      "intro_period": "SET-DEZ",
+      "periods": [
+        "SET-DEZ"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez"
+      ],
+      "continuity": [],
+      "source": "Proposta (quadro do relatório sem marcações)",
+      "order_index": 2
+    },
+    {
+      "level_code": "Bebés 2",
+      "number": "3",
+      "block": "Habilidades de motricidade grossa",
+      "title": "Equilíbrio ventral",
+      "intro_period": "SET-DEZ",
+      "periods": [
+        "SET-DEZ"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez"
+      ],
+      "continuity": [],
+      "source": "Proposta (quadro do relatório sem marcações)",
+      "order_index": 3
+    },
+    {
+      "level_code": "Bebés 2",
+      "number": "4",
+      "block": "Habilidades de motricidade grossa",
+      "title": "Equilíbrio dorsal",
+      "intro_period": "SET-DEZ",
+      "periods": [
+        "SET-DEZ"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez"
+      ],
+      "continuity": [],
+      "source": "Proposta (quadro do relatório sem marcações)",
+      "order_index": 4
+    },
+    {
+      "level_code": "Bebés 2",
+      "number": "5",
+      "block": "Habilidades de motricidade grossa",
+      "title": "Deslocamento vertical",
+      "intro_period": "JAN-MAR",
+      "periods": [
+        "JAN-MAR"
+      ],
+      "start_month": "Jan",
+      "months": [
+        "Jan",
+        "Fev",
+        "Mar"
+      ],
+      "continuity": [],
+      "source": "Proposta (quadro do relatório sem marcações)",
+      "order_index": 5
+    },
+    {
+      "level_code": "Bebés 2",
+      "number": "6",
+      "block": "Habilidades de motricidade grossa",
+      "title": "Deslocamento ventral",
+      "intro_period": "JAN-MAR",
+      "periods": [
+        "JAN-MAR"
+      ],
+      "start_month": "Jan",
+      "months": [
+        "Jan",
+        "Fev",
+        "Mar"
+      ],
+      "continuity": [],
+      "source": "Proposta (quadro do relatório sem marcações)",
+      "order_index": 6
+    },
+    {
+      "level_code": "Bebés 2",
+      "number": "7",
+      "block": "Habilidades de motricidade grossa",
+      "title": "Deslocamento dorsal",
+      "intro_period": "JAN-MAR",
+      "periods": [
+        "JAN-MAR"
+      ],
+      "start_month": "Jan",
+      "months": [
+        "Jan",
+        "Fev",
+        "Mar"
+      ],
+      "continuity": [],
+      "source": "Proposta (quadro do relatório sem marcações)",
+      "order_index": 7
+    },
+    {
+      "level_code": "Bebés 2",
+      "number": "8",
+      "block": "Habilidades de motricidade grossa",
+      "title": "Imersões (verticais e ventrais)",
+      "intro_period": "JAN-MAR",
+      "periods": [
+        "JAN-MAR"
+      ],
+      "start_month": "Jan",
+      "months": [
+        "Jan",
+        "Fev",
+        "Mar"
+      ],
+      "continuity": [],
+      "source": "Proposta (quadro do relatório sem marcações)",
+      "order_index": 8
+    },
+    {
+      "level_code": "Bebés 2",
+      "number": "9",
+      "block": "Habilidades de motricidade grossa",
+      "title": "Entrada na água partindo da posição sentado",
+      "intro_period": "ABR-JUL",
+      "periods": [
+        "ABR-JUL"
+      ],
+      "start_month": "Abr",
+      "months": [
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [],
+      "source": "Proposta (quadro do relatório sem marcações)",
+      "order_index": 9
+    },
+    {
+      "level_code": "Bebés 2",
+      "number": "10",
+      "block": "Habilidades de motricidade grossa",
+      "title": "Propulsão autónoma vertical",
+      "intro_period": "ABR-JUL",
+      "periods": [
+        "ABR-JUL"
+      ],
+      "start_month": "Abr",
+      "months": [
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [],
+      "source": "Proposta (quadro do relatório sem marcações)",
+      "order_index": 10
+    },
+    {
+      "level_code": "Bebés 2",
+      "number": "11",
+      "block": "Habilidades de motricidade grossa",
+      "title": "Propulsão autónoma ventral",
+      "intro_period": "ABR-JUL",
+      "periods": [
+        "ABR-JUL"
+      ],
+      "start_month": "Abr",
+      "months": [
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [],
+      "source": "Proposta (quadro do relatório sem marcações)",
+      "order_index": 11
+    },
+    {
+      "level_code": "Bebés 2",
+      "number": "12",
+      "block": "Habilidades de motricidade grossa",
+      "title": "Salto de pé",
+      "intro_period": "ABR-JUL",
+      "periods": [
+        "ABR-JUL"
+      ],
+      "start_month": "Abr",
+      "months": [
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [],
+      "source": "Proposta (quadro do relatório sem marcações)",
+      "order_index": 12
+    },
+    {
+      "level_code": "Bebés 2",
+      "number": "F1",
+      "block": "Habilidades de motricidade fina",
+      "title": "Manipulações",
+      "intro_period": "SET-DEZ",
+      "periods": [
+        "SET-DEZ",
+        "JAN-MAR",
+        "ABR-JUL"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez",
+        "Jan",
+        "Fev",
+        "Mar",
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [
+        "JAN-MAR",
+        "ABR-JUL"
+      ],
+      "source": "Proposta (conteúdo transversal, mantido todo o ano)",
+      "order_index": 13
+    },
+    {
+      "level_code": "Bebés 2",
+      "number": "F2",
+      "block": "Habilidades de motricidade fina",
+      "title": "Orientação espacial",
+      "intro_period": "SET-DEZ",
+      "periods": [
+        "SET-DEZ",
+        "JAN-MAR",
+        "ABR-JUL"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez",
+        "Jan",
+        "Fev",
+        "Mar",
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [
+        "JAN-MAR",
+        "ABR-JUL"
+      ],
+      "source": "Proposta (conteúdo transversal, mantido todo o ano)",
+      "order_index": 14
+    },
+    {
+      "level_code": "Bebés 2",
+      "number": "F3",
+      "block": "Habilidades de motricidade fina",
+      "title": "Ritmo",
+      "intro_period": "SET-DEZ",
+      "periods": [
+        "SET-DEZ",
+        "JAN-MAR",
+        "ABR-JUL"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez",
+        "Jan",
+        "Fev",
+        "Mar",
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [
+        "JAN-MAR",
+        "ABR-JUL"
+      ],
+      "source": "Proposta (conteúdo transversal, mantido todo o ano)",
+      "order_index": 15
+    },
+    {
+      "level_code": "Bebés 2",
+      "number": "F4",
+      "block": "Habilidades de motricidade fina",
+      "title": "Diferenciação cinestésica",
+      "intro_period": "SET-DEZ",
+      "periods": [
+        "SET-DEZ",
+        "JAN-MAR",
+        "ABR-JUL"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez",
+        "Jan",
+        "Fev",
+        "Mar",
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [
+        "JAN-MAR",
+        "ABR-JUL"
+      ],
+      "source": "Proposta (conteúdo transversal, mantido todo o ano)",
+      "order_index": 16
+    },
+    {
+      "level_code": "Bebés 2",
+      "number": "F5",
+      "block": "Habilidades de motricidade fina",
+      "title": "Reação",
+      "intro_period": "SET-DEZ",
+      "periods": [
+        "SET-DEZ",
+        "JAN-MAR",
+        "ABR-JUL"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez",
+        "Jan",
+        "Fev",
+        "Mar",
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [
+        "JAN-MAR",
+        "ABR-JUL"
+      ],
+      "source": "Proposta (conteúdo transversal, mantido todo o ano)",
+      "order_index": 17
+    },
+    {
+      "level_code": "A1",
+      "number": "1",
+      "block": "Adaptações verticais básicas",
+      "title": "Regras e rotinas da aula (entrada e saída organizada da água)",
+      "intro_period": "SET-JAN",
+      "periods": [
+        "SET-JAN",
+        "FEV-JUL"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez",
+        "Jan",
+        "Fev",
+        "Mar",
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [
+        "FEV-JUL"
+      ],
+      "source": "Relatório",
+      "order_index": 1
+    },
+    {
+      "level_code": "A1",
+      "number": "2",
+      "block": "Adaptações verticais básicas",
+      "title": "Equilíbrio vertical c/apoio",
+      "intro_period": "SET-JAN",
+      "periods": [
+        "SET-JAN"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez",
+        "Jan"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 2
+    },
+    {
+      "level_code": "A1",
+      "number": "3",
+      "block": "Adaptações verticais básicas",
+      "title": "Remada de sustentação (movimento MS)",
+      "intro_period": "SET-JAN",
+      "periods": [
+        "SET-JAN",
+        "FEV-JUL"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez",
+        "Jan",
+        "Fev",
+        "Mar",
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [
+        "FEV-JUL"
+      ],
+      "source": "Relatório",
+      "order_index": 3
+    },
+    {
+      "level_code": "A1",
+      "number": "4",
+      "block": "Adaptações verticais básicas",
+      "title": "Ritmo (sons e contagem, a manter até ao final da AMA)",
+      "intro_period": "SET-JAN",
+      "periods": [
+        "SET-JAN",
+        "FEV-JUL"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez",
+        "Jan",
+        "Fev",
+        "Mar",
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [
+        "FEV-JUL"
+      ],
+      "source": "Relatório",
+      "order_index": 4
+    },
+    {
+      "level_code": "A1",
+      "number": "5",
+      "block": "Adaptações verticais básicas",
+      "title": "Imersão da face",
+      "intro_period": "SET-JAN",
+      "periods": [
+        "SET-JAN"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez",
+        "Jan"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 5
+    },
+    {
+      "level_code": "A1",
+      "number": "6",
+      "block": "Adaptações verticais básicas",
+      "title": "Abertura dos olhos debaixo de água",
+      "intro_period": "SET-JAN",
+      "periods": [
+        "SET-JAN"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez",
+        "Jan"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 6
+    },
+    {
+      "level_code": "A1",
+      "number": "7",
+      "block": "Adaptações verticais básicas",
+      "title": "Respiração (dentro e fora de água; inspiração e expiração; boca e nariz)",
+      "intro_period": "SET-JAN",
+      "periods": [
+        "SET-JAN"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez",
+        "Jan"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 7
+    },
+    {
+      "level_code": "A1",
+      "number": "8",
+      "block": "Adaptações verticais básicas",
+      "title": "Preensão/pega da bola (espontânea, c/ 1 ou 2 mãos)",
+      "intro_period": "SET-JAN",
+      "periods": [
+        "SET-JAN"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez",
+        "Jan"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 8
+    },
+    {
+      "level_code": "A1",
+      "number": "9",
+      "block": "Adaptações verticais básicas",
+      "title": "Lançamento c/apoio (espontâneo, c/ 1 ou 2 mãos)",
+      "intro_period": "SET-JAN",
+      "periods": [
+        "SET-JAN"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez",
+        "Jan"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 9
+    },
+    {
+      "level_code": "A1",
+      "number": "10",
+      "block": "Adaptações verticais básicas",
+      "title": "Imersão em profundidade",
+      "intro_period": "SET-JAN",
+      "periods": [
+        "SET-JAN"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez",
+        "Jan"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 10
+    },
+    {
+      "level_code": "A1",
+      "number": "11",
+      "block": "Adaptações verticais básicas",
+      "title": "Salto de pé",
+      "intro_period": "SET-JAN",
+      "periods": [
+        "SET-JAN"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez",
+        "Jan"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 11
+    },
+    {
+      "level_code": "A1",
+      "number": "12",
+      "block": "Adaptações verticais básicas",
+      "title": "Equilíbrio vertical s/apoio (iniciar e manter até ao final da AMA)",
+      "intro_period": "SET-JAN",
+      "periods": [
+        "SET-JAN",
+        "FEV-JUL"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez",
+        "Jan",
+        "Fev",
+        "Mar",
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [
+        "FEV-JUL"
+      ],
+      "source": "Relatório",
+      "order_index": 12
+    },
+    {
+      "level_code": "A1",
+      "number": "13",
+      "block": "Transição da vertical para a horizontal",
+      "title": "Medusa (apneia inspiratória s/ e c/ manipulação)",
+      "intro_period": "SET-JAN",
+      "periods": [
+        "SET-JAN",
+        "FEV-JUL"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez",
+        "Jan",
+        "Fev",
+        "Mar",
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [
+        "FEV-JUL"
+      ],
+      "source": "Relatório",
+      "order_index": 13
+    },
+    {
+      "level_code": "A1",
+      "number": "14",
+      "block": "Transição da vertical para a horizontal",
+      "title": "Posição Barril c/apoio",
+      "intro_period": "SET-JAN",
+      "periods": [
+        "SET-JAN"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez",
+        "Jan"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 14
+    },
+    {
+      "level_code": "A1",
+      "number": "15",
+      "block": "Transição da vertical para a horizontal",
+      "title": "Esquema corporal (lateralidade – diferenciação esquerda/direita)",
+      "intro_period": "SET-JAN",
+      "periods": [
+        "SET-JAN"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez",
+        "Jan"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 15
+    },
+    {
+      "level_code": "A1",
+      "number": "16",
+      "block": "Transição da vertical para a horizontal",
+      "title": "Alteração equilíbrio vertical para horizontal ventral e dorsal c/apoio (vice-versa)",
+      "intro_period": "SET-JAN",
+      "periods": [
+        "SET-JAN"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez",
+        "Jan"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 16
+    },
+    {
+      "level_code": "A1",
+      "number": "17",
+      "block": "Adaptações verticais avançadas e horizontais",
+      "title": "Equilíbrio horizontal ventral e dorsal c/ e s/ apoio",
+      "intro_period": "SET-JAN",
+      "periods": [
+        "SET-JAN",
+        "FEV-JUL"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez",
+        "Jan",
+        "Fev",
+        "Mar",
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [
+        "FEV-JUL"
+      ],
+      "source": "Relatório",
+      "order_index": 17
+    },
+    {
+      "level_code": "A1",
+      "number": "17a",
+      "block": "Adaptações verticais avançadas e horizontais",
+      "title": "… c/ extensão dos pés e das pernas",
+      "intro_period": "FEV-JUL",
+      "periods": [
+        "FEV-JUL"
+      ],
+      "start_month": "Fev",
+      "months": [
+        "Fev",
+        "Mar",
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 18
+    },
+    {
+      "level_code": "A1",
+      "number": "18",
+      "block": "Adaptações verticais avançadas e horizontais",
+      "title": "Posição Barril s/apoio",
+      "intro_period": "FEV-JUL",
+      "periods": [
+        "FEV-JUL"
+      ],
+      "start_month": "Fev",
+      "months": [
+        "Fev",
+        "Mar",
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 19
+    },
+    {
+      "level_code": "A1",
+      "number": "19",
+      "block": "Adaptações verticais avançadas e horizontais",
+      "title": "Deslize ventral e dorsal, em posição hidrodinâmica, em imersão",
+      "intro_period": "FEV-JUL",
+      "periods": [
+        "FEV-JUL"
+      ],
+      "start_month": "Fev",
+      "months": [
+        "Fev",
+        "Mar",
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 20
+    },
+    {
+      "level_code": "A1",
+      "number": "20",
+      "block": "Adaptações verticais avançadas e horizontais",
+      "title": "Rotação sobre o eixo longitudinal (vertical direita e horizontal, c/ e s/deslize)",
+      "intro_period": "FEV-JUL",
+      "periods": [
+        "FEV-JUL"
+      ],
+      "start_month": "Fev",
+      "months": [
+        "Fev",
+        "Mar",
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 21
+    },
+    {
+      "level_code": "A1",
+      "number": "21",
+      "block": "Adaptações verticais avançadas e horizontais",
+      "title": "Deslocamento por ação dos MI e MS, c/ respiração (nado espontâneo)",
+      "intro_period": "FEV-JUL",
+      "periods": [
+        "FEV-JUL"
+      ],
+      "start_month": "Fev",
+      "months": [
+        "Fev",
+        "Mar",
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 22
+    },
+    {
+      "level_code": "A1",
+      "number": "22",
+      "block": "Adaptações verticais avançadas e horizontais",
+      "title": "Rotação sobre o eixo frontal (para a frente e para trás)",
+      "intro_period": "FEV-JUL",
+      "periods": [
+        "FEV-JUL"
+      ],
+      "start_month": "Fev",
+      "months": [
+        "Fev",
+        "Mar",
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 23
+    },
+    {
+      "level_code": "A1",
+      "number": "23",
+      "block": "Adaptações verticais avançadas e horizontais",
+      "title": "Remada no sentido dos pés",
+      "intro_period": "FEV-JUL",
+      "periods": [
+        "FEV-JUL"
+      ],
+      "start_month": "Fev",
+      "months": [
+        "Fev",
+        "Mar",
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 24
+    },
+    {
+      "level_code": "A1",
+      "number": "24",
+      "block": "Adaptações verticais avançadas e horizontais",
+      "title": "Remada no sentido da cabeça",
+      "intro_period": "FEV-JUL",
+      "periods": [
+        "FEV-JUL"
+      ],
+      "start_month": "Fev",
+      "months": [
+        "Fev",
+        "Mar",
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 25
+    },
+    {
+      "level_code": "A1",
+      "number": "25",
+      "block": "Adaptações verticais avançadas e horizontais",
+      "title": "Salto de cabeça (s/ voo)",
+      "intro_period": "FEV-JUL",
+      "periods": [
+        "FEV-JUL"
+      ],
+      "start_month": "Fev",
+      "months": [
+        "Fev",
+        "Mar",
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 26
+    },
+    {
+      "level_code": "A1",
+      "number": "26",
+      "block": "Adaptações verticais avançadas e horizontais",
+      "title": "Ação alternada dos MI em posição ventral c/ respiração frontal",
+      "intro_period": "FEV-JUL",
+      "periods": [
+        "FEV-JUL"
+      ],
+      "start_month": "Fev",
+      "months": [
+        "Fev",
+        "Mar",
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 27
+    },
+    {
+      "level_code": "A1",
+      "number": "27",
+      "block": "Adaptações verticais avançadas e horizontais",
+      "title": "Ação alternada dos MI em posição dorsal c/ respiração",
+      "intro_period": "FEV-JUL",
+      "periods": [
+        "FEV-JUL"
+      ],
+      "start_month": "Fev",
+      "months": [
+        "Fev",
+        "Mar",
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 28
+    },
+    {
+      "level_code": "A1",
+      "number": "28",
+      "block": "Adaptações verticais avançadas e horizontais",
+      "title": "Retropedalagem (movimento rudimentar)",
+      "intro_period": "FEV-JUL",
+      "periods": [
+        "FEV-JUL"
+      ],
+      "start_month": "Fev",
+      "months": [
+        "Fev",
+        "Mar",
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 29
+    },
+    {
+      "level_code": "A1",
+      "number": "29",
+      "block": "Adaptações verticais avançadas e horizontais",
+      "title": "“Balanças” em profundidade (variações do equilíbrio vertical)",
+      "intro_period": "FEV-JUL",
+      "periods": [
+        "FEV-JUL"
+      ],
+      "start_month": "Fev",
+      "months": [
+        "Fev",
+        "Mar",
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 30
+    },
+    {
+      "level_code": "A1+",
+      "number": "1",
+      "block": "Regras e rotinas de aula",
+      "title": "Regras e rotinas da aula (saída da parede, deslize e início de nado, chegada à parede)",
+      "intro_period": "SET-JAN",
+      "periods": [
+        "SET-JAN"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez",
+        "Jan"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 1
+    },
+    {
+      "level_code": "A1+",
+      "number": "2",
+      "block": "Natação Artística",
+      "title": "Posição Vela",
+      "intro_period": "SET-JAN",
+      "periods": [
+        "SET-JAN"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez",
+        "Jan"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 2
+    },
+    {
+      "level_code": "A1+",
+      "number": "3",
+      "block": "Natação Artística",
+      "title": "Posição Perna de Ballet",
+      "intro_period": "SET-JAN",
+      "periods": [
+        "SET-JAN"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez",
+        "Jan"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 3
+    },
+    {
+      "level_code": "A1+",
+      "number": "4",
+      "block": "Manipulações / Pólo Aquático",
+      "title": "Pega da bola, c/ 1 mão, por baixo (exercitar com ambas as mãos)",
+      "intro_period": "SET-JAN",
+      "periods": [
+        "SET-JAN"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez",
+        "Jan"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 4
+    },
+    {
+      "level_code": "A1+",
+      "number": "5",
+      "block": "Técnica de Crol",
+      "title": "Ação dos MI de crol lateral",
+      "intro_period": "SET-JAN",
+      "periods": [
+        "SET-JAN"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez",
+        "Jan"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 5
+    },
+    {
+      "level_code": "A1+",
+      "number": "6",
+      "block": "Técnica de Crol",
+      "title": "Ação dos MI de crol coordenada com a respiração (LATERAL)",
+      "intro_period": "SET-JAN",
+      "periods": [
+        "SET-JAN"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez",
+        "Jan"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 6
+    },
+    {
+      "level_code": "A1+",
+      "number": "7",
+      "block": "Saltos e entradas na água",
+      "title": "Salto de cabeça + entrada na água em posição hidrodinâmica + deslize",
+      "intro_period": "SET-JAN",
+      "periods": [
+        "SET-JAN"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez",
+        "Jan"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 7
+    },
+    {
+      "level_code": "A1+",
+      "number": "8",
+      "block": "Natação Artística",
+      "title": "Expressões e emoções (facial e corporal; estático e em deslocamento)",
+      "intro_period": "SET-JAN",
+      "periods": [
+        "SET-JAN"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez",
+        "Jan"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 8
+    },
+    {
+      "level_code": "A1+",
+      "number": "9",
+      "block": "Pólo Aquático",
+      "title": "Retropedalagem vertical (posição básica fundamental PA)",
+      "intro_period": "FEV-JUL",
+      "periods": [
+        "FEV-JUL"
+      ],
+      "start_month": "Fev",
+      "months": [
+        "Fev",
+        "Mar",
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 9
+    },
+    {
+      "level_code": "A1+",
+      "number": "10",
+      "block": "Técnica de Crol",
+      "title": "Ação dos MI de crol coordenação com a respiração e ação de um MS",
+      "intro_period": "FEV-JUL",
+      "periods": [
+        "FEV-JUL"
+      ],
+      "start_month": "Fev",
+      "months": [
+        "Fev",
+        "Mar",
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 10
+    },
+    {
+      "level_code": "A1+",
+      "number": "11",
+      "block": "Técnica de Costas",
+      "title": "Ação dos MI de costas (coordenada com a respiração) e ação de um MS",
+      "intro_period": "FEV-JUL",
+      "periods": [
+        "FEV-JUL"
+      ],
+      "start_month": "Fev",
+      "months": [
+        "Fev",
+        "Mar",
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 11
+    },
+    {
+      "level_code": "A1+",
+      "number": "12",
+      "block": "Pólo Aquático",
+      "title": "Passe (para a água) e receção (exercitar com ambas as mãos) c/ apoio",
+      "intro_period": "FEV-JUL",
+      "periods": [
+        "FEV-JUL"
+      ],
+      "start_month": "Fev",
+      "months": [
+        "Fev",
+        "Mar",
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 12
+    },
+    {
+      "level_code": "A1+",
+      "number": "13",
+      "block": "Pólo Aquático",
+      "title": "Jogos pré-desportivos 3x3 (olha sempre para a bola; identifica-se como atacante e defesa)",
+      "intro_period": "FEV-JUL",
+      "periods": [
+        "FEV-JUL"
+      ],
+      "start_month": "Fev",
+      "months": [
+        "Fev",
+        "Mar",
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 13
+    },
+    {
+      "level_code": "A1+",
+      "number": "14",
+      "block": "Técnica de Costas",
+      "title": "Técnica completa de Costas (coordenação MS, MI e respiração)",
+      "intro_period": "FEV-JUL",
+      "periods": [
+        "FEV-JUL"
+      ],
+      "start_month": "Fev",
+      "months": [
+        "Fev",
+        "Mar",
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 14
+    },
+    {
+      "level_code": "A1+",
+      "number": "15",
+      "block": "Técnica de Crol",
+      "title": "Técnica completa de Crol (coordenação MS, MI e respiração)",
+      "intro_period": "FEV-JUL",
+      "periods": [
+        "FEV-JUL"
+      ],
+      "start_month": "Fev",
+      "months": [
+        "Fev",
+        "Mar",
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 15
+    },
+    {
+      "level_code": "A1+",
+      "number": "16",
+      "block": "Viragens",
+      "title": "Viragem aberta Crol",
+      "intro_period": "FEV-JUL",
+      "periods": [
+        "FEV-JUL"
+      ],
+      "start_month": "Fev",
+      "months": [
+        "Fev",
+        "Mar",
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 16
+    },
+    {
+      "level_code": "A1+",
+      "number": "17",
+      "block": "Viragens",
+      "title": "Viragem aberta Costas",
+      "intro_period": "FEV-JUL",
+      "periods": [
+        "FEV-JUL"
+      ],
+      "start_month": "Fev",
+      "months": [
+        "Fev",
+        "Mar",
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 17
+    },
+    {
+      "level_code": "A1+",
+      "number": "18",
+      "block": "Natação Artística",
+      "title": "Posição Flamingo",
+      "intro_period": "FEV-JUL",
+      "periods": [
+        "FEV-JUL"
+      ],
+      "start_month": "Fev",
+      "months": [
+        "Fev",
+        "Mar",
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 18
+    },
+    {
+      "level_code": "A1+",
+      "number": "19",
+      "block": "Natação Artística",
+      "title": "Remada Canoa sustentação",
+      "intro_period": "FEV-JUL",
+      "periods": [
+        "FEV-JUL"
+      ],
+      "start_month": "Fev",
+      "months": [
+        "Fev",
+        "Mar",
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 19
+    },
+    {
+      "level_code": "A1+",
+      "number": "20",
+      "block": "Natação Artística",
+      "title": "Remada Canoa pés",
+      "intro_period": "FEV-JUL",
+      "periods": [
+        "FEV-JUL"
+      ],
+      "start_month": "Fev",
+      "months": [
+        "Fev",
+        "Mar",
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 20
+    },
+    {
+      "level_code": "A1+",
+      "number": "21",
+      "block": "Natação Artística",
+      "title": "Remada Canoa cabeça",
+      "intro_period": "FEV-JUL",
+      "periods": [
+        "FEV-JUL"
+      ],
+      "start_month": "Fev",
+      "months": [
+        "Fev",
+        "Mar",
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 21
+    },
+    {
+      "level_code": "A1+",
+      "number": "22",
+      "block": "Pólo Aquático",
+      "title": "“Balanças” c/ retropedalagem",
+      "intro_period": "FEV-JUL",
+      "periods": [
+        "FEV-JUL"
+      ],
+      "start_month": "Fev",
+      "months": [
+        "Fev",
+        "Mar",
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 22
+    },
+    {
+      "level_code": "A2",
+      "number": "1",
+      "block": "Adaptações verticais básicas",
+      "title": "Regras e rotinas da aula (entrada e saída organizada da água)",
+      "intro_period": "SET-JAN",
+      "periods": [
+        "SET-JAN",
+        "FEV-JUL"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez",
+        "Jan",
+        "Fev",
+        "Mar",
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [
+        "FEV-JUL"
+      ],
+      "source": "Relatório",
+      "order_index": 1
+    },
+    {
+      "level_code": "A2",
+      "number": "2",
+      "block": "Adaptações verticais básicas",
+      "title": "Equilíbrio vertical c/apoio",
+      "intro_period": "SET-JAN",
+      "periods": [
+        "SET-JAN"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez",
+        "Jan"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 2
+    },
+    {
+      "level_code": "A2",
+      "number": "3",
+      "block": "Adaptações verticais básicas",
+      "title": "Remada de sustentação (movimento MS)",
+      "intro_period": "SET-JAN",
+      "periods": [
+        "SET-JAN"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez",
+        "Jan"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 3
+    },
+    {
+      "level_code": "A2",
+      "number": "4",
+      "block": "Adaptações verticais básicas",
+      "title": "Ritmo (sons e contagem, a manter até ao final da AMA)",
+      "intro_period": "SET-JAN",
+      "periods": [
+        "SET-JAN",
+        "FEV-JUL"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez",
+        "Jan",
+        "Fev",
+        "Mar",
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [
+        "FEV-JUL"
+      ],
+      "source": "Relatório",
+      "order_index": 4
+    },
+    {
+      "level_code": "A2",
+      "number": "5",
+      "block": "Adaptações verticais básicas",
+      "title": "Imersão da face",
+      "intro_period": "SET-JAN",
+      "periods": [
+        "SET-JAN"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez",
+        "Jan"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 5
+    },
+    {
+      "level_code": "A2",
+      "number": "6",
+      "block": "Adaptações verticais básicas",
+      "title": "Abertura dos olhos debaixo de água",
+      "intro_period": "SET-JAN",
+      "periods": [
+        "SET-JAN"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez",
+        "Jan"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 6
+    },
+    {
+      "level_code": "A2",
+      "number": "7",
+      "block": "Adaptações verticais básicas",
+      "title": "Respiração (dentro e fora de água; inspiração e expiração; boca e nariz)",
+      "intro_period": "SET-JAN",
+      "periods": [
+        "SET-JAN"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez",
+        "Jan"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 7
+    },
+    {
+      "level_code": "A2",
+      "number": "8",
+      "block": "Adaptações verticais básicas",
+      "title": "Preensão/pega da bola (espontânea, c/ 1 ou 2 mãos)",
+      "intro_period": "SET-JAN",
+      "periods": [
+        "SET-JAN"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez",
+        "Jan"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 8
+    },
+    {
+      "level_code": "A2",
+      "number": "9",
+      "block": "Adaptações verticais básicas",
+      "title": "Lançamento c/apoio (espontâneo, c/ 1 ou 2 mãos)",
+      "intro_period": "SET-JAN",
+      "periods": [
+        "SET-JAN"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez",
+        "Jan"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 9
+    },
+    {
+      "level_code": "A2",
+      "number": "10",
+      "block": "Adaptações verticais básicas",
+      "title": "Imersão em profundidade",
+      "intro_period": "SET-JAN",
+      "periods": [
+        "SET-JAN"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez",
+        "Jan"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 10
+    },
+    {
+      "level_code": "A2",
+      "number": "11",
+      "block": "Adaptações verticais básicas",
+      "title": "Salto de pé",
+      "intro_period": "SET-JAN",
+      "periods": [
+        "SET-JAN"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez",
+        "Jan"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 11
+    },
+    {
+      "level_code": "A2",
+      "number": "12",
+      "block": "Adaptações verticais básicas",
+      "title": "Equilíbrio vertical s/apoio (iniciar e manter até ao final da AMA)",
+      "intro_period": "SET-JAN",
+      "periods": [
+        "SET-JAN",
+        "FEV-JUL"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez",
+        "Jan",
+        "Fev",
+        "Mar",
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [
+        "FEV-JUL"
+      ],
+      "source": "Relatório",
+      "order_index": 12
+    },
+    {
+      "level_code": "A2",
+      "number": "13",
+      "block": "Transição da vertical para a horizontal",
+      "title": "Medusa (apneia inspiratória s/ e c/ manipulação)",
+      "intro_period": "SET-JAN",
+      "periods": [
+        "SET-JAN"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez",
+        "Jan"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 13
+    },
+    {
+      "level_code": "A2",
+      "number": "14",
+      "block": "Transição da vertical para a horizontal",
+      "title": "Posição Barril c/apoio",
+      "intro_period": "SET-JAN",
+      "periods": [
+        "SET-JAN"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez",
+        "Jan"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 14
+    },
+    {
+      "level_code": "A2",
+      "number": "15",
+      "block": "Transição da vertical para a horizontal",
+      "title": "Esquema corporal (lateralidade – diferenciação esquerda/direita)",
+      "intro_period": "SET-JAN",
+      "periods": [
+        "SET-JAN"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez",
+        "Jan"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 15
+    },
+    {
+      "level_code": "A2",
+      "number": "16",
+      "block": "Transição da vertical para a horizontal",
+      "title": "Alteração equilíbrio vertical para horizontal ventral e dorsal c/apoio (vice-versa)",
+      "intro_period": "SET-JAN",
+      "periods": [
+        "SET-JAN"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez",
+        "Jan"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 16
+    },
+    {
+      "level_code": "A2",
+      "number": "17",
+      "block": "Adaptações verticais avançadas e horizontais",
+      "title": "Equilíbrio horizontal ventral e dorsal c/ e s/ apoio",
+      "intro_period": "SET-JAN",
+      "periods": [
+        "SET-JAN",
+        "FEV-JUL"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez",
+        "Jan",
+        "Fev",
+        "Mar",
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [
+        "FEV-JUL"
+      ],
+      "source": "Relatório",
+      "order_index": 17
+    },
+    {
+      "level_code": "A2",
+      "number": "17a",
+      "block": "Adaptações verticais avançadas e horizontais",
+      "title": "… c/ extensão dos pés e das pernas",
+      "intro_period": "SET-JAN",
+      "periods": [
+        "SET-JAN",
+        "FEV-JUL"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez",
+        "Jan",
+        "Fev",
+        "Mar",
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [
+        "FEV-JUL"
+      ],
+      "source": "Relatório",
+      "order_index": 18
+    },
+    {
+      "level_code": "A2",
+      "number": "18",
+      "block": "Adaptações verticais avançadas e horizontais",
+      "title": "Posição Barril s/apoio",
+      "intro_period": "SET-JAN",
+      "periods": [
+        "SET-JAN",
+        "FEV-JUL"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez",
+        "Jan",
+        "Fev",
+        "Mar",
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [
+        "FEV-JUL"
+      ],
+      "source": "Relatório",
+      "order_index": 19
+    },
+    {
+      "level_code": "A2",
+      "number": "19",
+      "block": "Adaptações verticais avançadas e horizontais",
+      "title": "Deslize ventral e dorsal, em posição hidrodinâmica, em imersão",
+      "intro_period": "SET-JAN",
+      "periods": [
+        "SET-JAN",
+        "FEV-JUL"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez",
+        "Jan",
+        "Fev",
+        "Mar",
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [
+        "FEV-JUL"
+      ],
+      "source": "Relatório",
+      "order_index": 20
+    },
+    {
+      "level_code": "A2",
+      "number": "20",
+      "block": "Adaptações verticais avançadas e horizontais",
+      "title": "Rotação sobre o eixo longitudinal (vertical direita e horizontal, c/ e s/deslize)",
+      "intro_period": "FEV-JUL",
+      "periods": [
+        "FEV-JUL"
+      ],
+      "start_month": "Fev",
+      "months": [
+        "Fev",
+        "Mar",
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 21
+    },
+    {
+      "level_code": "A2",
+      "number": "21",
+      "block": "Adaptações verticais avançadas e horizontais",
+      "title": "Deslocamento por ação dos MI e MS, c/ respiração (nado espontâneo)",
+      "intro_period": "FEV-JUL",
+      "periods": [
+        "FEV-JUL"
+      ],
+      "start_month": "Fev",
+      "months": [
+        "Fev",
+        "Mar",
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 22
+    },
+    {
+      "level_code": "A2",
+      "number": "22",
+      "block": "Adaptações verticais avançadas e horizontais",
+      "title": "Rotação sobre o eixo frontal (para a frente e para trás)",
+      "intro_period": "FEV-JUL",
+      "periods": [
+        "FEV-JUL"
+      ],
+      "start_month": "Fev",
+      "months": [
+        "Fev",
+        "Mar",
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 23
+    },
+    {
+      "level_code": "A2",
+      "number": "23",
+      "block": "Adaptações verticais avançadas e horizontais",
+      "title": "Remada no sentido dos pés",
+      "intro_period": "FEV-JUL",
+      "periods": [
+        "FEV-JUL"
+      ],
+      "start_month": "Fev",
+      "months": [
+        "Fev",
+        "Mar",
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 24
+    },
+    {
+      "level_code": "A2",
+      "number": "24",
+      "block": "Adaptações verticais avançadas e horizontais",
+      "title": "Remada no sentido da cabeça",
+      "intro_period": "FEV-JUL",
+      "periods": [
+        "FEV-JUL"
+      ],
+      "start_month": "Fev",
+      "months": [
+        "Fev",
+        "Mar",
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 25
+    },
+    {
+      "level_code": "A2",
+      "number": "25",
+      "block": "Adaptações verticais avançadas e horizontais",
+      "title": "Salto de cabeça (s/ voo)",
+      "intro_period": "FEV-JUL",
+      "periods": [
+        "FEV-JUL"
+      ],
+      "start_month": "Fev",
+      "months": [
+        "Fev",
+        "Mar",
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 26
+    },
+    {
+      "level_code": "A2",
+      "number": "26",
+      "block": "Adaptações verticais avançadas e horizontais",
+      "title": "Ação alternada dos MI em posição ventral c/ respiração frontal",
+      "intro_period": "FEV-JUL",
+      "periods": [
+        "FEV-JUL"
+      ],
+      "start_month": "Fev",
+      "months": [
+        "Fev",
+        "Mar",
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 27
+    },
+    {
+      "level_code": "A2",
+      "number": "27",
+      "block": "Adaptações verticais avançadas e horizontais",
+      "title": "Ação alternada dos MI em posição dorsal c/ respiração",
+      "intro_period": "FEV-JUL",
+      "periods": [
+        "FEV-JUL"
+      ],
+      "start_month": "Fev",
+      "months": [
+        "Fev",
+        "Mar",
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 28
+    },
+    {
+      "level_code": "A2",
+      "number": "28",
+      "block": "Adaptações verticais avançadas e horizontais",
+      "title": "Retropedalagem vertical (posição básica fundamental PA)",
+      "intro_period": "FEV-JUL",
+      "periods": [
+        "FEV-JUL"
+      ],
+      "start_month": "Fev",
+      "months": [
+        "Fev",
+        "Mar",
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 29
+    },
+    {
+      "level_code": "A2",
+      "number": "29",
+      "block": "Adaptações verticais avançadas e horizontais",
+      "title": "“Balanças” em profundidade (variações do equilíbrio vertical)",
+      "intro_period": "FEV-JUL",
+      "periods": [
+        "FEV-JUL"
+      ],
+      "start_month": "Fev",
+      "months": [
+        "Fev",
+        "Mar",
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 30
+    },
+    {
+      "level_code": "A2+",
+      "number": "1",
+      "block": "Regras e rotinas de aula",
+      "title": "Regras e rotinas da aula (saída da parede, deslize e início de nado, chegada à parede)",
+      "intro_period": "SET-JAN",
+      "periods": [
+        "SET-JAN"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez",
+        "Jan"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 1
+    },
+    {
+      "level_code": "A2+",
+      "number": "2",
+      "block": "Natação Artística",
+      "title": "Posição Vela",
+      "intro_period": "SET-JAN",
+      "periods": [
+        "SET-JAN"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez",
+        "Jan"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 2
+    },
+    {
+      "level_code": "A2+",
+      "number": "3",
+      "block": "Natação Artística",
+      "title": "Posição Perna de Ballet",
+      "intro_period": "SET-JAN",
+      "periods": [
+        "SET-JAN"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez",
+        "Jan"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 3
+    },
+    {
+      "level_code": "A2+",
+      "number": "4",
+      "block": "Natação Artística",
+      "title": "Posição Flamingo",
+      "intro_period": "SET-JAN",
+      "periods": [
+        "SET-JAN"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez",
+        "Jan"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 4
+    },
+    {
+      "level_code": "A2+",
+      "number": "5",
+      "block": "Manipulações / Pólo Aquático",
+      "title": "Pega da bola, c/ 1 mão, por baixo (exercitar com ambas as mãos)",
+      "intro_period": "SET-JAN",
+      "periods": [
+        "SET-JAN"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez",
+        "Jan"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 5
+    },
+    {
+      "level_code": "A2+",
+      "number": "6",
+      "block": "Técnica de Crol",
+      "title": "Ação dos MI de crol lateral",
+      "intro_period": "SET-JAN",
+      "periods": [
+        "SET-JAN"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez",
+        "Jan"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 6
+    },
+    {
+      "level_code": "A2+",
+      "number": "7",
+      "block": "Técnica de Crol",
+      "title": "Ação dos MI de crol coordenada com a respiração (LATERAL)",
+      "intro_period": "SET-JAN",
+      "periods": [
+        "SET-JAN"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez",
+        "Jan"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 7
+    },
+    {
+      "level_code": "A2+",
+      "number": "8",
+      "block": "Saltos e entradas na água",
+      "title": "Salto de cabeça + entrada na água em posição hidrodinâmica + deslize",
+      "intro_period": "SET-JAN",
+      "periods": [
+        "SET-JAN"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez",
+        "Jan"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 8
+    },
+    {
+      "level_code": "A2+",
+      "number": "9",
+      "block": "Natação Artística",
+      "title": "Expressões e emoções (facial e corporal; estático e em deslocamento)",
+      "intro_period": "SET-JAN",
+      "periods": [
+        "SET-JAN"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez",
+        "Jan"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 9
+    },
+    {
+      "level_code": "A2+",
+      "number": "10",
+      "block": "Técnica de Crol",
+      "title": "Ação dos MI de crol coordenação com a respiração e ação de um MS",
+      "intro_period": "FEV-JUL",
+      "periods": [
+        "FEV-JUL"
+      ],
+      "start_month": "Fev",
+      "months": [
+        "Fev",
+        "Mar",
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 10
+    },
+    {
+      "level_code": "A2+",
+      "number": "11",
+      "block": "Técnica de Costas",
+      "title": "Ação dos MI de costas (coordenada com a respiração) e ação de um MS",
+      "intro_period": "FEV-JUL",
+      "periods": [
+        "FEV-JUL"
+      ],
+      "start_month": "Fev",
+      "months": [
+        "Fev",
+        "Mar",
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 11
+    },
+    {
+      "level_code": "A2+",
+      "number": "12",
+      "block": "Técnica de Costas",
+      "title": "Técnica completa de Costas (coordenação MS, MI e respiração)",
+      "intro_period": "FEV-JUL",
+      "periods": [
+        "FEV-JUL"
+      ],
+      "start_month": "Fev",
+      "months": [
+        "Fev",
+        "Mar",
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 12
+    },
+    {
+      "level_code": "A2+",
+      "number": "13",
+      "block": "Técnica de Crol",
+      "title": "Técnica completa de Crol (coordenação MS, MI e respiração)",
+      "intro_period": "FEV-JUL",
+      "periods": [
+        "FEV-JUL"
+      ],
+      "start_month": "Fev",
+      "months": [
+        "Fev",
+        "Mar",
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 13
+    },
+    {
+      "level_code": "A2+",
+      "number": "14",
+      "block": "Viragens",
+      "title": "Viragem aberta Crol",
+      "intro_period": "FEV-JUL",
+      "periods": [
+        "FEV-JUL"
+      ],
+      "start_month": "Fev",
+      "months": [
+        "Fev",
+        "Mar",
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 14
+    },
+    {
+      "level_code": "A2+",
+      "number": "15",
+      "block": "Viragens",
+      "title": "Viragem aberta Costas",
+      "intro_period": "FEV-JUL",
+      "periods": [
+        "FEV-JUL"
+      ],
+      "start_month": "Fev",
+      "months": [
+        "Fev",
+        "Mar",
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 15
+    },
+    {
+      "level_code": "A2+",
+      "number": "16",
+      "block": "Pólo Aquático",
+      "title": "Passe (para a água) e receção (exercitar com ambas as mãos) c/ apoio",
+      "intro_period": "FEV-JUL",
+      "periods": [
+        "FEV-JUL"
+      ],
+      "start_month": "Fev",
+      "months": [
+        "Fev",
+        "Mar",
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 16
+    },
+    {
+      "level_code": "A2+",
+      "number": "17",
+      "block": "Pólo Aquático",
+      "title": "Jogos pré-desportivos 3x3 (olha sempre para a bola; identifica-se como atacante e defesa)",
+      "intro_period": "FEV-JUL",
+      "periods": [
+        "FEV-JUL"
+      ],
+      "start_month": "Fev",
+      "months": [
+        "Fev",
+        "Mar",
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 17
+    },
+    {
+      "level_code": "A2+",
+      "number": "18",
+      "block": "Natação Artística",
+      "title": "Remada Canoa sustentação",
+      "intro_period": "FEV-JUL",
+      "periods": [
+        "FEV-JUL"
+      ],
+      "start_month": "Fev",
+      "months": [
+        "Fev",
+        "Mar",
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 18
+    },
+    {
+      "level_code": "A2+",
+      "number": "19",
+      "block": "Natação Artística",
+      "title": "Remada Canoa pés",
+      "intro_period": "FEV-JUL",
+      "periods": [
+        "FEV-JUL"
+      ],
+      "start_month": "Fev",
+      "months": [
+        "Fev",
+        "Mar",
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 19
+    },
+    {
+      "level_code": "A2+",
+      "number": "20",
+      "block": "Natação Artística",
+      "title": "Remada Canoa cabeça",
+      "intro_period": "FEV-JUL",
+      "periods": [
+        "FEV-JUL"
+      ],
+      "start_month": "Fev",
+      "months": [
+        "Fev",
+        "Mar",
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 20
+    },
+    {
+      "level_code": "A2+",
+      "number": "21",
+      "block": "Pólo Aquático",
+      "title": "“Balanças” c/ retropedalagem",
+      "intro_period": "FEV-JUL",
+      "periods": [
+        "FEV-JUL"
+      ],
+      "start_month": "Fev",
+      "months": [
+        "Fev",
+        "Mar",
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 21
+    },
+    {
+      "level_code": "B1",
+      "number": "1",
+      "block": "Natação Artística",
+      "title": "Posição vertical invertida (posição de mesa, PVI na parede, c/ apoio instável e s/ apoio)",
+      "intro_period": "SET-DEZ",
+      "periods": [
+        "SET-DEZ"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 1
+    },
+    {
+      "level_code": "B1",
+      "number": "2",
+      "block": "Partidas, viragens e chegadas",
+      "title": "Chegada de Crol",
+      "intro_period": "SET-DEZ",
+      "periods": [
+        "SET-DEZ"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 2
+    },
+    {
+      "level_code": "B1",
+      "number": "3",
+      "block": "Partidas, viragens e chegadas",
+      "title": "Chegada de Costas",
+      "intro_period": "SET-DEZ",
+      "periods": [
+        "SET-DEZ"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 3
+    },
+    {
+      "level_code": "B1",
+      "number": "4",
+      "block": "Técnica de Crol",
+      "title": "Técnica completa Crol (trajeto motor subaquático dos MS)",
+      "intro_period": "SET-DEZ",
+      "periods": [
+        "SET-DEZ",
+        "JAN-ABR",
+        "ABR-JUL"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez",
+        "Jan",
+        "Fev",
+        "Mar",
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [
+        "JAN-ABR",
+        "ABR-JUL"
+      ],
+      "source": "Relatório",
+      "order_index": 4
+    },
+    {
+      "level_code": "B1",
+      "number": "5",
+      "block": "Técnica de Costas",
+      "title": "Técnica completa Costas (trajeto motor subaquático dos MS)",
+      "intro_period": "SET-DEZ",
+      "periods": [
+        "SET-DEZ",
+        "JAN-ABR",
+        "ABR-JUL"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez",
+        "Jan",
+        "Fev",
+        "Mar",
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [
+        "JAN-ABR",
+        "ABR-JUL"
+      ],
+      "source": "Relatório",
+      "order_index": 5
+    },
+    {
+      "level_code": "B1",
+      "number": "6",
+      "block": "Natação Artística",
+      "title": "Remada Torpedo",
+      "intro_period": "SET-DEZ",
+      "periods": [
+        "SET-DEZ"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 6
+    },
+    {
+      "level_code": "B1",
+      "number": "7",
+      "block": "Natação Artística",
+      "title": "Remada Contra Torpedo",
+      "intro_period": "SET-DEZ",
+      "periods": [
+        "SET-DEZ"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 7
+    },
+    {
+      "level_code": "B1",
+      "number": "8",
+      "block": "Natação Artística",
+      "title": "Remada Jacaré",
+      "intro_period": "SET-DEZ",
+      "periods": [
+        "SET-DEZ"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 8
+    },
+    {
+      "level_code": "B1",
+      "number": "9",
+      "block": "Natação Artística",
+      "title": "Remada Lagosta",
+      "intro_period": "SET-DEZ",
+      "periods": [
+        "SET-DEZ"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 9
+    },
+    {
+      "level_code": "B1",
+      "number": "10",
+      "block": "Movimento ondulatório",
+      "title": "Movimento Ondulatório",
+      "intro_period": "SET-DEZ",
+      "periods": [
+        "SET-DEZ"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 10
+    },
+    {
+      "level_code": "B1",
+      "number": "11",
+      "block": "Técnica de Bruços",
+      "title": "Ação simultânea dos MI",
+      "intro_period": "JAN-ABR",
+      "periods": [
+        "JAN-ABR"
+      ],
+      "start_month": "Jan",
+      "months": [
+        "Jan",
+        "Fev",
+        "Mar",
+        "Abr"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 11
+    },
+    {
+      "level_code": "B1",
+      "number": "12",
+      "block": "Partidas, viragens e chegadas",
+      "title": "Viragem rolamento Crol",
+      "intro_period": "JAN-ABR",
+      "periods": [
+        "JAN-ABR",
+        "ABR-JUL"
+      ],
+      "start_month": "Jan",
+      "months": [
+        "Jan",
+        "Fev",
+        "Mar",
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [
+        "ABR-JUL"
+      ],
+      "source": "Relatório",
+      "order_index": 12
+    },
+    {
+      "level_code": "B1",
+      "number": "13",
+      "block": "Partidas, viragens e chegadas",
+      "title": "Viragem rolamento Costas",
+      "intro_period": "JAN-ABR",
+      "periods": [
+        "JAN-ABR",
+        "ABR-JUL"
+      ],
+      "start_month": "Jan",
+      "months": [
+        "Jan",
+        "Fev",
+        "Mar",
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [
+        "ABR-JUL"
+      ],
+      "source": "Relatório",
+      "order_index": 13
+    },
+    {
+      "level_code": "B1",
+      "number": "14",
+      "block": "Partidas, viragens e chegadas",
+      "title": "Partida Crol (ações no bloco, voo, entrada, deslize, ações subaquáticas, início de nado)",
+      "intro_period": "JAN-ABR",
+      "periods": [
+        "JAN-ABR",
+        "ABR-JUL"
+      ],
+      "start_month": "Jan",
+      "months": [
+        "Jan",
+        "Fev",
+        "Mar",
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [
+        "ABR-JUL"
+      ],
+      "source": "Relatório",
+      "order_index": 14
+    },
+    {
+      "level_code": "B1",
+      "number": "15",
+      "block": "Partidas, viragens e chegadas",
+      "title": "Partida Costas (ações no bloco, voo, entrada, deslize, ações subaquáticas, início de nado)",
+      "intro_period": "JAN-ABR",
+      "periods": [
+        "JAN-ABR",
+        "ABR-JUL"
+      ],
+      "start_month": "Jan",
+      "months": [
+        "Jan",
+        "Fev",
+        "Mar",
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [
+        "ABR-JUL"
+      ],
+      "source": "Relatório",
+      "order_index": 15
+    },
+    {
+      "level_code": "B1",
+      "number": "16",
+      "block": "Técnica de Bruços",
+      "title": "Ação MI Bruços",
+      "intro_period": "JAN-ABR",
+      "periods": [
+        "JAN-ABR"
+      ],
+      "start_month": "Jan",
+      "months": [
+        "Jan",
+        "Fev",
+        "Mar",
+        "Abr"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 16
+    },
+    {
+      "level_code": "B1",
+      "number": "17",
+      "block": "Técnica de Bruços",
+      "title": "Ação MI Bruços coordenada c/ a respiração",
+      "intro_period": "JAN-ABR",
+      "periods": [
+        "JAN-ABR",
+        "ABR-JUL"
+      ],
+      "start_month": "Jan",
+      "months": [
+        "Jan",
+        "Fev",
+        "Mar",
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [
+        "ABR-JUL"
+      ],
+      "source": "Relatório",
+      "order_index": 17
+    },
+    {
+      "level_code": "B1",
+      "number": "18",
+      "block": "Natação Artística",
+      "title": "Posição de Carpa (posição de mesa, PVI na parede, c/ apoio instável e s/ apoio)",
+      "intro_period": "ABR-JUL",
+      "periods": [
+        "ABR-JUL"
+      ],
+      "start_month": "Abr",
+      "months": [
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 18
+    },
+    {
+      "level_code": "B1",
+      "number": "19",
+      "block": "Natação Artística",
+      "title": "Posição de Engrupado Vertical (invertida) (progressão idêntica à anterior)",
+      "intro_period": "ABR-JUL",
+      "periods": [
+        "ABR-JUL"
+      ],
+      "start_month": "Abr",
+      "months": [
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 19
+    },
+    {
+      "level_code": "B1",
+      "number": "20",
+      "block": "Pólo Aquático",
+      "title": "Posição básica lateral PA (retropedalagem assimétrica)",
+      "intro_period": "ABR-JUL",
+      "periods": [
+        "ABR-JUL"
+      ],
+      "start_month": "Abr",
+      "months": [
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 20
+    },
+    {
+      "level_code": "B1",
+      "number": "21",
+      "block": "Pólo Aquático",
+      "title": "Passe e receção s/ apoio",
+      "intro_period": "ABR-JUL",
+      "periods": [
+        "ABR-JUL"
+      ],
+      "start_month": "Abr",
+      "months": [
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 21
+    },
+    {
+      "level_code": "B1",
+      "number": "22",
+      "block": "Pólo Aquático",
+      "title": "Arranque/Paragem",
+      "intro_period": "ABR-JUL",
+      "periods": [
+        "ABR-JUL"
+      ],
+      "start_month": "Abr",
+      "months": [
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 22
+    },
+    {
+      "level_code": "B1",
+      "number": "23",
+      "block": "Estafetas",
+      "title": "Estafetas: partida tradicional (2ª, 3ª e 4ª percursos)",
+      "intro_period": "ABR-JUL",
+      "periods": [
+        "ABR-JUL"
+      ],
+      "start_month": "Abr",
+      "months": [
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 23
+    },
+    {
+      "level_code": "B1",
+      "number": "24",
+      "block": "Estafetas",
+      "title": "Estafetas: rendição (relação chegada-partida)",
+      "intro_period": "ABR-JUL",
+      "periods": [
+        "ABR-JUL"
+      ],
+      "start_month": "Abr",
+      "months": [
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 24
+    },
+    {
+      "level_code": "B1",
+      "number": "25",
+      "block": "Pólo Aquático",
+      "title": "Crol Pólo Aquático/Sincro (cabeça fora de água)",
+      "intro_period": "ABR-JUL",
+      "periods": [
+        "ABR-JUL"
+      ],
+      "start_month": "Abr",
+      "months": [
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 25
+    },
+    {
+      "level_code": "B1",
+      "number": "26",
+      "block": "Pólo Aquático",
+      "title": "Costas Pólo Aquático",
+      "intro_period": "ABR-JUL",
+      "periods": [
+        "ABR-JUL"
+      ],
+      "start_month": "Abr",
+      "months": [
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 26
+    },
+    {
+      "level_code": "B1",
+      "number": "27",
+      "block": "Pólo Aquático",
+      "title": "Jogo reduzido 3x3+GR (joga com a equipa; não afundar a bola)",
+      "intro_period": "ABR-JUL",
+      "periods": [
+        "ABR-JUL"
+      ],
+      "start_month": "Abr",
+      "months": [
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 27
+    },
+    {
+      "level_code": "B2",
+      "number": "1",
+      "block": "Natação Artística",
+      "title": "Posição vertical invertida (posição de mesa, PVI na parede, c/ apoio instável e s/ apoio)",
+      "intro_period": "SET-DEZ",
+      "periods": [
+        "SET-DEZ"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 1
+    },
+    {
+      "level_code": "B2",
+      "number": "2",
+      "block": "Partidas, viragens e chegadas",
+      "title": "Chegada de Crol",
+      "intro_period": "SET-DEZ",
+      "periods": [
+        "SET-DEZ"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 2
+    },
+    {
+      "level_code": "B2",
+      "number": "3",
+      "block": "Partidas, viragens e chegadas",
+      "title": "Chegada de Costas",
+      "intro_period": "SET-DEZ",
+      "periods": [
+        "SET-DEZ",
+        "JAN-ABR",
+        "ABR-JUL"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez",
+        "Jan",
+        "Fev",
+        "Mar",
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [
+        "JAN-ABR",
+        "ABR-JUL"
+      ],
+      "source": "Relatório",
+      "order_index": 3
+    },
+    {
+      "level_code": "B2",
+      "number": "4",
+      "block": "Técnica de Crol",
+      "title": "Técnica completa Crol (trajeto motor subaquático dos MS)",
+      "intro_period": "SET-DEZ",
+      "periods": [
+        "SET-DEZ",
+        "JAN-ABR",
+        "ABR-JUL"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez",
+        "Jan",
+        "Fev",
+        "Mar",
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [
+        "JAN-ABR",
+        "ABR-JUL"
+      ],
+      "source": "Relatório",
+      "order_index": 4
+    },
+    {
+      "level_code": "B2",
+      "number": "5",
+      "block": "Técnica de Costas",
+      "title": "Técnica completa Costas (trajeto motor subaquático dos MS)",
+      "intro_period": "SET-DEZ",
+      "periods": [
+        "SET-DEZ",
+        "JAN-ABR",
+        "ABR-JUL"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez",
+        "Jan",
+        "Fev",
+        "Mar",
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [
+        "JAN-ABR",
+        "ABR-JUL"
+      ],
+      "source": "Relatório",
+      "order_index": 5
+    },
+    {
+      "level_code": "B2",
+      "number": "6",
+      "block": "Natação Artística",
+      "title": "Remada Torpedo",
+      "intro_period": "SET-DEZ",
+      "periods": [
+        "SET-DEZ",
+        "JAN-ABR",
+        "ABR-JUL"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez",
+        "Jan",
+        "Fev",
+        "Mar",
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [
+        "JAN-ABR",
+        "ABR-JUL"
+      ],
+      "source": "Relatório",
+      "order_index": 6
+    },
+    {
+      "level_code": "B2",
+      "number": "7",
+      "block": "Natação Artística",
+      "title": "Remada Contra Torpedo",
+      "intro_period": "SET-DEZ",
+      "periods": [
+        "SET-DEZ",
+        "JAN-ABR",
+        "ABR-JUL"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez",
+        "Jan",
+        "Fev",
+        "Mar",
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [
+        "JAN-ABR",
+        "ABR-JUL"
+      ],
+      "source": "Relatório",
+      "order_index": 7
+    },
+    {
+      "level_code": "B2",
+      "number": "8",
+      "block": "Natação Artística",
+      "title": "Remada Jacaré",
+      "intro_period": "SET-DEZ",
+      "periods": [
+        "SET-DEZ",
+        "JAN-ABR",
+        "ABR-JUL"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez",
+        "Jan",
+        "Fev",
+        "Mar",
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [
+        "JAN-ABR",
+        "ABR-JUL"
+      ],
+      "source": "Relatório",
+      "order_index": 8
+    },
+    {
+      "level_code": "B2",
+      "number": "9",
+      "block": "Natação Artística",
+      "title": "Remada Lagosta",
+      "intro_period": "SET-DEZ",
+      "periods": [
+        "SET-DEZ",
+        "JAN-ABR",
+        "ABR-JUL"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez",
+        "Jan",
+        "Fev",
+        "Mar",
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [
+        "JAN-ABR",
+        "ABR-JUL"
+      ],
+      "source": "Relatório",
+      "order_index": 9
+    },
+    {
+      "level_code": "B2",
+      "number": "10",
+      "block": "Movimento ondulatório",
+      "title": "Movimento Ondulatório",
+      "intro_period": "SET-DEZ",
+      "periods": [
+        "SET-DEZ",
+        "JAN-ABR",
+        "ABR-JUL"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez",
+        "Jan",
+        "Fev",
+        "Mar",
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [
+        "JAN-ABR",
+        "ABR-JUL"
+      ],
+      "source": "Relatório",
+      "order_index": 10
+    },
+    {
+      "level_code": "B2",
+      "number": "11",
+      "block": "Técnica de Bruços",
+      "title": "Ação simultânea dos MI",
+      "intro_period": "JAN-ABR",
+      "periods": [
+        "JAN-ABR",
+        "ABR-JUL"
+      ],
+      "start_month": "Jan",
+      "months": [
+        "Jan",
+        "Fev",
+        "Mar",
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [
+        "ABR-JUL"
+      ],
+      "source": "Relatório",
+      "order_index": 11
+    },
+    {
+      "level_code": "B2",
+      "number": "12",
+      "block": "Partidas, viragens e chegadas",
+      "title": "Viragem rolamento Crol",
+      "intro_period": "JAN-ABR",
+      "periods": [
+        "JAN-ABR",
+        "ABR-JUL"
+      ],
+      "start_month": "Jan",
+      "months": [
+        "Jan",
+        "Fev",
+        "Mar",
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [
+        "ABR-JUL"
+      ],
+      "source": "Relatório",
+      "order_index": 12
+    },
+    {
+      "level_code": "B2",
+      "number": "13",
+      "block": "Partidas, viragens e chegadas",
+      "title": "Viragem rolamento Costas",
+      "intro_period": "JAN-ABR",
+      "periods": [
+        "JAN-ABR",
+        "ABR-JUL"
+      ],
+      "start_month": "Jan",
+      "months": [
+        "Jan",
+        "Fev",
+        "Mar",
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [
+        "ABR-JUL"
+      ],
+      "source": "Relatório",
+      "order_index": 13
+    },
+    {
+      "level_code": "B2",
+      "number": "14",
+      "block": "Partidas, viragens e chegadas",
+      "title": "Partida Crol (ações no bloco, voo, entrada, deslize, ações subaquáticas, início de nado)",
+      "intro_period": "JAN-ABR",
+      "periods": [
+        "JAN-ABR",
+        "ABR-JUL"
+      ],
+      "start_month": "Jan",
+      "months": [
+        "Jan",
+        "Fev",
+        "Mar",
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [
+        "ABR-JUL"
+      ],
+      "source": "Relatório",
+      "order_index": 14
+    },
+    {
+      "level_code": "B2",
+      "number": "15",
+      "block": "Partidas, viragens e chegadas",
+      "title": "Partida Costas (ações no bloco, voo, entrada, deslize, ações subaquáticas, início de nado)",
+      "intro_period": "JAN-ABR",
+      "periods": [
+        "JAN-ABR",
+        "ABR-JUL"
+      ],
+      "start_month": "Jan",
+      "months": [
+        "Jan",
+        "Fev",
+        "Mar",
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [
+        "ABR-JUL"
+      ],
+      "source": "Relatório",
+      "order_index": 15
+    },
+    {
+      "level_code": "B2",
+      "number": "16",
+      "block": "Técnica de Bruços",
+      "title": "Ação MI Bruços",
+      "intro_period": "JAN-ABR",
+      "periods": [
+        "JAN-ABR",
+        "ABR-JUL"
+      ],
+      "start_month": "Jan",
+      "months": [
+        "Jan",
+        "Fev",
+        "Mar",
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [
+        "ABR-JUL"
+      ],
+      "source": "Relatório",
+      "order_index": 16
+    },
+    {
+      "level_code": "B2",
+      "number": "17",
+      "block": "Técnica de Bruços",
+      "title": "Ação MI Bruços coordenada c/ a respiração",
+      "intro_period": "JAN-ABR",
+      "periods": [
+        "JAN-ABR",
+        "ABR-JUL"
+      ],
+      "start_month": "Jan",
+      "months": [
+        "Jan",
+        "Fev",
+        "Mar",
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [
+        "ABR-JUL"
+      ],
+      "source": "Relatório",
+      "order_index": 17
+    },
+    {
+      "level_code": "B2",
+      "number": "18",
+      "block": "Natação Artística",
+      "title": "Posição de Carpa (posição de mesa, PVI na parede, c/ apoio instável e s/ apoio)",
+      "intro_period": "ABR-JUL",
+      "periods": [
+        "ABR-JUL"
+      ],
+      "start_month": "Abr",
+      "months": [
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 18
+    },
+    {
+      "level_code": "B2",
+      "number": "19",
+      "block": "Natação Artística",
+      "title": "Posição de Engrupado Vertical (invertida) (progressão idêntica à anterior)",
+      "intro_period": "ABR-JUL",
+      "periods": [
+        "ABR-JUL"
+      ],
+      "start_month": "Abr",
+      "months": [
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 19
+    },
+    {
+      "level_code": "B2",
+      "number": "20",
+      "block": "Pólo Aquático",
+      "title": "Posição básica lateral PA (retropedalagem assimétrica)",
+      "intro_period": "ABR-JUL",
+      "periods": [
+        "ABR-JUL"
+      ],
+      "start_month": "Abr",
+      "months": [
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 20
+    },
+    {
+      "level_code": "B2",
+      "number": "21",
+      "block": "Pólo Aquático",
+      "title": "Passe e receção s/ apoio",
+      "intro_period": "ABR-JUL",
+      "periods": [
+        "ABR-JUL"
+      ],
+      "start_month": "Abr",
+      "months": [
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 21
+    },
+    {
+      "level_code": "B2",
+      "number": "22",
+      "block": "Pólo Aquático",
+      "title": "Arranque/Paragem",
+      "intro_period": "ABR-JUL",
+      "periods": [
+        "ABR-JUL"
+      ],
+      "start_month": "Abr",
+      "months": [
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 22
+    },
+    {
+      "level_code": "B2",
+      "number": "23",
+      "block": "Estafetas",
+      "title": "Estafetas: partida tradicional (2ª, 3ª e 4ª percursos)",
+      "intro_period": "ABR-JUL",
+      "periods": [
+        "ABR-JUL"
+      ],
+      "start_month": "Abr",
+      "months": [
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 23
+    },
+    {
+      "level_code": "B2",
+      "number": "24",
+      "block": "Estafetas",
+      "title": "Estafetas: rendição (relação chegada-partida)",
+      "intro_period": "ABR-JUL",
+      "periods": [
+        "ABR-JUL"
+      ],
+      "start_month": "Abr",
+      "months": [
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 24
+    },
+    {
+      "level_code": "B2",
+      "number": "25",
+      "block": "Pólo Aquático",
+      "title": "Crol Pólo Aquático/Sincro (cabeça fora de água)",
+      "intro_period": "ABR-JUL",
+      "periods": [
+        "ABR-JUL"
+      ],
+      "start_month": "Abr",
+      "months": [
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 25
+    },
+    {
+      "level_code": "B2",
+      "number": "26",
+      "block": "Pólo Aquático",
+      "title": "Costas Pólo Aquático",
+      "intro_period": "ABR-JUL",
+      "periods": [
+        "ABR-JUL"
+      ],
+      "start_month": "Abr",
+      "months": [
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 26
+    },
+    {
+      "level_code": "B2",
+      "number": "27",
+      "block": "Pólo Aquático",
+      "title": "Jogo reduzido 3x3+GR (joga com a equipa; não afundar a bola)",
+      "intro_period": "ABR-JUL",
+      "periods": [
+        "ABR-JUL"
+      ],
+      "start_month": "Abr",
+      "months": [
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 27
+    },
+    {
+      "level_code": "C",
+      "number": "1",
+      "block": "Pólo Aquático",
+      "title": "Nado Lateral",
+      "intro_period": "SET-DEZ",
+      "periods": [
+        "SET-DEZ"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 1
+    },
+    {
+      "level_code": "C",
+      "number": "2",
+      "block": "Natação Artística",
+      "title": "Kick pull direito e esquerdo",
+      "intro_period": "SET-DEZ",
+      "periods": [
+        "SET-DEZ"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 2
+    },
+    {
+      "level_code": "C",
+      "number": "3",
+      "block": "Pólo Aquático",
+      "title": "Mudanças do sentido de nado",
+      "intro_period": "SET-DEZ",
+      "periods": [
+        "SET-DEZ"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 3
+    },
+    {
+      "level_code": "C",
+      "number": "4",
+      "block": "Pólo Aquático",
+      "title": "Crol Pólo c/ pernas bruços",
+      "intro_period": "SET-DEZ",
+      "periods": [
+        "SET-DEZ"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 4
+    },
+    {
+      "level_code": "C",
+      "number": "5",
+      "block": "Técnica de Bruços",
+      "title": "Ação MI Bruços coordenada c/ a respiração e ação de um MS",
+      "intro_period": "SET-DEZ",
+      "periods": [
+        "SET-DEZ"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 5
+    },
+    {
+      "level_code": "C",
+      "number": "6",
+      "block": "Técnica de Bruços",
+      "title": "Técnica de Bruços Completa",
+      "intro_period": "SET-DEZ",
+      "periods": [
+        "SET-DEZ",
+        "JAN-ABR"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez",
+        "Jan",
+        "Fev",
+        "Mar",
+        "Abr"
+      ],
+      "continuity": [
+        "JAN-ABR"
+      ],
+      "source": "Relatório",
+      "order_index": 6
+    },
+    {
+      "level_code": "C",
+      "number": "7",
+      "block": "Técnica de Bruços",
+      "title": "Braçada submarina",
+      "intro_period": "JAN-ABR",
+      "periods": [
+        "JAN-ABR"
+      ],
+      "start_month": "Jan",
+      "months": [
+        "Jan",
+        "Fev",
+        "Mar",
+        "Abr"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 7
+    },
+    {
+      "level_code": "C",
+      "number": "8",
+      "block": "Técnica de Bruços",
+      "title": "Bruços apneia com impulso da parede",
+      "intro_period": "JAN-ABR",
+      "periods": [
+        "JAN-ABR"
+      ],
+      "start_month": "Jan",
+      "months": [
+        "Jan",
+        "Fev",
+        "Mar",
+        "Abr"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 8
+    },
+    {
+      "level_code": "C",
+      "number": "9",
+      "block": "Natação Artística",
+      "title": "Posição de vertical de joelho fletido direita e esquerda (posição de mesa, PVI na parede, c/ apoio instável e s/ apoio)",
+      "intro_period": "JAN-ABR",
+      "periods": [
+        "JAN-ABR"
+      ],
+      "start_month": "Jan",
+      "months": [
+        "Jan",
+        "Fev",
+        "Mar",
+        "Abr"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 9
+    },
+    {
+      "level_code": "C",
+      "number": "10",
+      "block": "Natação Artística",
+      "title": "Posição de grua direita e esquerda (progressão idêntica à anterior)",
+      "intro_period": "JAN-ABR",
+      "periods": [
+        "JAN-ABR"
+      ],
+      "start_month": "Jan",
+      "months": [
+        "Jan",
+        "Fev",
+        "Mar",
+        "Abr"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 10
+    },
+    {
+      "level_code": "C",
+      "number": "11",
+      "block": "Natação Artística",
+      "title": "Movimento de posição dorsal para barril em remada de sustentação",
+      "intro_period": "JAN-ABR",
+      "periods": [
+        "JAN-ABR"
+      ],
+      "start_month": "Jan",
+      "months": [
+        "Jan",
+        "Fev",
+        "Mar",
+        "Abr"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 11
+    },
+    {
+      "level_code": "C",
+      "number": "12",
+      "block": "Natação Artística",
+      "title": "Movimento de posição dorsal para perna de ballet com apoio e remada de sustentação",
+      "intro_period": "JAN-ABR",
+      "periods": [
+        "JAN-ABR"
+      ],
+      "start_month": "Jan",
+      "months": [
+        "Jan",
+        "Fev",
+        "Mar",
+        "Abr"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 12
+    },
+    {
+      "level_code": "C",
+      "number": "13",
+      "block": "Natação Artística",
+      "title": "Movimento de boost - salto",
+      "intro_period": "JAN-ABR",
+      "periods": [
+        "JAN-ABR"
+      ],
+      "start_month": "Jan",
+      "months": [
+        "Jan",
+        "Fev",
+        "Mar",
+        "Abr"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 13
+    },
+    {
+      "level_code": "C",
+      "number": "14",
+      "block": "Pólo Aquático",
+      "title": "Retropedalagem com MS elevado",
+      "intro_period": "JAN-ABR",
+      "periods": [
+        "JAN-ABR"
+      ],
+      "start_month": "Jan",
+      "months": [
+        "Jan",
+        "Fev",
+        "Mar",
+        "Abr"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 14
+    },
+    {
+      "level_code": "C",
+      "number": "15",
+      "block": "Pólo Aquático",
+      "title": "Passe para a mão e receção s/ apoio",
+      "intro_period": "JAN-ABR",
+      "periods": [
+        "JAN-ABR"
+      ],
+      "start_month": "Jan",
+      "months": [
+        "Jan",
+        "Fev",
+        "Mar",
+        "Abr"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 15
+    },
+    {
+      "level_code": "C",
+      "number": "16",
+      "block": "Partidas, viragens e chegadas",
+      "title": "Partida de Bruços",
+      "intro_period": "ABR-JUL",
+      "periods": [
+        "ABR-JUL"
+      ],
+      "start_month": "Abr",
+      "months": [
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 16
+    },
+    {
+      "level_code": "C",
+      "number": "17",
+      "block": "Partidas, viragens e chegadas",
+      "title": "Viragem de Bruços",
+      "intro_period": "ABR-JUL",
+      "periods": [
+        "ABR-JUL"
+      ],
+      "start_month": "Abr",
+      "months": [
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 17
+    },
+    {
+      "level_code": "C",
+      "number": "18",
+      "block": "Partidas, viragens e chegadas",
+      "title": "Chegada de Bruços",
+      "intro_period": "ABR-JUL",
+      "periods": [
+        "ABR-JUL"
+      ],
+      "start_month": "Abr",
+      "months": [
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 18
+    },
+    {
+      "level_code": "C",
+      "number": "19",
+      "block": "Natação Artística",
+      "title": "Remada de entrada em carpa",
+      "intro_period": "ABR-JUL",
+      "periods": [
+        "ABR-JUL"
+      ],
+      "start_month": "Abr",
+      "months": [
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 19
+    },
+    {
+      "level_code": "C",
+      "number": "20",
+      "block": "Pólo Aquático",
+      "title": "Condução de Bola",
+      "intro_period": "ABR-JUL",
+      "periods": [
+        "ABR-JUL"
+      ],
+      "start_month": "Abr",
+      "months": [
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 20
+    },
+    {
+      "level_code": "C",
+      "number": "21",
+      "block": "Pólo Aquático",
+      "title": "Jogo reduzido 3x3 (defende pelo menos 1 adversário; jogar apenas c/ 1 mão)",
+      "intro_period": "ABR-JUL",
+      "periods": [
+        "ABR-JUL"
+      ],
+      "start_month": "Abr",
+      "months": [
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 21
+    },
+    {
+      "level_code": "C",
+      "number": "22",
+      "block": "Movimento ondulatório",
+      "title": "Movimento Ondulatório",
+      "intro_period": "ABR-JUL",
+      "periods": [
+        "ABR-JUL"
+      ],
+      "start_month": "Abr",
+      "months": [
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 22
+    },
+    {
+      "level_code": "D",
+      "number": "1",
+      "block": "Capacidades funcionais",
+      "title": "Desenvolvimento das capacidades funcionais: resistência e velocidade",
+      "intro_period": "SET-DEZ",
+      "periods": [
+        "SET-DEZ",
+        "JAN-ABR",
+        "ABR-JUL"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez",
+        "Jan",
+        "Fev",
+        "Mar",
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [
+        "JAN-ABR",
+        "ABR-JUL"
+      ],
+      "source": "Relatório",
+      "order_index": 1
+    },
+    {
+      "level_code": "D",
+      "number": "2",
+      "block": "Técnica de Mariposa",
+      "title": "Ação dos MI de Mariposa",
+      "intro_period": "SET-DEZ",
+      "periods": [
+        "SET-DEZ"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 2
+    },
+    {
+      "level_code": "D",
+      "number": "3",
+      "block": "Técnica de Mariposa",
+      "title": "Ação dos MI de Mariposa coordenada c/ a respiração",
+      "intro_period": "SET-DEZ",
+      "periods": [
+        "SET-DEZ"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 3
+    },
+    {
+      "level_code": "D",
+      "number": "4",
+      "block": "Técnica de Mariposa",
+      "title": "Ação dos MI de Mariposa coordenada c/ a respiração e a ação de um MS",
+      "intro_period": "SET-DEZ",
+      "periods": [
+        "SET-DEZ"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 4
+    },
+    {
+      "level_code": "D",
+      "number": "5",
+      "block": "Natação Artística",
+      "title": "Posição de “V” fechado com apoio",
+      "intro_period": "SET-DEZ",
+      "periods": [
+        "SET-DEZ"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 5
+    },
+    {
+      "level_code": "D",
+      "number": "6",
+      "block": "Natação Artística",
+      "title": "Posição de espargata com apoio",
+      "intro_period": "SET-DEZ",
+      "periods": [
+        "SET-DEZ"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 6
+    },
+    {
+      "level_code": "D",
+      "number": "7",
+      "block": "Natação Artística",
+      "title": "Movimento de entrada em carpa",
+      "intro_period": "SET-DEZ",
+      "periods": [
+        "SET-DEZ"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 7
+    },
+    {
+      "level_code": "D",
+      "number": "8",
+      "block": "Natação Artística",
+      "title": "Movimento de barracuda com apoio",
+      "intro_period": "SET-DEZ",
+      "periods": [
+        "SET-DEZ"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 8
+    },
+    {
+      "level_code": "D",
+      "number": "9",
+      "block": "Técnica de Mariposa",
+      "title": "Técnica de Mariposa Completa",
+      "intro_period": "SET-DEZ",
+      "periods": [
+        "SET-DEZ",
+        "JAN-ABR"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez",
+        "Jan",
+        "Fev",
+        "Mar",
+        "Abr"
+      ],
+      "continuity": [
+        "JAN-ABR"
+      ],
+      "source": "Relatório",
+      "order_index": 9
+    },
+    {
+      "level_code": "D",
+      "number": "10",
+      "block": "Natação Artística",
+      "title": "Posição de arqueada com apoio",
+      "intro_period": "JAN-ABR",
+      "periods": [
+        "JAN-ABR"
+      ],
+      "start_month": "Jan",
+      "months": [
+        "Jan",
+        "Fev",
+        "Mar",
+        "Abr"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 10
+    },
+    {
+      "level_code": "D",
+      "number": "11",
+      "block": "Natação Artística",
+      "title": "Kick pull over direito e esquerdo",
+      "intro_period": "JAN-ABR",
+      "periods": [
+        "JAN-ABR"
+      ],
+      "start_month": "Jan",
+      "months": [
+        "Jan",
+        "Fev",
+        "Mar",
+        "Abr"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 11
+    },
+    {
+      "level_code": "D",
+      "number": "12",
+      "block": "Estilos",
+      "title": "Nado individual de estilos",
+      "intro_period": "JAN-ABR",
+      "periods": [
+        "JAN-ABR"
+      ],
+      "start_month": "Jan",
+      "months": [
+        "Jan",
+        "Fev",
+        "Mar",
+        "Abr"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 12
+    },
+    {
+      "level_code": "D",
+      "number": "13",
+      "block": "Partidas, viragens e chegadas",
+      "title": "Viragem aberta de mariposa para costas",
+      "intro_period": "JAN-ABR",
+      "periods": [
+        "JAN-ABR"
+      ],
+      "start_month": "Jan",
+      "months": [
+        "Jan",
+        "Fev",
+        "Mar",
+        "Abr"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 13
+    },
+    {
+      "level_code": "D",
+      "number": "14",
+      "block": "Partidas, viragens e chegadas",
+      "title": "Viragem aberta de costas para bruços",
+      "intro_period": "JAN-ABR",
+      "periods": [
+        "JAN-ABR"
+      ],
+      "start_month": "Jan",
+      "months": [
+        "Jan",
+        "Fev",
+        "Mar",
+        "Abr"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 14
+    },
+    {
+      "level_code": "D",
+      "number": "15",
+      "block": "Partidas, viragens e chegadas",
+      "title": "Viragem de rolamento de costas para bruços",
+      "intro_period": "JAN-ABR",
+      "periods": [
+        "JAN-ABR"
+      ],
+      "start_month": "Jan",
+      "months": [
+        "Jan",
+        "Fev",
+        "Mar",
+        "Abr"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 15
+    },
+    {
+      "level_code": "D",
+      "number": "16",
+      "block": "Partidas, viragens e chegadas",
+      "title": "Viragem aberta de bruços para crol",
+      "intro_period": "JAN-ABR",
+      "periods": [
+        "JAN-ABR"
+      ],
+      "start_month": "Jan",
+      "months": [
+        "Jan",
+        "Fev",
+        "Mar",
+        "Abr"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 16
+    },
+    {
+      "level_code": "D",
+      "number": "17",
+      "block": "Pólo Aquático",
+      "title": "Jogo reduzido 5x5 (dois metros)",
+      "intro_period": "ABR-JUL",
+      "periods": [
+        "ABR-JUL"
+      ],
+      "start_month": "Abr",
+      "months": [
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 17
+    },
+    {
+      "level_code": "D",
+      "number": "18",
+      "block": "Natação Artística",
+      "title": "Posição de arqueada com remada de sustentação",
+      "intro_period": "ABR-JUL",
+      "periods": [
+        "ABR-JUL"
+      ],
+      "start_month": "Abr",
+      "months": [
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 18
+    },
+    {
+      "level_code": "D",
+      "number": "19",
+      "block": "Natação Artística",
+      "title": "Movimento de entrada em delfim",
+      "intro_period": "ABR-JUL",
+      "periods": [
+        "ABR-JUL"
+      ],
+      "start_month": "Abr",
+      "months": [
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 19
+    },
+    {
+      "level_code": "D",
+      "number": "20",
+      "block": "Natação Artística",
+      "title": "Deslocamento com remada assimétrica em posição de arqueada com apoio",
+      "intro_period": "ABR-JUL",
+      "periods": [
+        "ABR-JUL"
+      ],
+      "start_month": "Abr",
+      "months": [
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 20
+    },
+    {
+      "level_code": "Avançado",
+      "number": "1",
+      "block": "Técnica de Crol",
+      "title": "Técnica completa de Crol (aperfeiçoamento)",
+      "intro_period": "SET-DEZ",
+      "periods": [
+        "SET-DEZ"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 1
+    },
+    {
+      "level_code": "Avançado",
+      "number": "2",
+      "block": "Técnica de Costas",
+      "title": "Técnica completa de Costas (aperfeiçoamento)",
+      "intro_period": "SET-DEZ",
+      "periods": [
+        "SET-DEZ"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 2
+    },
+    {
+      "level_code": "Avançado",
+      "number": "3",
+      "block": "Técnica de Bruços",
+      "title": "Técnica completa de Bruços (aperfeiçoamento)",
+      "intro_period": "SET-DEZ",
+      "periods": [
+        "SET-DEZ"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 3
+    },
+    {
+      "level_code": "Avançado",
+      "number": "4",
+      "block": "Técnica de Mariposa",
+      "title": "Técnica completa de Mariposa (aperfeiçoamento)",
+      "intro_period": "SET-DEZ",
+      "periods": [
+        "SET-DEZ"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 4
+    },
+    {
+      "level_code": "Avançado",
+      "number": "5",
+      "block": "Estilos",
+      "title": "Nado individual de Estilos (aperfeiçoamento)",
+      "intro_period": "SET-DEZ",
+      "periods": [
+        "SET-DEZ"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 5
+    },
+    {
+      "level_code": "Avançado",
+      "number": "6",
+      "block": "Partidas, viragens e chegadas",
+      "title": "Partidas e Viragens (aperfeiçoamento)",
+      "intro_period": "SET-DEZ",
+      "periods": [
+        "SET-DEZ"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 6
+    },
+    {
+      "level_code": "Avançado",
+      "number": "7",
+      "block": "Estafetas",
+      "title": "Estafetas (aperfeiçoamento)",
+      "intro_period": "SET-DEZ",
+      "periods": [
+        "SET-DEZ"
+      ],
+      "start_month": "Set",
+      "months": [
+        "Set",
+        "Out",
+        "Nov",
+        "Dez"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 7
+    },
+    {
+      "level_code": "Avançado",
+      "number": "8",
+      "block": "Natação Artística",
+      "title": "Coreografia Prova Nível 1",
+      "intro_period": "JAN-ABR",
+      "periods": [
+        "JAN-ABR"
+      ],
+      "start_month": "Jan",
+      "months": [
+        "Jan",
+        "Fev",
+        "Mar",
+        "Abr"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 8
+    },
+    {
+      "level_code": "Avançado",
+      "number": "9",
+      "block": "Pólo Aquático",
+      "title": "Jogo Formal",
+      "intro_period": "JAN-ABR",
+      "periods": [
+        "JAN-ABR"
+      ],
+      "start_month": "Jan",
+      "months": [
+        "Jan",
+        "Fev",
+        "Mar",
+        "Abr"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 9
+    },
+    {
+      "level_code": "Avançado",
+      "number": "10",
+      "block": "Outras disciplinas aquáticas",
+      "title": "Nado com Barbatanas",
+      "intro_period": "JAN-ABR",
+      "periods": [
+        "JAN-ABR"
+      ],
+      "start_month": "Jan",
+      "months": [
+        "Jan",
+        "Fev",
+        "Mar",
+        "Abr"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 10
+    },
+    {
+      "level_code": "Avançado",
+      "number": "11",
+      "block": "Águas Abertas",
+      "title": "Águas Abertas (técnicas específicas)",
+      "intro_period": "ABR-JUL",
+      "periods": [
+        "ABR-JUL"
+      ],
+      "start_month": "Abr",
+      "months": [
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 11
+    },
+    {
+      "level_code": "Avançado",
+      "number": "12",
+      "block": "Salvamento Aquático",
+      "title": "Salvamento Aquático (técnicas de reboque)",
+      "intro_period": "ABR-JUL",
+      "periods": [
+        "ABR-JUL"
+      ],
+      "start_month": "Abr",
+      "months": [
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul"
+      ],
+      "continuity": [],
+      "source": "Relatório",
+      "order_index": 12
+    }
+  ]
+}
