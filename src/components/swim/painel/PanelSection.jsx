@@ -10,13 +10,13 @@ export default function PanelSection({ title, actionLabel, actionTo, children, c
         {actionLabel && (
           <Link
             to={actionTo}
-            className="text-[15px] text-[#0A84FF] rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0A84FF] active:opacity-60"
+            className="text-[15px] text-[#2fe06b] rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2fe06b] active:opacity-60"
           >
             {actionLabel}
           </Link>
         )}
       </div>
-      <div className="rounded-[12px] bg-[#1C1C1E] overflow-hidden">{children}</div>
+      <div className="rounded-[12px] bg-[#0d3f22] overflow-hidden">{children}</div>
     </section>
   );
 }
