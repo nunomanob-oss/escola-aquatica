@@ -30,7 +30,7 @@ export default function Register() {
       setError(signUpError.message || 'Não foi possível criar a conta')
       return
     }
-    await navigate({ to: '/' })
+    await navigate({ to: '/niveis' })
   }
 
   return (

@@ -11,7 +11,7 @@ const STATUS = {
 };
 
 // Conteúdo do nível com a sua calendarização (faixa Set–Jul), o estado no mês escolhido
-// e os exercícios exemplo (os mesmos da aba Conteúdos).
+// e os exercícios exemplo (do programa CFP).
 // A área do conteúdo é o controlo; a Checkbox é só visual (dentro de um <label> alternava duas vezes).
 export default function ContentItem({ content, month, examples = [], levelCode, selectedIds, onToggle, onOpenExercise }) {
   const [open, setOpen] = useState(false);

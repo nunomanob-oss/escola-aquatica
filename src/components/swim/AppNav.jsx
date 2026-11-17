@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "@tanstack/react-router";
-import { BookOpen, ClipboardList, Layers, LayoutGrid, ListChecks, LogOut } from "lucide-react";
+import { BookOpen, ClipboardList, Layers, LogOut } from "lucide-react";
 import { signOut } from "@/lib/auth-client";
 
 const base = "flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-semibold transition-colors";
@@ -21,10 +21,6 @@ export default function AppNav() {
 
   return (
     <nav className="flex flex-wrap items-center gap-2 px-4 sm:px-8 pt-6">
-      <Link to="/" activeOptions={{ exact: true }} className={inactive} activeProps={{ className: active }}>
-        <ListChecks className="w-4 h-4" />
-        Conteúdos
-      </Link>
       <Link to="/niveis" className={inactive} activeProps={{ className: active }}>
         <Layers className="w-4 h-4" />
         Níveis
@@ -36,10 +32,6 @@ export default function AppNav() {
       <Link to="/aulas" className={inactive} activeProps={{ className: active }}>
         <ClipboardList className="w-4 h-4" />
         Aulas
-      </Link>
-      <Link to="/painel" className={inactive} activeProps={{ className: active }}>
-        <LayoutGrid className="w-4 h-4" />
-        Painel
       </Link>
       <button
         type="button"

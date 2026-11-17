@@ -44,7 +44,7 @@ export default function Niveis() {
         ]);
         setLevels(lvlRes.items || []);
         setContents(contentRes.items || []);
-        // Exercícios exemplo dos conteúdos (mesma cache da aba Conteúdos).
+        // Exercícios exemplo dos conteúdos (cache partilhada com a Biblioteca).
         setExercises(await loadWithCache(SWIM_CACHE.exercises, () => fetchAll(entities.Exercise, {}, "order_index")).catch(() => []));
         localStorage.setItem(CACHE_KEYS.levels, JSON.stringify(lvlRes.items || []));
         localStorage.setItem(CACHE_KEYS.contents, JSON.stringify(contentRes.items || []));
