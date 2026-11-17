@@ -143,7 +143,7 @@ loop, ligações e top de queries (`pg_stat_statements`).
 
 ## 7. CI e reprodução
 
-- Job: [`.github/workflows/perf.yml`](../.github/workflows/perf.yml). Em PRs que mexem no servidor faz build, Postgres de teste, massa de dados e stress em degraus até 400 VUs; falha se um SLO for violado (thresholds em `perf/k6/load.js`). Também corre à mão com qualquer cenário (`workflow_dispatch`). Não foi executado no GitHub nesta sessão; o mesmo comando correu localmente.
+- Job: [`.github/workflows/perf.yml`](../.github/workflows/perf.yml). Em PRs que mexem no servidor faz build, Postgres de teste, massa de dados e stress em degraus até 400 VUs; falha se um SLO for violado (thresholds em `perf/k6/load.js`). Também corre à mão com qualquer cenário (`workflow_dispatch`). Correu no PR #8 e passou ([run](https://github.com/nunomanob-oss/escola-aquatica/actions/runs/44164627732), 6,5 min).
 - Comandos exatos usados neste relatório (depois de seguir o setup do [README](README.md#3-como-correr)):
 
 ```bash
