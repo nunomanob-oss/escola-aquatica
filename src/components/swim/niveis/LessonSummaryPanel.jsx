@@ -1,6 +1,6 @@
 import React, { useMemo, useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Copy, Trash2, Check, Save } from "lucide-react";
+import { Copy, Trash2, Check, Save, ChevronUp, ChevronDown } from "lucide-react";
 import { toast } from "@/components/ui/use-toast";
 import { saveRecord } from "../offlineQueue";
 
@@ -48,6 +48,8 @@ export default function LessonSummaryPanel({ level, selectedContents, selectedEx
   const [copied, setCopied] = useState(false);
   const [saving, setSaving] = useState(false);
   const [saved, setSaved] = useState(false);
+  // No telemóvel o painel começa recolhido (só uma barra) para não tapar a lista de conteúdos.
+  const [expanded, setExpanded] = useState(false);
 
   const total = selectedContents.length + selectedExercises.length;
   const empty = total === 0;
@@ -88,17 +90,27 @@ export default function LessonSummaryPanel({ level, selectedContents, selectedEx
   };
 
   return (
-    <div className="sticky bottom-0 left-0 right-0 bg-[#0d3f22]/95 backdrop-blur border-t border-white/10 px-4 sm:px-8 py-4">
+    <div className="sticky bottom-0 left-0 right-0 bg-[#0d3f22]/95 backdrop-blur border-t border-white/10 px-4 sm:px-8 py-3 sm:py-4">
       <div className="max-w-3xl mx-auto">
-        <div className="flex items-center justify-between gap-3 mb-2">
+        <button
+          type="button"
+          onClick={() => setExpanded((v) => !v)}
+          aria-expanded={expanded}
+          className="w-full flex items-center justify-between gap-3 text-left sm:mb-2 sm:pointer-events-none"
+        >
           <h3 className="text-sm font-semibold text-[#2fe06b] uppercase tracking-wide">
             Sumário da Aula {level ? `· ${level.code}` : ""}
           </h3>
-          <span className="text-xs text-[#9bd0a8]">{selectedContents.length} conteúdo(s)
-            {selectedExercises.length > 0 && ` · ${selectedExercises.length} exercício(s)`}
+          <span className="flex items-center gap-2 text-xs text-[#9bd0a8]">
+            <span>
+              {selectedContents.length} conteúdo(s)
+              {selectedExercises.length > 0 && ` · ${selectedExercises.length} exercício(s)`}
+            </span>
+            {expanded ? <ChevronDown className="w-4 h-4 sm:hidden" /> : <ChevronUp className="w-4 h-4 sm:hidden" />}
           </span>
-        </div>
+        </button>
 
+        <div className={expanded ? "mt-2 sm:mt-0" : "hidden sm:block"}>
         <div className="flex gap-2 mb-2">
           <input
             type="date"
@@ -123,8 +135,9 @@ export default function LessonSummaryPanel({ level, selectedContents, selectedEx
             {text}
           </pre>
         )}
+        </div>
 
-        <div className="flex gap-2">
+        <div className={`flex gap-2 ${expanded ? "" : "mt-2 sm:mt-0"}`}>
           <Button
             onClick={handleCopy}
             disabled={empty}

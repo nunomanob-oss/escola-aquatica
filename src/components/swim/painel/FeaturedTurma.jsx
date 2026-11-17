@@ -17,7 +17,7 @@ export default function FeaturedTurma({ level, coverage, onOpen }) {
         <ProgressRing value={ratio} size={112} stroke={14} color={color} label={`${level.code}: ${coverage.done} de ${coverage.total} conteúdos dados`} />
         <div className="min-w-0">
           <p className="text-[15px] font-semibold text-white">Turma {level.code}</p>
-          <p className="text-[13px] text-[#8E8E93]">Conteúdos dados nesta época</p>
+          <p className="text-[13px] text-[#9bd0a8]">Conteúdos dados nesta época</p>
           <p className="mt-1 leading-none tabular-nums" style={{ ...rounded, color }}>
             <span className="text-[34px] font-semibold">{coverage.done}</span>
             <span className="text-[20px] font-medium">/{coverage.total}</span>
@@ -27,7 +27,7 @@ export default function FeaturedTurma({ level, coverage, onOpen }) {
 
       {next.length > 0 ? (
         <div className="mt-4">
-          <p className="text-[13px] text-[#8E8E93] mb-1.5">A seguir no programa</p>
+          <p className="text-[13px] text-[#9bd0a8] mb-1.5">A seguir no programa</p>
           <ul className="space-y-1.5">
             {next.map((ex) => (
               <li key={ex.id} className="flex gap-2.5 text-[15px] leading-snug text-white">
@@ -38,7 +38,7 @@ export default function FeaturedTurma({ level, coverage, onOpen }) {
           </ul>
         </div>
       ) : (
-        <p className="mt-4 text-[15px] text-[#8E8E93]">
+        <p className="mt-4 text-[15px] text-[#9bd0a8]">
           {coverage.total ? "Todo o programa até hoje já foi dado." : "Esta turma ainda não tem programa."}
         </p>
       )}
@@ -46,7 +46,7 @@ export default function FeaturedTurma({ level, coverage, onOpen }) {
       <Link
         to="/"
         onClick={onOpen}
-        className="mt-4 inline-flex h-11 items-center px-4 rounded-[10px] bg-[#0A84FF] text-[15px] font-semibold text-white active:opacity-70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+        className="mt-4 inline-flex h-11 items-center px-4 rounded-[10px] bg-[#2fe06b] text-[15px] font-semibold text-[#062b16] active:opacity-70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
       >
         Abrir conteúdos de {level.code}
       </Link>

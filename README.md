@@ -108,6 +108,7 @@ Todos os scripts definidos em `package.json`:
 | `npm run db:migrate`  | Aplica as migrações pendentes em `drizzle/` à base de dados.                                                                                                                      |
 | `npm run db:seed`     | Carrega níveis, conteúdos por nível e a biblioteca de exercícios. É idempotente: podes correr outra vez sem duplicar dados (níveis e conteúdos são atualizados a partir do JSON). |
 | `npm run db:reset`    | Apaga todos os dados da base, volta a aplicar as migrações e corre o seed do zero.                                                                                                 |
+| `npm run db:demo`     | Cria sumários e fichas de treino de exemplo (para ver Aulas e Painel preenchidos). `npm run db:demo -- --limpar` apaga só esses exemplos. |
 | `npm run db:studio`   | Abre o Drizzle Studio (UI no browser) para inspecionar e editar dados na base.                                                                                                    |
 
 ### Conteúdos por nível (fora do `package.json`)

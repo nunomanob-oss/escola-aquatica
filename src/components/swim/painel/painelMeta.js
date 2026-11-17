@@ -1,9 +1,9 @@
 // Cálculos do Painel: cobertura do programa por turma, datas relativas e cores por etapa.
 
-// Cor do sistema (modo escuro do iOS) por etapa de aprendizagem.
-const STAGE_COLOR = { A: "#40C8E0", B: "#0A84FF", C: "#5E5CE6", D: "#5E5CE6" };
+// Cor por etapa de aprendizagem, na paleta verde da app.
+const STAGE_COLOR = { A: "#8ef5b4", B: "#2fe06b", C: "#4fd1c5", D: "#4fd1c5" };
 export const ringColor = (code) =>
-  code?.startsWith("Bebés") ? "#FF9F0A" : code === "Avançado" ? "#BF5AF2" : STAGE_COLOR[code?.[0]] || "#0A84FF";
+  code?.startsWith("Bebés") ? "#ffc94d" : code === "Avançado" ? "#a3e635" : STAGE_COLOR[code?.[0]] || "#2fe06b";
 
 const iso = (d) => d.toISOString().slice(0, 10);
 
