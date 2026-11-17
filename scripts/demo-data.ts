@@ -1,4 +1,4 @@
-// Dados de exemplo para Aulas e Painel: alguns sumários e fichas de treino das últimas semanas,
+// Dados de exemplo para a aba Aulas: alguns sumários e fichas de treino das últimas semanas,
 // atribuídos ao instrutor demo. Servem só para ver os ecrãs preenchidos.
 // Uso: npm run db:demo            (cria; se já existirem, substitui-os)
 //      npm run db:demo -- --limpar (apaga só os registos de exemplo)

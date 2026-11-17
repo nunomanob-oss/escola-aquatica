@@ -46,7 +46,7 @@ const isLevelled = (ex) => ex.level_id === "ALL" && Boolean(ex.training_block);
 export const isProgramExample = (ex) => ex.source === "CFP";
 
 // A Biblioteca mostra a biblioteca técnica, os exemplos do programa e os exercícios criados pelos instrutores.
-// O programa original das turmas continua a existir e a aparecer no ecrã Conteúdos.
+// O programa original das turmas continua a existir e a aparecer no ecrã Níveis.
 export const isLibraryExercise = (ex) => isLevelled(ex) || isProgramExample(ex) || Boolean(ex.is_custom);
 
 // Turmas de um exercício da biblioteca: as atribuídas a ele ou, se não tiver, todas as do seu nível.

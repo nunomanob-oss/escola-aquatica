@@ -2,7 +2,7 @@
 
 A Biblioteca mostra apenas estes 175 exercícios (e os personalizados que os instrutores criarem). São organizados por **nível do atleta** e por **bloco de treino**, e ficam gravados com `level_id: "ALL"` e a lista de `turmas` a que se destinam.
 
-O **ecrã Conteúdos não muda**: continua a mostrar o programa original de cada turma, que não é apagado.
+O ecrã **Níveis** mostra o programa de cada turma, que não é apagado.
 
 | Nível do atleta | Aquec. | Técnica | Série Princ. | Pernas | Braços | Veloc. | Calma | Jogos | Total |
 |---|---|---|---|---|---|---|---|---|---|
@@ -14,7 +14,7 @@ O **ecrã Conteúdos não muda**: continua a mostrar o programa original de cada
 
 ## O que aparece em cada turma
 
-- **Conteúdos:** o programa original da turma (não muda).
+- **Níveis:** o programa da turma, por mês.
 - **Biblioteca:** os exercícios da biblioteca atribuídos a essa turma em `scripts/library/turmas.mjs`.
 
 | Turma | Exercícios da biblioteca | Foco |
@@ -66,7 +66,7 @@ O programa de cada turma vem da base de dados do clube (`scripts/cfp/data/CFP_ex
 
 - Cada conteúdo fica na tabela `level_content` (turma, bloco, número, período e meses) com os códigos dos seus exercícios exemplo.
 - Os exemplos entram na tabela `exercise` com `source: "CFP"` e as turmas onde são usados; aparecem também na Biblioteca.
-- No ecrã **Conteúdos**, cada turma mostra a árvore Bloco → Conteúdo → Exercício exemplo → Regressão / Progressão. Marca-se o conteúdo para o sumário da aula e, dentro da árvore, junta-se o exemplo à aula ou abre-se a ficha.
+- No ecrã **Níveis**, cada conteúdo mostra Bloco → Conteúdo → Exercício exemplo → Regressão / Progressão. Marca-se o conteúdo para o sumário da aula e, dentro da árvore, junta-se o exemplo à aula ou abre-se a ficha.
 
 Para atualizar depois de mudar a base do clube:
 
@@ -81,7 +81,7 @@ As imagens ficam em `public/exercicios/`, com o código do exercício como nome 
 1. Copiar as imagens para `public/exercicios/` (por exemplo, as de `biblioteca/imagens/` do `CFP_entrega.zip`). Uma imagem com o mesmo código noutro formato (por exemplo `.png` em vez de `.jpg`) deve substituir a anterior, e não ficar ao lado dela.
 2. `npm run db:seed` — liga cada imagem ao exercício com o mesmo código.
 
-A imagem aparece na ficha do exercício e, no ecrã Conteúdos, em cada exemplo da árvore. O formato esperado é horizontal 16:9.
+A imagem aparece na ficha do exercício e, no ecrã Níveis, em cada exemplo do conteúdo. O formato esperado é horizontal 16:9.
 
 Os 326 exercícios (175 `BIB-…` e 151 `EX-…`) têm a ilustração 3D aprovada da "Biblioteca Profissional 3D v2" (Google Drive, `BD-Profissional-INI004-atualizada.xlsx`), em `.webp` com 960 px de largura. O original de cada uma é o PNG indicado na coluna "Ficheiro da imagem" dessa folha.
 

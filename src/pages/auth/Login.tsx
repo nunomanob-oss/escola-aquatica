@@ -24,7 +24,7 @@ export default function Login() {
       setError(signInError.message || 'Email ou palavra-passe inválidos')
       return
     }
-    await navigate({ to: '/' })
+    await navigate({ to: '/niveis' })
   }
 
   return (

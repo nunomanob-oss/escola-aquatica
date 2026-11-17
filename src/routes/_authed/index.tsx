@@ -1,4 +1,9 @@
-import { createFileRoute } from '@tanstack/react-router'
-import Home from '@/pages/Home'
+import { createFileRoute, redirect } from '@tanstack/react-router'
 
-export const Route = createFileRoute('/_authed/')({ ssr: false, component: Home })
+// A página inicial é Níveis (a antiga aba Conteúdos foi removida).
+export const Route = createFileRoute('/_authed/')({
+  ssr: false,
+  beforeLoad: () => {
+    throw redirect({ to: '/niveis' })
+  },
+})
