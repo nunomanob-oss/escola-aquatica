@@ -1,0 +1,21 @@
+
+== soak ==  pedidos 2849  RPS médio 23.7  VUs máx 80  iterações 257
+falhas http 0.000%  ·  erros da app (HTTP 200 com erro) 0.000%
+endpoint                           n      p50      p95      p99      max
+{expected_response:true}        2849     17.9     1966     8301     8738
+{kind:read}                     2612     18.1      997     2988     3418
+{kind:write}                     237     13.1     8310     8386     8738
+{name:auth:sign-in}               85     8294     8313     8502     8738
+{name:auth:sign-out}               8     12.9     46.5     48.9     49.5
+{name:fn:session}                641      7.3      515      606      634
+{name:list:ClassSummary}          76     11.9     47.8     68.3     69.5
+{name:list:Exercise}             528     49.0     2987     3366     3418
+{name:list:LevelContent}         264     20.6     1021     1115     1123
+{name:list:Level}                641      8.2      598      619      630
+{name:list:WorkoutSheet}         113     22.3     60.3     96.5     99.3
+{name:page:html}                 349     36.7     1006     1015     1328
+{name:write:ClassSummary:create}      76      8.8     53.3     75.9     85.0
+{name:write:WorkoutSheet:create}      51      9.2     37.1     62.1     77.5
+{name:write:WorkoutSheet:update}      17     10.8     62.0     64.1     64.6
+SLO FALHADOS: http_req_duration{kind:read}, http_req_duration, http_req_duration{kind:write}
+time="2026-11-17T16:51:00Z" level=error msg="thresholds on metrics 'http_req_duration, http_req_duration{kind:read}, http_req_duration{kind:write}' have been crossed"

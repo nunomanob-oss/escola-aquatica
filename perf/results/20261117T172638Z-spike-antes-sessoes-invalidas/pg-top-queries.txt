@@ -1,0 +1,19 @@
+ calls | mean_ms | max_ms | total_ms |  rows  |                                                                              query                                                                               
+-------+---------+--------+----------+--------+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  1421 |    4.37 |   20.7 |     6214 | 605346 | select "id", "title", "code", "source", "description", "primary_objective", "content", "subcategory", "training_block", "category", "style", "level", "turmas", 
+   922 |    0.57 |    2.9 |      521 | 225890 | select "id", "level_code", "number", "block", "title", "period", "periods", "continuity", "start_month", "months", "source", "exercise_codes", "order_index" fro
+   112 |    1.62 |    5.3 |      181 |  56000 | select "id", "title", "level_id", "session_date", "focus", "sections", "total_distance", "notes", "created_by_id", "created_at", "updated_at" from "workout_shee
+  4616 |    0.03 |    1.2 |      135 |   4616 | select "id", "name", "email", "email_verified", "image", "role", "created_at", "updated_at" from "user" where "user"."id" = $1
+  3359 |    0.03 |    1.4 |      104 |   3304 | select "id", "expires_at", "token", "created_at", "updated_at", "ip_address", "user_agent", "user_id" from "session" where "session"."token" = $1
+   485 |    0.15 |    1.5 |       74 |    485 | insert into "session" ("id", "expires_at", "token", "created_at", "updated_at", "ip_address", "user_agent", "user_id") values ($1, $2, $3, $4, $5, $6, $7, $8) r
+   217 |    0.17 |    4.9 |       36 |    217 | select count(*) filter (where state = $1)::int active, count(*) filter (where state = $2)::int idle, count(*) filter (where wait_event_type = $3)::int lockwaits
+  1071 |    0.03 |    0.2 |       31 |  11781 | select "id", "code", "name", "duration_min", "max_students", "age_range", "stage", "space", "requirements", "periods", "order_index" from "level" limit $1
+   131 |    0.18 |    4.1 |       23 |    131 | insert into "class_summary" ("id", "date", "level_id", "exercise_ids", "content_ids", "notes", "created_by_id", "created_at", "updated_at") values ($1, $2, $3, 
+   448 |    0.04 |    0.3 |       17 |    448 | select "id", "account_id", "provider_id", "user_id", "access_token", "refresh_token", "id_token", "access_token_expires_at", "refresh_token_expires_at", "scope"
+    67 |    0.15 |    0.5 |       10 |     67 | insert into "workout_sheet" ("id", "title", "level_id", "session_date", "focus", "sections", "total_distance", "notes", "created_by_id", "created_at", "updated_
+   302 |    0.03 |    0.1 |        9 |    302 | select "id", "name", "email", "email_verified", "image", "role", "created_at", "updated_at" from "user" where "user"."email" = $1
+   239 |    0.03 |    0.1 |        8 |    239 | select "id", "date", "level_id", "exercise_ids", "content_ids", "notes", "created_by_id", "created_at", "updated_at" from "class_summary" where ("class_summary"
+   217 |    0.02 |    0.1 |        5 |    217 | select xact_commit::bigint xc, blks_hit::bigint hit, blks_read::bigint rd, deadlocks::int dl from pg_stat_database where datname = current_database()
+    27 |    0.05 |    0.1 |        1 |     27 | delete from "session" where "session"."token" = $1
+(15 rows)
+

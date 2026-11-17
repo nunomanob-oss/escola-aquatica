@@ -1,0 +1,21 @@
+
+== stress ==  pedidos 2007  RPS médio 22.9  VUs máx 10000  iterações 124
+falhas http 0.000%  ·  erros da app (HTTP 200 com erro) 0.000%
+endpoint                           n      p50      p95      p99      max
+{expected_response:true}        2007     18.9      366      556      876
+{kind:read}                     1830     17.2      323      512      744
+{kind:write}                     177      117      552      715      876
+{name:auth:sign-in}               96      194      647      729      876
+{name:auth:sign-out}               7     16.6      153      155      155
+{name:fn:session}                425      8.8      287      458      511
+{name:list:ClassSummary}          43     10.8      419      492      507
+{name:list:Exercise}             364     62.1      400      563      744
+{name:list:LevelContent}         210     20.6      392      488      565
+{name:list:Level}                423      9.2      347      558      648
+{name:list:WorkoutSheet}          54     30.5      318      483      503
+{name:page:html}                 311      6.2      124      228      337
+{name:write:ClassSummary:create}      43     12.0      298      567      645
+{name:write:WorkoutSheet:create}      25     10.5      495      510      513
+{name:write:WorkoutSheet:update}       6     32.5      421      506      527
+SLO FALHADOS: http_req_duration{kind:read}
+time="2026-11-17T16:48:14Z" level=error msg="thresholds on metrics 'http_req_duration{kind:read}' were crossed; at least one has abortOnFail enabled, stopping test prematurely"

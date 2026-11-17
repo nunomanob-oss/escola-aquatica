@@ -38,7 +38,10 @@ function makeEntity(
                 limit: options.limit ?? 500,
             },
         });
-        return { items: rows as Row[], next_cursor: null as string | null };
+        // O servidor responde com JSON simples (com ETag no catálogo); no browser o cliente das funções de
+        // servidor já devolve o array. Se for chamado no servidor, chega o Response e lê-se aqui.
+        const items = (rows instanceof Response ? await rows.json() : rows) as Row[];
+        return { items, next_cursor: null as string | null };
     };
 
     return {

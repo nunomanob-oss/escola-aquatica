@@ -1,0 +1,18 @@
+ calls | mean_ms | max_ms | total_ms |  rows  |                                                                              query                                                                               
+-------+---------+--------+----------+--------+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+   683 |    4.14 |   19.2 |     2827 | 290958 | select "id", "title", "code", "source", "description", "primary_objective", "content", "subcategory", "training_block", "category", "style", "level", "turmas", 
+  1900 |    0.57 |    6.7 |     1085 | 465500 | select "id", "level_code", "number", "block", "title", "period", "periods", "continuity", "start_month", "months", "source", "exercise_codes", "order_index" fro
+ 13313 |    0.03 |    1.5 |      377 |  13313 | select "id", "expires_at", "token", "created_at", "updated_at", "ip_address", "user_agent", "user_id" from "session" where "session"."token" = $1
+ 13131 |    0.03 |    3.4 |      374 |  13131 | select "id", "name", "email", "email_verified", "image", "role", "created_at", "updated_at" from "user" where "user"."id" = $1
+   677 |    0.19 |    3.6 |      127 |    677 | insert into "session" ("id", "expires_at", "token", "created_at", "updated_at", "ip_address", "user_agent", "user_id") values ($1, $2, $3, $4, $5, $6, $7, $8) r
+  4021 |    0.03 |    4.2 |      125 |  44231 | select "id", "code", "name", "duration_min", "max_students", "age_range", "stage", "space", "requirements", "periods", "order_index" from "level" limit $1
+   706 |    0.04 |    1.9 |       29 |    706 | select "id", "account_id", "provider_id", "user_id", "access_token", "refresh_token", "id_token", "access_token_expires_at", "refresh_token_expires_at", "scope"
+   217 |    0.12 |    0.4 |       25 |    217 | select count(*) filter (where state = $1)::int active, count(*) filter (where state = $2)::int idle, count(*) filter (where wait_event_type = $3)::int lockwaits
+   756 |    0.03 |    0.2 |       22 |    756 | select "id", "name", "email", "email_verified", "image", "role", "created_at", "updated_at" from "user" where "user"."email" = $1
+    31 |    0.27 |    0.5 |        9 |     31 | insert into "class_summary" ("id", "date", "level_id", "exercise_ids", "content_ids", "notes", "created_by_id", "created_at", "updated_at") values ($1, $2, $3, 
+    76 |    0.07 |    0.3 |        5 |     76 | select "id", "date", "level_id", "exercise_ids", "content_ids", "notes", "created_by_id", "created_at", "updated_at" from "class_summary" where ("class_summary"
+   217 |    0.02 |    0.1 |        4 |    217 | select xact_commit::bigint xc, blks_hit::bigint hit, blks_read::bigint rd, deadlocks::int dl from pg_stat_database where datname = current_database()
+    11 |    0.34 |    0.5 |        4 |   3333 | select b.oid, b.typarray from pg_catalog.pg_type a left join pg_catalog.pg_type b on b.oid = a.typelem where a.typcategory = $1 group by b.oid, b.typarray order
+     1 |    0.82 |    0.8 |        1 |      1 | select pg_stat_statements_reset()
+(14 rows)
+

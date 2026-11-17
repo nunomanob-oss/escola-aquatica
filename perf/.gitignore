@@ -1,0 +1,2 @@
+# CSV bruto do k6 (dezenas de MB por corrida): fica fora do git.
+results/*/k6-raw.csv.gz

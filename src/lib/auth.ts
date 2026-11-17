@@ -27,6 +27,12 @@ export const auth = betterAuth({
     },
   },
   socialProviders: google,
+  session: {
+    // A sessão fica também num cookie assinado durante 5 min: as chamadas à API deixam de ir à BD (sessão +
+    // utilizador) em cada pedido. Contrapartida: um logout noutro dispositivo ou uma sessão revogada só deixam
+    // de valer aqui ao fim de, no máximo, 5 min.
+    cookieCache: { enabled: true, maxAge: 5 * 60 },
+  },
   user: {
     additionalFields: {
       role: { type: 'string', defaultValue: 'user', input: false },

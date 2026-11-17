@@ -1,0 +1,66 @@
+# Teste de regressão de performance: build de produção + Postgres de teste + massa de dados + k6.
+# Falha se os SLO (thresholds em perf/k6/load.js) forem violados. Corre à mão ou quando muda código do servidor.
+# Os runners do GitHub têm 4 vCPU e o gerador partilha a máquina: os números servem para comparar commits,
+# não para dimensionar produção.
+name: perf
+on:
+  workflow_dispatch:
+    inputs:
+      scenario:
+        description: 'smoke | stress | ramp | soak | spike'
+        default: 'stress'
+  pull_request:
+    paths: ['src/server/**', 'src/lib/**', 'src/db/**', 'src/pages/**', 'perf/**', 'package-lock.json']
+
+jobs:
+  k6:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    services:
+      postgres:
+        image: postgres:16
+        env: { POSTGRES_USER: escola, POSTGRES_PASSWORD: escola, POSTGRES_DB: escola_aquatica }
+        ports: ['5432:5432']
+        options: >-
+          --health-cmd "pg_isready -U escola" --health-interval 5s --health-retries 10
+    env:
+      DATABASE_URL: postgres://escola:escola@localhost:5432/escola_aquatica
+      BETTER_AUTH_URL: http://localhost:3000
+      BETTER_AUTH_SECRET: perf-ci-secret-nao-usar-em-producao-123456
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22, cache: npm }
+      - run: npm ci
+      - name: Base de dados de teste
+        run: |
+          printf 'DATABASE_URL=%s\nBETTER_AUTH_URL=%s\nBETTER_AUTH_SECRET=%s\n' "$DATABASE_URL" "$BETTER_AUTH_URL" "$BETTER_AUTH_SECRET" > .env
+          npm run db:migrate && npm run db:seed && npm run db:demo
+          sudo apt-get update -qq && sudo apt-get install -y -qq postgresql-client
+          psql "$DATABASE_URL" -c "create extension if not exists pg_stat_statements" || true
+          psql "$DATABASE_URL" -q -f perf/scripts/seed-volume.sql
+      - name: Instalar k6
+        run: |
+          curl -sSL https://github.com/grafana/k6/releases/download/v0.54.0/k6-v0.54.0-linux-amd64.tar.gz | tar xz
+          sudo mv k6-v0.54.0-linux-amd64/k6 /usr/local/bin/
+      - name: Build e servidor
+        run: |
+          npm run build
+          NODE_ENV=production nohup node perf/serve.mjs > serve.log 2>&1 &
+          for i in $(seq 30); do curl -sf localhost:3000/login >/dev/null && break; sleep 1; done
+      - name: k6
+        env:
+          SCENARIO: ${{ inputs.scenario || 'stress' }}
+          # Em PR: degraus de 100 VUs até 400 (≈ 6 min). Regressão = qualquer SLO violado.
+          STRESS_STEP: 100
+          STRESS_MAX: 400
+        run: |
+          # pg_stat_statements pode não existir no serviço; o run.sh só perde essa tabela.
+          perf/run.sh "$SCENARIO" ci
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: perf-results
+          path: |
+            perf/results/
+            serve.log

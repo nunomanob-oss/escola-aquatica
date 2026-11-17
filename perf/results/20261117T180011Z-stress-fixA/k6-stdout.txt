@@ -1,0 +1,20 @@
+
+== stress ==  pedidos 110939  RPS médio 119  VUs máx 600  iterações 10840
+falhas http 0.000%  ·  erros da app (HTTP 200 com erro) 0.000%
+endpoint                           n      p50      p95      p99      max
+{expected_response:true}      110939      6.2     36.7      135      575
+{kind:read}                   103901      5.9     33.3     93.8      444
+{kind:write}                    7038     11.0      167      276      575
+{name:auth:sign-in}              544      173      314      486      575
+{name:auth:sign-out}             508     13.2     74.9      180      368
+{name:fn:session}              26115      6.1     35.3     98.0      335
+{name:list:ClassSummary}        3226      8.1     43.5      122      444
+{name:list:Exercise}           21786      5.8     32.5     99.5      427
+{name:list:LevelContent}       10893      6.3     33.3      102      410
+{name:list:Level}              26115      5.7     32.6     97.1      425
+{name:list:WorkoutSheet}        4329     15.7     52.8      111      395
+{name:page:html}               11437      3.5     18.3     43.7      120
+{name:write:ClassSummary:update}    3226     10.1     49.4      131      539
+{name:write:WorkoutSheet:create}    2112      9.8     54.6      131      401
+{name:write:WorkoutSheet:update}     648     11.6     57.9      181      499
+SLO: todos cumpridos

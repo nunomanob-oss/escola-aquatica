@@ -1,0 +1,4 @@
+{ "scenario": "ramp", "label": "antes", "started": "20261117T173427Z", "commit": "ed91610-dirty",
+  "base_url": "http://localhost:3000", "plateau": "2m", "max_vus": "5000", "think": "1", "static": "0", "returning": "0.9",
+  "server_workers": "1", "machine": "2 vCPU, 15 GB RAM", "k6": "k6 v0.54.0 (commit/baba871c8a, go1.23.1, linux/amd64)",
+  "db_rows": { "user" : 50002, "__drizzle_migrations" : 4, "class_summary" : 502178, "level_content" : 245, "account" : 50002, "verification" : 0, "level" : 11, "session" : 151175, "workout_sheet" : 201192, "exercise" : 426 } }
