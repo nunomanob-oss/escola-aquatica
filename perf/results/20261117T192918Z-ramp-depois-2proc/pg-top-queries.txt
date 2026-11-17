@@ -1,0 +1,19 @@
+ calls | mean_ms | max_ms | total_ms |  rows   |                                                                              query                                                                               
+-------+---------+--------+----------+---------+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 19845 |    0.58 |   27.4 |    11608 |   19845 | select count(*)::text || $1 || coalesce(sum(hashtext(t::text)), $2)::text as v from "level_content" t
+  7273 |    1.44 |   46.2 |    10449 | 3636500 | select "id", "title", "level_id", "session_date", "focus", "sections", "total_distance", "notes", "created_by_id", "created_at", "updated_at" from "workout_shee
+ 38989 |    0.23 |   39.8 |     8936 |   38989 | select count(*)::text || $1 || coalesce(max(updated_at)::text, $2) as v from "exercise"
+ 46423 |    0.04 |    7.0 |     1938 |   46423 | select count(*)::text || $1 || coalesce(sum(hashtext(t::text)), $2)::text as v from "level" t
+  3356 |    0.16 |    4.6 |      534 |    3356 | insert into "workout_sheet" ("id", "title", "level_id", "session_date", "focus", "sections", "total_distance", "notes", "created_by_id", "created_at", "updated_
+  5811 |    0.07 |    5.3 |      420 |    5811 | update "class_summary" set "exercise_ids" = $1, "updated_at" = $2 where "class_summary"."id" = $3 returning "id", "date", "level_id", "exercise_ids", "content_i
+  5859 |    0.06 |    4.2 |      325 |    5859 | select "id", "date", "level_id", "exercise_ids", "content_ids", "notes", "created_by_id", "created_at", "updated_at" from "class_summary" where ("class_summary"
+  5811 |    0.04 |    4.4 |      234 |    5811 | select "id", "date", "level_id", "exercise_ids", "content_ids", "notes", "created_by_id", "created_at", "updated_at" from "class_summary" where "class_summary".
+  6328 |    0.03 |    1.4 |      213 |    6328 | select "id", "expires_at", "token", "created_at", "updated_at", "ip_address", "user_agent", "user_id" from "session" where "session"."token" = $1
+  1187 |    0.17 |    2.7 |      198 |    1187 | insert into "session" ("id", "expires_at", "token", "created_at", "updated_at", "ip_address", "user_agent", "user_id") values ($1, $2, $3, $4, $5, $6, $7, $8) r
+  6328 |    0.03 |    3.7 |      184 |    6328 | select "id", "name", "email", "email_verified", "image", "role", "created_at", "updated_at" from "user" where "user"."id" = $1
+  2067 |    0.04 |    3.0 |       82 |    2067 | select "id", "account_id", "provider_id", "user_id", "access_token", "refresh_token", "id_token", "access_token_expires_at", "refresh_token_expires_at", "scope"
+   946 |    0.07 |    1.1 |       66 |     946 | update "workout_sheet" set "notes" = $1, "updated_at" = $2 where "workout_sheet"."id" = $3 returning "id", "title", "level_id", "session_date", "focus", "sectio
+   946 |    0.05 |    1.2 |       47 |     946 | select "id", "title", "level_id", "session_date", "focus", "sections", "total_distance", "notes", "created_by_id", "created_at", "updated_at" from "workout_shee
+   880 |    0.05 |    3.2 |       42 |     880 | delete from "session" where "session"."token" = $1
+(15 rows)
+

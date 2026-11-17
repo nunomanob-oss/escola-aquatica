@@ -1,0 +1,818 @@
+{
+ "root_group": {
+  "name": "",
+  "path": "",
+  "id": "d41d8cd98f00b204e9800998ecf8427e",
+  "groups": [
+   {
+    "name": "niveis",
+    "path": "::niveis",
+    "id": "8a81ea68af28ae4cf5b076cf995a231c",
+    "groups": [],
+    "checks": [
+      {
+       "id": "7ab62d74e4c7d804499c3243ab408cc3",
+       "passes": 2989,
+       "fails": 1747,
+       "name": "page:html 2xx",
+       "path": "::niveis::page:html 2xx"
+      },
+      {
+       "name": "page:html sem erro da app",
+       "path": "::niveis::page:html sem erro da app",
+       "id": "57fe271499a8942c3f0a10537c6318ed",
+       "passes": 4736,
+       "fails": 0
+      },
+      {
+       "path": "::niveis::fn:session 2xx",
+       "id": "88ab3f5001c16e0e835373c8f11353d4",
+       "passes": 3109,
+       "fails": 1617,
+       "name": "fn:session 2xx"
+      },
+      {
+       "name": "fn:session sem erro da app",
+       "path": "::niveis::fn:session sem erro da app",
+       "id": "5634ac844c3335b443004d9b3e74febf",
+       "passes": 4726,
+       "fails": 0
+      },
+      {
+       "path": "::niveis::list:Level 2xx",
+       "id": "61d21f02180735c01a7846ea372ce9bf",
+       "passes": 1114,
+       "fails": 3507,
+       "name": "list:Level 2xx"
+      },
+      {
+       "name": "list:Level sem erro da app",
+       "path": "::niveis::list:Level sem erro da app",
+       "id": "3fbb9f006f90706cfd56bf10ef299704",
+       "passes": 4621,
+       "fails": 0
+      },
+      {
+       "path": "::niveis::list:LevelContent 2xx",
+       "id": "3a31e1246efc14782d93b52ec95df08e",
+       "passes": 409,
+       "fails": 3015,
+       "name": "list:LevelContent 2xx"
+      },
+      {
+       "passes": 3424,
+       "fails": 0,
+       "name": "list:LevelContent sem erro da app",
+       "path": "::niveis::list:LevelContent sem erro da app",
+       "id": "3d952283dde67161058d727e309100c7"
+      },
+      {
+       "fails": 1773,
+       "name": "list:Exercise 2xx",
+       "path": "::niveis::list:Exercise 2xx",
+       "id": "174f1da7afb6cf33dd1be8fdac3ea356",
+       "passes": 148
+      },
+      {
+       "name": "list:Exercise sem erro da app",
+       "path": "::niveis::list:Exercise sem erro da app",
+       "id": "23703cfaedb6d2b9ac462ce299b94d52",
+       "passes": 1921,
+       "fails": 0
+      }
+     ]
+   },
+   {
+    "groups": [],
+    "checks": [
+      {
+       "id": "220ea798109f71884235edb6bc43eb8d",
+       "passes": 624,
+       "fails": 295,
+       "name": "page:html 2xx",
+       "path": "::login::page:html 2xx"
+      },
+      {
+       "passes": 919,
+       "fails": 0,
+       "name": "page:html sem erro da app",
+       "path": "::login::page:html sem erro da app",
+       "id": "e91b1942cf1e2b78c923f8098abb7138"
+      },
+      {
+       "passes": 221,
+       "fails": 601,
+       "name": "auth:sign-in 2xx",
+       "path": "::login::auth:sign-in 2xx",
+       "id": "1c68e619ba424fa138238eeaad8f7700"
+      },
+      {
+       "path": "::login::auth:sign-in sem erro da app",
+       "id": "ec949a1e47d7f8c0ab6800127745af4a",
+       "passes": 822,
+       "fails": 0,
+       "name": "auth:sign-in sem erro da app"
+      }
+     ],
+    "name": "login",
+    "path": "::login",
+    "id": "a7d10b3a6c9a385ee254f0dbc7f9c8c9"
+   },
+   {
+    "id": "c00515bd8306b84b3ea57cacd3921fbb",
+    "groups": [],
+    "checks": [
+      {
+       "id": "f3d9b7c952d93ec45be33b776914fa03",
+       "passes": 44,
+       "fails": 325,
+       "name": "fn:session 2xx",
+       "path": "::biblioteca::fn:session 2xx"
+      },
+      {
+       "name": "fn:session sem erro da app",
+       "path": "::biblioteca::fn:session sem erro da app",
+       "id": "f90d32ebf065cb6e0748f0fcfff898ec",
+       "passes": 369,
+       "fails": 0
+      },
+      {
+       "passes": 8,
+       "fails": 154,
+       "name": "list:Level 2xx",
+       "path": "::biblioteca::list:Level 2xx",
+       "id": "741198b76af8d0965e9bc339a5a1fca9"
+      },
+      {
+       "path": "::biblioteca::list:Level sem erro da app",
+       "id": "2f5c91d13258b2c12cbaaab22dc995ec",
+       "passes": 162,
+       "fails": 0,
+       "name": "list:Level sem erro da app"
+      },
+      {
+       "id": "51d76a4e19d03c70a1aa347dd94dab47",
+       "passes": 0,
+       "fails": 58,
+       "name": "list:Exercise 2xx",
+       "path": "::biblioteca::list:Exercise 2xx"
+      },
+      {
+       "fails": 0,
+       "name": "list:Exercise sem erro da app",
+       "path": "::biblioteca::list:Exercise sem erro da app",
+       "id": "6773cf70ee3da0f5ef4daa2166af0015",
+       "passes": 58
+      }
+     ],
+    "name": "biblioteca",
+    "path": "::biblioteca"
+   },
+   {
+    "groups": [],
+    "checks": [
+      {
+       "fails": 137,
+       "name": "list:ClassSummary 2xx",
+       "path": "::sumario::list:ClassSummary 2xx",
+       "id": "ae72e618b297250460c72386b2275718",
+       "passes": 19
+      },
+      {
+       "passes": 156,
+       "fails": 0,
+       "name": "list:ClassSummary sem erro da app",
+       "path": "::sumario::list:ClassSummary sem erro da app",
+       "id": "5d3fec9d4090644eeb09b5cee00558c5"
+      },
+      {
+       "fails": 66,
+       "name": "write:ClassSummary:create 2xx",
+       "path": "::sumario::write:ClassSummary:create 2xx",
+       "id": "76049e383fe53c2af8d19a8732cbd2fc",
+       "passes": 1
+      },
+      {
+       "passes": 67,
+       "fails": 0,
+       "name": "write:ClassSummary:create sem erro da app",
+       "path": "::sumario::write:ClassSummary:create sem erro da app",
+       "id": "d85b3d55abf03a08e24fd022f3833320"
+      }
+     ],
+    "name": "sumario",
+    "path": "::sumario",
+    "id": "0f414954f79cb8193baead7a65886fbe"
+   },
+   {
+    "name": "aulas",
+    "path": "::aulas",
+    "id": "3f47515d5fc723bd9b02ae0e422adbb7",
+    "groups": [],
+    "checks": [
+      {
+       "name": "fn:session 2xx",
+       "path": "::aulas::fn:session 2xx",
+       "id": "84e26dcbf9123938fb390178d58d3dac",
+       "passes": 0,
+       "fails": 2
+      },
+      {
+       "id": "14eff0bdc1d9c1881a0b1633acb7b681",
+       "passes": 2,
+       "fails": 0,
+       "name": "fn:session sem erro da app",
+       "path": "::aulas::fn:session sem erro da app"
+      },
+      {
+       "name": "list:Level 2xx",
+       "path": "::aulas::list:Level 2xx",
+       "id": "a200c46b7db51154d302e448ee8e4f4e",
+       "passes": 0,
+       "fails": 2
+      },
+      {
+       "passes": 2,
+       "fails": 0,
+       "name": "list:Level sem erro da app",
+       "path": "::aulas::list:Level sem erro da app",
+       "id": "49c1e2dafc032658188e369f0f0d68d6"
+      }
+     ]
+   }
+  ],
+  "checks": [
+   {
+    "name": "auth:sign-out 2xx",
+    "path": "::auth:sign-out 2xx",
+    "id": "fba4e90a3c16e00af6ac511962e81f5d",
+    "passes": 0,
+    "fails": 1
+   },
+   {
+    "name": "auth:sign-out sem erro da app",
+    "path": "::auth:sign-out sem erro da app",
+    "id": "1502bfd13bea7bb59d5e55a8a6eeac5c",
+    "passes": 1,
+    "fails": 0
+   }
+  ]
+ },
+ "options": {
+  "summaryTrendStats": [
+   "avg",
+   "med",
+   "p(95)",
+   "p(99)",
+   "max",
+   "count"
+  ],
+  "summaryTimeUnit": "",
+  "noColor": false
+ },
+ "state": {
+  "isStdOutTTY": false,
+  "isStdErrTTY": false,
+  "testRunDurationMs": 430002.524819
+ },
+ "metrics": {
+  "http_req_duration{name:static:image}": {
+   "values": {
+    "p(99)": 0,
+    "max": 0,
+    "count": 0,
+    "avg": 0,
+    "med": 0,
+    "p(95)": 0
+   },
+   "thresholds": {
+    "max>=0": {
+     "ok": true
+    }
+   },
+   "type": "trend",
+   "contains": "time"
+  },
+  "http_reqs": {
+   "type": "counter",
+   "contains": "default",
+   "values": {
+    "rate": 51.1299323399427,
+    "count": 21986
+   }
+  },
+  "group_duration": {
+   "values": {
+    "avg": 114227.15949556317,
+    "med": 131001.1182845,
+    "p(95)": 170913.18914595002,
+    "p(99)": 178754.99866164,
+    "max": 182055.929884,
+    "count": 2868
+   },
+   "type": "trend",
+   "contains": "time"
+  },
+  "http_req_connecting": {
+   "type": "trend",
+   "contains": "time",
+   "values": {
+    "p(99)": 19448.59781645,
+    "max": 19593.7313,
+    "count": 21986,
+    "avg": 1345.4181680131458,
+    "med": 0,
+    "p(95)": 7130.87197925
+   }
+  },
+  "http_req_duration{name:auth:sign-out}": {
+   "type": "trend",
+   "contains": "time",
+   "values": {
+    "avg": 9856.599101,
+    "med": 9856.599101,
+    "p(95)": 9856.599101,
+    "p(99)": 9856.599101,
+    "max": 9856.599101,
+    "count": 1
+   },
+   "thresholds": {
+    "max>=0": {
+     "ok": true
+    }
+   }
+  },
+  "errors_by_type": {
+   "type": "counter",
+   "contains": "default",
+   "values": {
+    "count": 13300,
+    "rate": 30.930050947022554
+   }
+  },
+  "http_req_duration{name:list:LevelContent}": {
+   "thresholds": {
+    "max>=0": {
+     "ok": true
+    }
+   },
+   "type": "trend",
+   "contains": "time",
+   "values": {
+    "avg": 31719.03938037327,
+    "med": 26433.1555495,
+    "p(95)": 60001.06759745,
+    "p(99)": 60001.8264306,
+    "max": 60035.033466,
+    "count": 3424
+   }
+  },
+  "http_req_duration{kind:write}": {
+   "values": {
+    "max": 60022.009166,
+    "count": 890,
+    "avg": 43608.610243278694,
+    "med": 58990.111303,
+    "p(95)": 60001.2201746,
+    "p(99)": 60001.82257876
+   },
+   "thresholds": {
+    "p(95)<800": {
+     "ok": false
+    }
+   },
+   "type": "trend",
+   "contains": "time"
+  },
+  "http_req_duration{kind:static}": {
+   "type": "trend",
+   "contains": "time",
+   "values": {
+    "p(99)": 0,
+    "max": 0,
+    "count": 0,
+    "avg": 0,
+    "med": 0,
+    "p(95)": 0
+   },
+   "thresholds": {
+    "p(95)<300": {
+     "ok": true
+    }
+   }
+  },
+  "http_req_duration": {
+   "type": "trend",
+   "contains": "time",
+   "values": {
+    "avg": 28548.618166814078,
+    "med": 21706.7268855,
+    "p(95)": 60001.0076,
+    "p(99)": 60001.909875,
+    "max": 60039.962959,
+    "count": 21986
+   },
+   "thresholds": {
+    "p(99)<1000": {
+     "ok": false
+    }
+   }
+  },
+  "http_req_duration{kind:read}": {
+   "values": {
+    "count": 21096,
+    "avg": 27913.265827600295,
+    "med": 20595.273169,
+    "p(95)": 60000.987100750004,
+    "p(99)": 60001.92525745,
+    "max": 60039.962959
+   },
+   "thresholds": {
+    "p(95)<300": {
+     "ok": false
+    }
+   },
+   "type": "trend",
+   "contains": "time"
+  },
+  "vus_max": {
+   "type": "gauge",
+   "contains": "default",
+   "values": {
+    "min": 1241,
+    "max": 5000,
+    "value": 5000
+   }
+  },
+  "http_req_waiting": {
+   "type": "trend",
+   "contains": "time",
+   "values": {
+    "p(95)": 60000.972894,
+    "p(99)": 60001.8593004,
+    "max": 60039.934889,
+    "count": 21986,
+    "avg": 28542.221814178167,
+    "med": 21706.423775000003
+   }
+  },
+  "http_req_blocked": {
+   "type": "trend",
+   "contains": "time",
+   "values": {
+    "avg": 1345.468150667651,
+    "med": 0.010551999999999999,
+    "p(95)": 7130.958526,
+    "p(99)": 19448.61954475,
+    "max": 19593.817867,
+    "count": 21986
+   }
+  },
+  "http_req_receiving": {
+   "contains": "time",
+   "values": {
+    "avg": 6.228592891794788,
+    "med": 0,
+    "p(95)": 17.6646485,
+    "p(99)": 148.4158173000001,
+    "max": 1420.08315,
+    "count": 21986
+   },
+   "type": "trend"
+  },
+  "payload_bytes": {
+   "type": "trend",
+   "contains": "default",
+   "values": {
+    "count": 8467,
+    "avg": 28995.62005432857,
+    "med": 2727,
+    "p(95)": 167927,
+    "p(99)": 1064868,
+    "max": 1064868
+   }
+  },
+  "http_req_sending": {
+   "type": "trend",
+   "contains": "time",
+   "values": {
+    "med": 0.036408499999999996,
+    "p(95)": 0.71601975,
+    "p(99)": 2.237548150000014,
+    "max": 15.828572,
+    "count": 21986,
+    "avg": 0.16775974420085485
+   }
+  },
+  "http_req_duration{name:auth:sign-in}": {
+   "contains": "time",
+   "values": {
+    "med": 59736.1444355,
+    "p(95)": 60001.225599100006,
+    "p(99)": 60001.83625764,
+    "max": 60022.009166,
+    "count": 822,
+    "avg": 44761.398248637495
+   },
+   "thresholds": {
+    "max>=0": {
+     "ok": true
+    }
+   },
+   "type": "trend"
+  },
+  "data_sent": {
+   "type": "counter",
+   "contains": "data",
+   "values": {
+    "count": 14889032,
+    "rate": 34625.45250465031
+   }
+  },
+  "iterations": {
+   "type": "counter",
+   "contains": "default",
+   "values": {
+    "rate": 1.4092940506688472,
+    "count": 606
+   }
+  },
+  "http_req_tls_handshaking": {
+   "values": {
+    "p(99)": 0,
+    "max": 0,
+    "count": 21986,
+    "avg": 0,
+    "med": 0,
+    "p(95)": 0
+   },
+   "type": "trend",
+   "contains": "time"
+  },
+  "http_req_duration{name:write:WorkoutSheet:update}": {
+   "type": "trend",
+   "contains": "time",
+   "values": {
+    "avg": 0,
+    "med": 0,
+    "p(95)": 0,
+    "p(99)": 0,
+    "max": 0,
+    "count": 0
+   },
+   "thresholds": {
+    "max>=0": {
+     "ok": true
+    }
+   }
+  },
+  "app_errors": {
+   "type": "rate",
+   "contains": "default",
+   "values": {
+    "fails": 4852,
+    "rate": 0.6871292236265153,
+    "passes": 10656
+   },
+   "thresholds": {
+    "rate<0.001": {
+     "ok": false
+    }
+   }
+  },
+  "http_req_failed": {
+   "type": "rate",
+   "contains": "default",
+   "values": {
+    "fails": 8686,
+    "rate": 0.6049304102610752,
+    "passes": 13300
+   },
+   "thresholds": {
+    "rate<0.001": {
+     "ok": false
+    }
+   }
+  },
+  "http_req_duration{name:write:WorkoutSheet:create}": {
+   "type": "trend",
+   "contains": "time",
+   "values": {
+    "p(95)": 0,
+    "p(99)": 0,
+    "max": 0,
+    "count": 0,
+    "avg": 0,
+    "med": 0
+   },
+   "thresholds": {
+    "max>=0": {
+     "ok": true
+    }
+   }
+  },
+  "data_received": {
+   "type": "counter",
+   "contains": "data",
+   "values": {
+    "count": 32580093,
+    "rate": 75767.21325930323
+   }
+  },
+  "http_req_duration{name:list:ClassSummary}": {
+   "contains": "time",
+   "values": {
+    "med": 25855.5243275,
+    "p(95)": 60001.0288055,
+    "p(99)": 60001.8385906,
+    "max": 60010.890082,
+    "count": 156,
+    "avg": 30083.16353542948
+   },
+   "thresholds": {
+    "max>=0": {
+     "ok": true
+    }
+   },
+   "type": "trend"
+  },
+  "vus": {
+   "type": "gauge",
+   "contains": "default",
+   "values": {
+    "value": 2,
+    "min": 0,
+    "max": 5000
+   }
+  },
+  "http_req_duration{name:fn:session}": {
+   "type": "trend",
+   "contains": "time",
+   "values": {
+    "avg": 31584.893506249577,
+    "med": 27210.364619,
+    "p(95)": 60000.763969,
+    "p(99)": 60001.576045680005,
+    "max": 60037.755882,
+    "count": 5097
+   },
+   "thresholds": {
+    "max>=0": {
+     "ok": true
+    }
+   }
+  },
+  "iteration_duration": {
+   "type": "trend",
+   "contains": "time",
+   "values": {
+    "med": 72996.23846,
+    "p(95)": 124553.51690875,
+    "p(99)": 182505.06306205003,
+    "max": 188201.78594,
+    "count": 606,
+    "avg": 78204.48105452485
+   }
+  },
+  "http_req_duration{name:page:html}": {
+   "type": "trend",
+   "contains": "time",
+   "values": {
+    "p(99)": 56929.92272714,
+    "max": 58995.300979,
+    "count": 5655,
+    "avg": 9888.696294606538,
+    "med": 7488.938546,
+    "p(95)": 29505.017638999998
+   },
+   "thresholds": {
+    "max>=0": {
+     "ok": true
+    }
+   }
+  },
+  "http_req_duration{name:write:ClassSummary:create}": {
+   "values": {
+    "avg": 29969.21129905971,
+    "med": 19683.696719,
+    "p(95)": 60001.0336746,
+    "p(99)": 60001.21066906,
+    "max": 60001.219981,
+    "count": 67
+   },
+   "thresholds": {
+    "max>=0": {
+     "ok": true
+    }
+   },
+   "type": "trend",
+   "contains": "time"
+  },
+  "http_req_duration{name:list:WorkoutSheet}": {
+   "contains": "time",
+   "values": {
+    "avg": 0,
+    "med": 0,
+    "p(95)": 0,
+    "p(99)": 0,
+    "max": 0,
+    "count": 0
+   },
+   "thresholds": {
+    "max>=0": {
+     "ok": true
+    }
+   },
+   "type": "trend"
+  },
+  "http_req_duration{name:write:ClassSummary:update}": {
+   "values": {
+    "p(95)": 0,
+    "p(99)": 0,
+    "max": 0,
+    "count": 0,
+    "avg": 0,
+    "med": 0
+   },
+   "thresholds": {
+    "max>=0": {
+     "ok": true
+    }
+   },
+   "type": "trend",
+   "contains": "time"
+  },
+  "http_req_duration{expected_response:true}": {
+   "type": "trend",
+   "contains": "time",
+   "values": {
+    "med": 11682.5004795,
+    "p(95)": 47248.900774249996,
+    "p(99)": 56898.24108645,
+    "max": 59985.633854,
+    "count": 8686,
+    "avg": 17977.817829338925
+   }
+  },
+  "checks": {
+   "contains": "default",
+   "values": {
+    "rate": 0.6975347948694623,
+    "passes": 30672,
+    "fails": 13300
+   },
+   "type": "rate"
+  },
+  "http_req_duration{name:static:asset}": {
+   "values": {
+    "max": 0,
+    "count": 0,
+    "avg": 0,
+    "med": 0,
+    "p(95)": 0,
+    "p(99)": 0
+   },
+   "thresholds": {
+    "max>=0": {
+     "ok": true
+    }
+   },
+   "type": "trend",
+   "contains": "time"
+  },
+  "http_req_duration{name:list:Exercise}": {
+   "type": "trend",
+   "contains": "time",
+   "values": {
+    "max": 60039.962959,
+    "count": 1979,
+    "avg": 23772.838276462797,
+    "med": 13320.747364,
+    "p(95)": 60000.874664899995,
+    "p(99)": 60001.26253324
+   },
+   "thresholds": {
+    "max>=0": {
+     "ok": true
+    }
+   }
+  },
+  "http_req_duration{name:list:Level}": {
+   "contains": "time",
+   "values": {
+    "avg": 44222.37509982332,
+    "med": 60000.027883,
+    "p(95)": 60001.348400400006,
+    "p(99)": 60005.2091208,
+    "max": 60036.213961,
+    "count": 4785
+   },
+   "thresholds": {
+    "max>=0": {
+     "ok": true
+    }
+   },
+   "type": "trend"
+  }
+ }
+}

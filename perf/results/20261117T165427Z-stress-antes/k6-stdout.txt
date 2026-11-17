@@ -1,0 +1,21 @@
+
+== stress ==  pedidos 43540  RPS médio 46.8  VUs máx 600  iterações 3972
+falhas http 0.000%  ·  erros da app (HTTP 200 com erro) 0.000%
+endpoint                           n      p50      p95      p99      max
+{expected_response:true}       43540     3765    11188    13837    23477
+{kind:read}                    40897     3686    11097    13576    15538
+{kind:write}                    2643     5295    12832    17947    23477
+{name:auth:sign-in}              251     5553    12508    13043    14166
+{name:auth:sign-out}             200     8115    19979    22626    23477
+{name:fn:session}              10283     3315     8063     9284    11029
+{name:list:ClassSummary}        1243     4939    11576    14312    15136
+{name:list:Exercise}            8527     5193    11877    14276    15538
+{name:list:LevelContent}        4414     4927    11778    14064    15181
+{name:list:Level}              10201     4886    11596    13746    15218
+{name:list:WorkoutSheet}        1561     4950    11588    14021    15109
+{name:page:html}                4668     95.3      342      490      803
+{name:write:ClassSummary:create}    1227     4865    11621    13641    15007
+{name:write:WorkoutSheet:create}     743     5160    11249    14185    15039
+{name:write:WorkoutSheet:update}     222     6579    15370    17856    19717
+SLO FALHADOS: http_req_duration, http_req_duration{kind:write}, http_req_duration{kind:read}
+time="2026-11-17T17:09:58Z" level=error msg="thresholds on metrics 'http_req_duration, http_req_duration{kind:read}, http_req_duration{kind:write}' have been crossed"

@@ -1,0 +1,95 @@
+{
+ "cpuMachinePct": {
+  "avg": 29.3,
+  "p95": 47,
+  "max": 80.6,
+  "first": 80.6,
+  "last": 27
+ },
+ "serverCpuPct": {
+  "avg": 87.7,
+  "p95": 100,
+  "max": 100.4,
+  "first": 98.3,
+  "last": 98
+ },
+ "serverRssMB": {
+  "avg": 612.2,
+  "p95": 714,
+  "max": 748,
+  "first": 532,
+  "last": 718
+ },
+ "postgresCpuPct": {
+  "avg": 4.4,
+  "p95": 9,
+  "max": 11.5,
+  "first": 6,
+  "last": 1
+ },
+ "k6CpuPct": {
+  "avg": 21.1,
+  "p95": 78,
+  "max": 191.3,
+  "first": 191,
+  "last": 6
+ },
+ "k6RssMB": {
+  "avg": 2452.1,
+  "p95": 2927,
+  "max": 3129,
+  "first": 582,
+  "last": 2510
+ },
+ "lagP99ms": {
+  "avg": 317.6,
+  "p95": 747.1,
+  "max": 940.6,
+  "first": 256,
+  "last": 872.4
+ },
+ "heapMB": {
+  "avg": 146.4,
+  "p95": 257.9,
+  "max": 274.3,
+  "first": 51.3,
+  "last": 258.3
+ },
+ "pgActive": {
+  "avg": 5.3,
+  "p95": 9,
+  "max": 11,
+  "first": 7,
+  "last": 5
+ },
+ "pgConns": {
+  "avg": 11,
+  "p95": 11,
+  "max": 11,
+  "first": 11,
+  "last": 11
+ },
+ "pgLockWaits": {
+  "avg": 0,
+  "p95": 0,
+  "max": 0,
+  "first": 0,
+  "last": 0
+ },
+ "pgTps": {
+  "avg": 78.8,
+  "p95": 168,
+  "max": 382,
+  "first": 112,
+  "last": 20
+ },
+ "pgCacheHitPct": {
+  "avg": 100,
+  "p95": 100,
+  "max": 100,
+  "first": 100,
+  "last": 100
+ },
+ "samples": 496,
+ "serverDownSamples": 0
+}

@@ -1,0 +1,19 @@
+ calls | mean_ms | max_ms | total_ms |  rows   |                                                                              query                                                                               
+-------+---------+--------+----------+---------+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  4595 |    4.31 |   31.8 |    19826 | 1957470 | select "id", "title", "code", "source", "description", "primary_objective", "content", "subcategory", "training_block", "category", "style", "level", "turmas", 
+  3973 |    0.59 |    8.7 |     2337 |  973385 | select "id", "level_code", "number", "block", "title", "period", "periods", "continuity", "start_month", "months", "source", "exercise_codes", "order_index" fro
+   706 |    1.69 |   12.0 |     1196 |  353000 | select "id", "title", "level_id", "session_date", "focus", "sections", "total_distance", "notes", "created_by_id", "created_at", "updated_at" from "workout_shee
+ 28947 |    0.03 |    4.8 |      897 |   28796 | select "id", "expires_at", "token", "created_at", "updated_at", "ip_address", "user_agent", "user_id" from "session" where "session"."token" = $1
+ 27600 |    0.03 |   12.7 |      791 |   27600 | select "id", "name", "email", "email_verified", "image", "role", "created_at", "updated_at" from "user" where "user"."id" = $1
+  7527 |    0.03 |    3.9 |      243 |   82797 | select "id", "code", "name", "duration_min", "max_students", "age_range", "stage", "space", "requirements", "periods", "order_index" from "level" limit $1
+   684 |    0.17 |    3.3 |      116 |     684 | insert into "class_summary" ("id", "date", "level_id", "exercise_ids", "content_ids", "notes", "created_by_id", "created_at", "updated_at") values ($1, $2, $3, 
+   568 |    0.17 |    2.7 |       98 |     568 | insert into "session" ("id", "expires_at", "token", "created_at", "updated_at", "ip_address", "user_agent", "user_id") values ($1, $2, $3, $4, $5, $6, $7, $8) r
+   496 |    0.14 |    1.7 |       67 |     496 | select count(*) filter (where state = $1)::int active, count(*) filter (where state = $2)::int idle, count(*) filter (where wait_event_type = $3)::int lockwaits
+   300 |    0.20 |    7.7 |       59 |     300 | insert into "workout_sheet" ("id", "title", "level_id", "session_date", "focus", "sections", "total_distance", "notes", "created_by_id", "created_at", "updated_
+   711 |    0.04 |    0.4 |       29 |     711 | select "id", "account_id", "provider_id", "user_id", "access_token", "refresh_token", "id_token", "access_token_expires_at", "refresh_token_expires_at", "scope"
+   700 |    0.04 |    0.6 |       28 |     700 | select "id", "date", "level_id", "exercise_ids", "content_ids", "notes", "created_by_id", "created_at", "updated_at" from "class_summary" where ("class_summary"
+   751 |    0.03 |    1.7 |       25 |     751 | select "id", "name", "email", "email_verified", "image", "role", "created_at", "updated_at" from "user" where "user"."email" = $1
+   496 |    0.03 |    1.9 |       13 |     496 | select xact_commit::bigint xc, blks_hit::bigint hit, blks_read::bigint rd, deadlocks::int dl from pg_stat_database where datname = current_database()
+    83 |    0.08 |    0.1 |        7 |      83 | update "workout_sheet" set "notes" = $1, "updated_at" = $2 where "workout_sheet"."id" = $3 returning "id", "title", "level_id", "session_date", "focus", "sectio
+(15 rows)
+

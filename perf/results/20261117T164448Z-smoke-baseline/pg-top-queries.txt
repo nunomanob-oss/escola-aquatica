@@ -1,0 +1,19 @@
+ calls | mean_ms | max_ms | total_ms | rows |                                                                              query                                                                               
+-------+---------+--------+----------+------+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+     6 |    2.99 |    3.6 |       18 | 3000 | select "id", "title", "code", "source", "description", "primary_objective", "content", "subcategory", "training_block", "category", "style", "level", "turmas", 
+    45 |    0.11 |    0.2 |        5 |   45 | select count(*) filter (where state = $1)::int active, count(*) filter (where state = $2)::int idle, count(*) filter (where wait_event_type = $3)::int lockwaits
+     2 |    1.77 |    2.2 |        4 | 1000 | select "id", "title", "level_id", "session_date", "focus", "sections", "total_distance", "notes", "created_by_id", "created_at", "updated_at" from "workout_shee
+     3 |    0.49 |    0.5 |        1 |  735 | select "id", "level_code", "number", "block", "title", "period", "periods", "continuity", "start_month", "months", "source", "exercise_codes", "order_index" fro
+    33 |    0.04 |    0.1 |        1 |   33 | select "id", "expires_at", "token", "created_at", "updated_at", "ip_address", "user_agent", "user_id" from "session" where "session"."token" = $1
+    45 |    0.02 |    0.1 |        1 |   45 | select xact_commit::bigint xc, blks_hit::bigint hit, blks_read::bigint rd, deadlocks::int dl from pg_stat_database where datname = current_database()
+    33 |    0.03 |    0.1 |        1 |   33 | select "id", "name", "email", "email_verified", "image", "role", "created_at", "updated_at" from "user" where "user"."id" = $1
+     1 |    0.75 |    0.8 |        1 |    1 | select pg_stat_statements_reset()
+     2 |    0.25 |    0.3 |        0 |    2 | insert into "class_summary" ("id", "date", "level_id", "exercise_ids", "content_ids", "notes", "created_by_id", "created_at", "updated_at") values ($1, $2, $3, 
+     1 |    0.34 |    0.3 |        0 |  303 | select b.oid, b.typarray from pg_catalog.pg_type a left join pg_catalog.pg_type b on b.oid = a.typelem where a.typcategory = $1 group by b.oid, b.typarray order
+     1 |    0.30 |    0.3 |        0 |    1 | insert into "session" ("id", "expires_at", "token", "created_at", "updated_at", "ip_address", "user_agent", "user_id") values ($1, $2, $3, $4, $5, $6, $7, $8) r
+     8 |    0.03 |    0.0 |        0 |   88 | select "id", "code", "name", "duration_min", "max_students", "age_range", "stage", "space", "requirements", "periods", "order_index" from "level" limit $1
+     1 |    0.14 |    0.1 |        0 |    1 | insert into "workout_sheet" ("id", "title", "level_id", "session_date", "focus", "sections", "total_distance", "notes", "created_by_id", "created_at", "updated_
+     2 |    0.04 |    0.1 |        0 |    2 | select "id", "date", "level_id", "exercise_ids", "content_ids", "notes", "created_by_id", "created_at", "updated_at" from "class_summary" where ("class_summary"
+     1 |    0.06 |    0.1 |        0 |    1 | update "workout_sheet" set "notes" = $1, "updated_at" = $2 where "workout_sheet"."id" = $3 returning "id", "title", "level_id", "session_date", "focus", "sectio
+(15 rows)
+

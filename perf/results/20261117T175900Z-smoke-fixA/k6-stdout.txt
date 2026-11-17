@@ -1,0 +1,17 @@
+
+== smoke ==  pedidos 22  RPS médio 0.3  VUs máx 1  iterações 2
+falhas http 0.000%  ·  erros da app (HTTP 200 com erro) 0.000%
+endpoint                           n      p50      p95      p99      max
+{expected_response:true}          22     12.6      112      516      623
+{kind:read}                       20     11.4      140      526      623
+{kind:write}                       2     15.3     18.1     18.4     18.5
+{name:fn:session}                  5     14.2     59.3     68.0     70.1
+{name:list:ClassSummary}           1      9.6      9.6      9.6      9.6
+{name:list:Exercise}               4      6.4     98.3      111      114
+{name:list:LevelContent}           2     38.9     67.6     70.1     70.7
+{name:list:Level}                  5      9.6     27.6     30.5     31.2
+{name:list:WorkoutSheet}           1     48.2     48.2     48.2     48.2
+{name:page:html}                   2      319      592      617      623
+{name:write:ClassSummary:update}       1     12.1     12.1     12.1     12.1
+{name:write:WorkoutSheet:create}       1     18.5     18.5     18.5     18.5
+SLO: todos cumpridos

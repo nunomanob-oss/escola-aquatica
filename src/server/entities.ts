@@ -1,6 +1,6 @@
 import { createServerFn } from '@tanstack/react-start'
 import { getRequest } from '@tanstack/react-start/server'
-import { and, asc, desc, eq, getTableColumns, type SQL } from 'drizzle-orm'
+import { and, asc, desc, eq, getTableColumns, getTableName, sql, type SQL } from 'drizzle-orm'
 import type { PgTable } from 'drizzle-orm/pg-core'
 import { z } from 'zod'
 import * as schema from '@/db/schema'
@@ -22,7 +22,13 @@ type EntityName = keyof typeof TABLES
 const ENTITY_NAMES = Object.keys(TABLES) as [EntityName, ...EntityName[]]
 const SORTABLE = ['order_index', 'session_date', 'date'] as const
 
-const toSnake = (key: string) => key.replace(/[A-Z]/g, (c) => `_${c.toLowerCase()}`)
+// Memorizado: chamado para cada campo de cada linha (era ~5% do CPU do servidor nas listas grandes).
+const snakeCache = new Map<string, string>()
+const toSnake = (key: string) => {
+  let out = snakeCache.get(key)
+  if (out === undefined) snakeCache.set(key, (out = key.replace(/[A-Z]/g, (c) => `_${c.toLowerCase()}`)))
+  return out
+}
 const toCamel = (key: string) => key.replace(/_([a-z])/g, (_, c: string) => c.toUpperCase())
 
 // Linha da base de dados -> objeto da API (snake_case).
@@ -58,6 +64,28 @@ const listInput = z.object({
   limit: z.number().int().min(1).max(1000).default(500),
 })
 
+// Catálogo (níveis, conteúdos e exercícios): igual para todos os utilizadores, lido em cada abertura de Níveis e
+// Biblioteca (a lista de exercícios tem ~870 KB). Guarda-se a resposta já em JSON por processo, validada contra uma
+// "versão" barata calculada na base de dados: nº de linhas + último updated_at (exercícios; todas as escritas da app
+// e do seed atualizam updated_at) ou soma de hashes do conteúdo (níveis e conteúdos, tabelas pequenas sem
+// updated_at). Uma alteração feita por esta ou por outra instância muda a versão e invalida a cópia. Com ETag,
+// o browser revalida e recebe 304 sem corpo quando nada mudou.
+const CATALOG = new Set<EntityName>(['Level', 'LevelContent', 'Exercise'])
+const catalogCache = new Map<string, { version: string; etag: string; body: string }>()
+
+const JSON_HEADERS = { 'content-type': 'application/json; charset=utf-8' }
+
+async function catalogVersion(db: Awaited<ReturnType<typeof server>>['db'], table: PgTable) {
+  const name = sql.identifier(getTableName(table))
+  const hasUpdatedAt = 'updatedAt' in getTableColumns(table)
+  const [row] = await db.execute<{ v: string }>(
+    hasUpdatedAt
+      ? sql`select count(*)::text || '-' || coalesce(max(updated_at)::text, '') as v from ${name}`
+      : sql`select count(*)::text || '-' || coalesce(sum(hashtext(t::text)), 0)::text as v from ${name} t`,
+  )
+  return row.v
+}
+
 export const entityList = createServerFn({ method: 'GET' })
   .validator(listInput)
   .handler(async ({ data }) => {
@@ -76,14 +104,33 @@ export const entityList = createServerFn({ method: 'GET' })
     const sortColumn = sortKey ? columns[toCamel(sortKey)] : null
     const order = sortColumn ? (data.descending ? desc(sortColumn) : asc(sortColumn)) : undefined
 
-    const rows = await db
-      .select()
-      .from(table)
-      .where(conditions.length ? and(...conditions) : undefined)
-      .orderBy(...(order ? [order] : []))
-      .limit(data.limit)
+    const load = async () => {
+      const rows = await db
+        .select()
+        .from(table)
+        .where(conditions.length ? and(...conditions) : undefined)
+        .orderBy(...(order ? [order] : []))
+        .limit(data.limit)
+      return JSON.stringify(rows.map((row) => toApi(row)))
+    }
 
-    return rows.map((row) => toApi(row))
+    // Listas por utilizador/filtro: JSON simples (o cliente recebe o mesmo array; as datas chegam como texto).
+    if (!CATALOG.has(data.entity) || conditions.length) {
+      return new Response(await load(), { headers: { ...JSON_HEADERS, 'cache-control': 'private, no-store' } })
+    }
+
+    const key = JSON.stringify(data)
+    const version = await catalogVersion(db, table)
+    let entry = catalogCache.get(key)
+    if (!entry || entry.version !== version) {
+      const body = await load()
+      entry = { version, etag: `"${data.entity}-${version}-${body.length}"`, body }
+      if (catalogCache.size > 50) catalogCache.clear()
+      catalogCache.set(key, entry)
+    }
+    const headers = { ...JSON_HEADERS, etag: entry.etag, 'cache-control': 'private, no-cache' }
+    if (getRequest().headers.get('if-none-match') === entry.etag) return new Response(null, { status: 304, headers })
+    return new Response(entry.body, { headers })
   })
 
 const writeInput = z.object({

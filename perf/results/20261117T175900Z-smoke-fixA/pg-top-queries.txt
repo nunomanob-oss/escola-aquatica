@@ -1,0 +1,19 @@
+ calls | mean_ms | max_ms | total_ms | rows |                                                                              query                                                                               
+-------+---------+--------+----------+------+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+     1 |    5.99 |    6.0 |        6 |  500 | select "id", "title", "level_id", "session_date", "focus", "sections", "total_distance", "notes", "created_by_id", "created_at", "updated_at" from "workout_shee
+     1 |    4.13 |    4.1 |        4 |  426 | select "id", "title", "code", "source", "description", "primary_objective", "content", "subcategory", "training_block", "category", "style", "level", "turmas", 
+    32 |    0.12 |    0.4 |        4 |   32 | select count(*) filter (where state = $1)::int active, count(*) filter (where state = $2)::int idle, count(*) filter (where wait_event_type = $3)::int lockwaits
+     2 |    0.78 |    0.8 |        2 |  606 | select b.oid, b.typarray from pg_catalog.pg_type a left join pg_catalog.pg_type b on b.oid = a.typelem where a.typcategory = $1 group by b.oid, b.typarray order
+     4 |    0.36 |    0.4 |        1 |    4 | select count(*)::text || $1 || coalesce(max(updated_at)::text, $2) as v from "exercise"
+     2 |    0.62 |    0.7 |        1 |    2 | select count(*)::text || $1 || coalesce(sum(hashtext(t::text)), $2)::text as v from "level_content" t
+    20 |    0.04 |    0.1 |        1 |   20 | select "id", "expires_at", "token", "created_at", "updated_at", "ip_address", "user_agent", "user_id" from "session" where "session"."token" = $1
+     1 |    0.76 |    0.8 |        1 |    1 | select pg_stat_statements_reset()
+    32 |    0.02 |    0.0 |        1 |   32 | select xact_commit::bigint xc, blks_hit::bigint hit, blks_read::bigint rd, deadlocks::int dl from pg_stat_database where datname = current_database()
+     1 |    0.62 |    0.6 |        1 |  245 | select "id", "level_code", "number", "block", "title", "period", "periods", "continuity", "start_month", "months", "source", "exercise_codes", "order_index" fro
+    20 |    0.03 |    0.1 |        1 |   20 | select "id", "name", "email", "email_verified", "image", "role", "created_at", "updated_at" from "user" where "user"."id" = $1
+     1 |    0.43 |    0.4 |        0 |    1 | insert into "workout_sheet" ("id", "title", "level_id", "session_date", "focus", "sections", "total_distance", "notes", "created_by_id", "created_at", "updated_
+     5 |    0.06 |    0.1 |        0 |    5 | select count(*)::text || $1 || coalesce(sum(hashtext(t::text)), $2)::text as v from "level" t
+     1 |    0.21 |    0.2 |        0 |    1 | select "id", "date", "level_id", "exercise_ids", "content_ids", "notes", "created_by_id", "created_at", "updated_at" from "class_summary" where ("class_summary"
+     1 |    0.15 |    0.1 |        0 |    1 | select "id", "date", "level_id", "exercise_ids", "content_ids", "notes", "created_by_id", "created_at", "updated_at" from "class_summary" where "class_summary".
+(15 rows)
+
