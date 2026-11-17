@@ -17,6 +17,7 @@ import { Route as ResetPasswordRouteImport } from './routes/reset-password'
 import { Route as AuthedIndexRouteImport } from './routes/_authed/index'
 import { Route as AuthedAulasRouteImport } from './routes/_authed/aulas'
 import { Route as AuthedBibliotecaRouteImport } from './routes/_authed/biblioteca'
+import { Route as AuthedNiveisRouteImport } from './routes/_authed/niveis'
 import { Route as AuthedPainelRouteImport } from './routes/_authed/painel'
 import { Route as AuthedTreinosRouteImport } from './routes/_authed/treinos'
 import { Route as ApiAuthSplatRouteImport } from './routes/api/auth/$'
@@ -60,6 +61,11 @@ const AuthedBibliotecaRoute = AuthedBibliotecaRouteImport.update({
   path: '/biblioteca',
   getParentRoute: () => AuthedRoute,
 } as any)
+const AuthedNiveisRoute = AuthedNiveisRouteImport.update({
+  id: '/niveis',
+  path: '/niveis',
+  getParentRoute: () => AuthedRoute,
+} as any)
 const AuthedPainelRoute = AuthedPainelRouteImport.update({
   id: '/painel',
   path: '/painel',
@@ -84,6 +90,7 @@ export interface FileRoutesByFullPath {
   '/reset-password': typeof ResetPasswordRoute
   '/aulas': typeof AuthedAulasRoute
   '/biblioteca': typeof AuthedBibliotecaRoute
+  '/niveis': typeof AuthedNiveisRoute
   '/painel': typeof AuthedPainelRoute
   '/treinos': typeof AuthedTreinosRoute
   '/api/auth/$': typeof ApiAuthSplatRoute
@@ -95,6 +102,7 @@ export interface FileRoutesByTo {
   '/reset-password': typeof ResetPasswordRoute
   '/aulas': typeof AuthedAulasRoute
   '/biblioteca': typeof AuthedBibliotecaRoute
+  '/niveis': typeof AuthedNiveisRoute
   '/painel': typeof AuthedPainelRoute
   '/treinos': typeof AuthedTreinosRoute
   '/': typeof AuthedIndexRoute
@@ -109,6 +117,7 @@ export interface FileRoutesById {
   '/reset-password': typeof ResetPasswordRoute
   '/_authed/aulas': typeof AuthedAulasRoute
   '/_authed/biblioteca': typeof AuthedBibliotecaRoute
+  '/_authed/niveis': typeof AuthedNiveisRoute
   '/_authed/painel': typeof AuthedPainelRoute
   '/_authed/treinos': typeof AuthedTreinosRoute
   '/_authed/': typeof AuthedIndexRoute
@@ -124,6 +133,7 @@ export interface FileRouteTypes {
     | '/reset-password'
     | '/aulas'
     | '/biblioteca'
+    | '/niveis'
     | '/painel'
     | '/treinos'
     | '/api/auth/$'
@@ -135,6 +145,7 @@ export interface FileRouteTypes {
     | '/reset-password'
     | '/aulas'
     | '/biblioteca'
+    | '/niveis'
     | '/painel'
     | '/treinos'
     | '/'
@@ -148,6 +159,7 @@ export interface FileRouteTypes {
     | '/reset-password'
     | '/_authed/aulas'
     | '/_authed/biblioteca'
+    | '/_authed/niveis'
     | '/_authed/painel'
     | '/_authed/treinos'
     | '/_authed/'
@@ -221,6 +233,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthedBibliotecaRouteImport
       parentRoute: typeof AuthedRoute
     }
+    '/_authed/niveis': {
+      id: '/_authed/niveis'
+      path: '/niveis'
+      fullPath: '/niveis'
+      preLoaderRoute: typeof AuthedNiveisRouteImport
+      parentRoute: typeof AuthedRoute
+    }
     '/_authed/painel': {
       id: '/_authed/painel'
       path: '/painel'
@@ -248,6 +267,7 @@ declare module '@tanstack/react-router' {
 interface AuthedRouteChildren {
   AuthedAulasRoute: typeof AuthedAulasRoute
   AuthedBibliotecaRoute: typeof AuthedBibliotecaRoute
+  AuthedNiveisRoute: typeof AuthedNiveisRoute
   AuthedPainelRoute: typeof AuthedPainelRoute
   AuthedTreinosRoute: typeof AuthedTreinosRoute
   AuthedIndexRoute: typeof AuthedIndexRoute
@@ -256,6 +276,7 @@ interface AuthedRouteChildren {
 const AuthedRouteChildren: AuthedRouteChildren = {
   AuthedAulasRoute: AuthedAulasRoute,
   AuthedBibliotecaRoute: AuthedBibliotecaRoute,
+  AuthedNiveisRoute: AuthedNiveisRoute,
   AuthedPainelRoute: AuthedPainelRoute,
   AuthedTreinosRoute: AuthedTreinosRoute,
   AuthedIndexRoute: AuthedIndexRoute,

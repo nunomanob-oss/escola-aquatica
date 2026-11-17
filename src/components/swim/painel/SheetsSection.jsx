@@ -20,8 +20,8 @@ export default function SheetsSection({ sheets }) {
     <PanelSection title="Fichas de treino" actionLabel={list.length ? "Ver todas" : undefined} actionTo="/aulas">
       {list.length === 0 ? (
         <div className="px-4 py-4">
-          <p className="text-[15px] text-[#8E8E93]">Ainda não há fichas de treino.</p>
-          <Link to="/aulas" className="mt-2 inline-block text-[15px] text-[#0A84FF] active:opacity-60">
+          <p className="text-[15px] text-[#9bd0a8]">Ainda não há fichas de treino.</p>
+          <Link to="/aulas" className="mt-2 inline-block text-[15px] text-[#2fe06b] active:opacity-60">
             Criar a primeira ficha
           </Link>
         </div>
@@ -34,7 +34,7 @@ export default function SheetsSection({ sheets }) {
             subtitle={relativeDay(sheet.session_date)}
             trailing={
               sheet.total_distance > 0 && (
-                <span className="text-[15px] text-[#8E8E93] tabular-nums whitespace-nowrap">
+                <span className="text-[15px] text-[#9bd0a8] tabular-nums whitespace-nowrap">
                   {sheet.total_distance.toLocaleString("pt-PT")} m
                 </span>
               )

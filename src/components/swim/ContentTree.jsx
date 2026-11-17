@@ -21,7 +21,7 @@ function Difficulty({ rating }) {
   );
 }
 
-function ExampleNode({ exercise, levelCode, inLesson, onToggle, onOpen }) {
+export function ExampleNode({ exercise, levelCode, inLesson, onToggle, onOpen }) {
   const elsewhere = (exercise.turmas || []).filter((t) => t !== levelCode);
 
   return (
@@ -29,7 +29,7 @@ function ExampleNode({ exercise, levelCode, inLesson, onToggle, onOpen }) {
       <div className="rounded-lg bg-[#062b16] p-3">
         {exercise.image_diagram && (
           <button type="button" onClick={() => onOpen(exercise)} className="block w-full mb-3 rounded-md overflow-hidden">
-            <Image src={exercise.image_diagram} alt={exercise.title} className="w-full aspect-[3/2]" />
+            <Image src={exercise.image_diagram} alt={exercise.title} className="w-full aspect-video" />
           </button>
         )}
         <button

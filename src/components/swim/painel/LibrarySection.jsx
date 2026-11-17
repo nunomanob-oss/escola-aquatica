@@ -18,7 +18,7 @@ export default function LibrarySection({ exercises }) {
         <PanelRow
           key={level}
           title={level}
-          trailing={<span className="text-[17px] text-[#8E8E93] tabular-nums">{count}</span>}
+          trailing={<span className="text-[17px] text-[#9bd0a8] tabular-nums">{count}</span>}
         />
       ))}
     </PanelSection>

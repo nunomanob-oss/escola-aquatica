@@ -1,20 +1,34 @@
 {
-  "version": "7",
-  "dialect": "postgresql",
-  "entries": [
-    {
-      "idx": 0,
-      "version": "7",
-      "when": 1792884806802,
-      "tag": "0000_inicial",
-      "breakpoints": true
-    },
-    {
-      "idx": 1,
-      "version": "7",
-      "when": 1793014297034,
-      "tag": "0001_programa_cfp",
-      "breakpoints": true
-    }
-  ]
+    "version": "7",
+    "dialect": "postgresql",
+    "entries": [
+        {
+            "idx": 0,
+            "version": "7",
+            "when": 1792884806802,
+            "tag": "0000_inicial",
+            "breakpoints": true
+        },
+        {
+            "idx": 1,
+            "version": "7",
+            "when": 1792962406321,
+            "tag": "0001_niveis_conteudos",
+            "breakpoints": true
+        },
+        {
+            "idx": 2,
+            "version": "7",
+            "when": 1793052000000,
+            "tag": "0002_campos_exercise_cfp",
+            "breakpoints": true
+        },
+        {
+            "idx": 3,
+            "version": "7",
+            "when": 1793053000000,
+            "tag": "0003_conteudos_programa_cfp",
+            "breakpoints": true
+        }
+    ]
 }

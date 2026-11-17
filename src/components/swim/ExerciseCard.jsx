@@ -49,7 +49,7 @@ export default function ExerciseCard({ exercise, onOpen }) {
           <Image
             src={exercise.image_diagram}
             alt={exercise.title}
-            className="w-full aspect-[3/2]"
+            className="w-full aspect-video"
           />
           {exercise.video_url && (
             <span className="absolute top-1.5 right-1.5 flex items-center gap-1 rounded-full bg-black/75 px-2 py-0.5 text-[10px] font-semibold text-[#2fe06b]">

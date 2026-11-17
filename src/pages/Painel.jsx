@@ -12,7 +12,6 @@ import { longToday, programCoverage } from "@/components/swim/painel/painelMeta"
 import { CACHE_KEYS, fetchAll, loadWithCache } from "@/components/swim/offlineCache";
 import { SYNC_EVENT, applyPending, pendingCount } from "@/components/swim/offlineQueue";
 
-const SYSTEM_FONT = '-apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", system-ui, sans-serif';
 
 const listOf = (res) => (Array.isArray(res) ? res : res.items || []);
 
@@ -66,17 +65,17 @@ export default function Painel() {
   const featured = rings.find((r) => r.level.code === activeCode) || rings[0];
 
   return (
-    <div className="min-h-screen bg-black text-white pb-10" style={{ fontFamily: SYSTEM_FONT }}>
+    <div className="min-h-screen bg-[#062b16] text-white pb-10">
       <AppNav />
 
       <header className="px-4 sm:px-8 pt-6 pb-2 max-w-3xl mx-auto w-full">
         <h1 className="text-[34px] leading-tight font-bold tracking-[-0.02em]">Painel</h1>
-        <p className="text-[15px] text-[#8E8E93]">{longToday()}</p>
+        <p className="text-[15px] text-[#9bd0a8]">{longToday()}</p>
       </header>
 
       {!data ? (
         <div className="flex justify-center py-20">
-          <div className="w-8 h-8 border-[3px] border-[#2C2C2E] border-t-[#8E8E93] rounded-full animate-spin" />
+          <div className="w-8 h-8 border-[3px] border-[#186a35] border-t-[#9bd0a8] rounded-full animate-spin" />
         </div>
       ) : (
         <main className="px-4 sm:px-8 mt-4 max-w-3xl mx-auto w-full space-y-8">

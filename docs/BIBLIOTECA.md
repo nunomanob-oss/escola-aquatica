@@ -67,7 +67,6 @@ O programa de cada turma vem da base de dados do clube (`scripts/cfp/data/CFP_ex
 - Cada conteúdo fica na tabela `level_content` (turma, bloco, número, período e meses) com os códigos dos seus exercícios exemplo.
 - Os exemplos entram na tabela `exercise` com `source: "CFP"` e as turmas onde são usados; aparecem também na Biblioteca.
 - No ecrã **Conteúdos**, cada turma mostra a árvore Bloco → Conteúdo → Exercício exemplo → Regressão / Progressão. Marca-se o conteúdo para o sumário da aula e, dentro da árvore, junta-se o exemplo à aula ou abre-se a ficha.
-- As ilustrações dos exemplos ainda não estão na app.
 
 Para atualizar depois de mudar a base do clube:
 
@@ -77,11 +76,31 @@ Para atualizar depois de mudar a base do clube:
 
 ## Ilustrações dos exercícios
 
-As imagens ficam em `public/exercicios/`, com o código do exercício como nome (`EX-001.png`, `BIB-INI-001.png`; também `.webp` ou `.jpg`).
+As imagens ficam em `public/exercicios/`, com o código do exercício como nome (`EX-001.png`, `BIB-INI-001.png`; também `.webp`, `.jpg` ou `.svg`).
 
 1. Copiar as imagens para `public/exercicios/` (por exemplo, as de `biblioteca/imagens/` do `CFP_entrega.zip`). Uma imagem com o mesmo código noutro formato (por exemplo `.png` em vez de `.jpg`) deve substituir a anterior, e não ficar ao lado dela.
 2. `npm run db:seed` — liga cada imagem ao exercício com o mesmo código.
 
-A imagem aparece na ficha do exercício e, no ecrã Conteúdos, em cada exemplo da árvore. O formato esperado é horizontal 3:2.
+A imagem aparece na ficha do exercício e, no ecrã Conteúdos, em cada exemplo da árvore. O formato esperado é horizontal 16:9.
 
-As 151 imagens atuais dos exemplos `EX-…` (`.jpg`, 320 px de largura) vêm da aba "Ilustrações" de `biblioteca_exercicios_CFP.xlsx`. Quando houver os PNG em tamanho real, substituem-nas: apagar o `.jpg` com o mesmo código antes de correr o seed.
+Os 326 exercícios (175 `BIB-…` e 151 `EX-…`) têm a ilustração 3D aprovada da "Biblioteca Profissional 3D v2" (Google Drive, `BD-Profissional-INI004-atualizada.xlsx`), em `.webp` com 960 px de largura. O original de cada uma é o PNG indicado na coluna "Ficheiro da imagem" dessa folha.
+
+### Esquemas dos exercícios da biblioteca
+
+`scripts/library/illustrations.mjs` desenha um esquema em SVG para cada exercício `BIB-…`: piscina em corte lateral, instrutor no cais, o aluno na posição do exercício, o material e uma seta com o sentido do deslocamento. Os esquemas já não estão em `public/exercicios/` (foram substituídos pelas ilustrações 3D), mas o script serve para um exercício novo enquanto não houver ilustração.
+
+- A cena de cada exercício está em `scripts/library/illustrations.json`, por exemplo `"crol breath pb lane"` (crol a respirar, com pull-buoy e corda de pista). Ao criar um exercício novo, acrescentar a linha dele e correr `node scripts/library/illustrations.mjs`.
+- O script escreve um `.svg` para todos os exercícios: apagar os que já têm `.webp` com o mesmo código antes de correr o seed.
+
+### Padrão de cores
+
+Todas as imagens, novas e refeitas, seguem as mesmas cores:
+
+| Elemento | Cor |
+|---|---|
+| Pele fora de água | tom natural (clara `#F2B48C`, escura `#8D5A3B`) |
+| Pele dentro de água | a mesma pele com véu turquesa a 35% (clara `#B1B29C`, escura `#707868`), nunca cinzenta nem verde forte |
+| Água · superfície · fundo | `#3AAEBB` · `#6CC9CE` com linha branca · `#2A8C99` |
+| Azulejos do cais · contorno | `#CFEFEC` · `#123B4A` |
+| Toucas e fatos de banho | `#1B3A5C` |
+| Instrutor | polo `#1F3B57` e calções, no cais (nunca de fato de treino dentro de água) |
